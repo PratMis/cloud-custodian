@@ -608,6 +608,7 @@ class CloudTrailMode(LambdaMode):
                  'properties': {
                      'source': {'type': 'string'},
                      'ids': {'type': 'string'},
+                     'account': {'type': 'array', 'items': {'type': 'string'}},
                      'event': {'type': 'string'}}}]
         }},
         rinherit=LambdaMode.schema)

@@ -1014,6 +1014,8 @@ class CloudWatchEventSource:
                 event_info = e
                 events.append(e['event'])
             sources.append(event_info['source'])
+            if e.get('account'):
+                payload['account'] = e['account']
 
         payload['detail'] = {
             'eventSource': list(set(sources)),
