@@ -1,9 +1,0 @@
-servicemanagement resources
-###############################
-
-.. toctree::
-   :maxdepth: 1
-   :titlesonly:
-
-
-   service.rst
