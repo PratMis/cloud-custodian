@@ -61,6 +61,8 @@ Filters
   
   - :ref:`waf-enabled <aws.app-elb.filters.waf-enabled>`
 
+  - :ref:`wafv2-enabled <aws.app-elb.filters.wafv2-enabled>`
+
 
 
 .. _aws.app-elb.filters.attributes:
@@ -687,6 +689,40 @@ Parent base class for filters and actions.
 Permissions - waf-regional:ListResourcesForWebACL, waf-regional:ListWebACLs
 
 
+.. _aws.app-elb.filters.wafv2-enabled:
+
+wafv2-enabled
++++++++++++++
+Parent base class for filters and actions.
+    
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      state:
+        type: boolean
+      type:
+        enum:
+        - wafv2-enabled
+      web-acl:
+        type: string
+    required:
+    - type
+
+
+
+
+Permissions - wafv2:ListResourcesForWebACL, wafv2:ListWebACLs
+
+
 
 
 Actions
@@ -726,6 +762,8 @@ Actions
   - :ref:`set-shield <aws.app-elb.actions.set-shield>`
 
   - :ref:`set-waf <aws.app-elb.actions.set-waf>`
+
+  - :ref:`set-wafv2 <aws.app-elb.actions.set-wafv2>`
 
   - :ref:`tag <aws.common.actions.tag>`
   
@@ -1052,4 +1090,40 @@ Enable/Disable waf protection on applicable resource.
 
 
 Permissions - waf-regional:AssociateWebACL, waf-regional:ListWebACLs
+
+
+.. _aws.app-elb.actions.set-wafv2:
+
+set-wafv2
++++++++++
+Enable/Disable wafv2 protection on applicable resource.
+
+    
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      state:
+        type: boolean
+      type:
+        enum:
+        - set-wafv2
+      web-acl:
+        type: string
+    required:
+    - web-acl
+    - type
+
+
+
+
+Permissions - wafv2:AssociateWebACL, wafv2:ListWebACLs
 

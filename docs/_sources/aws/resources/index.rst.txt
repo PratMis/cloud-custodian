@@ -134,6 +134,8 @@ be applies for all resources.
 
    group-kms.rst
 
+   group-lakeformation.rst
+
    group-lambda.rst
 
    group-lightsail.rst
@@ -199,5 +201,7 @@ be applies for all resources.
    group-waf.rst
 
    group-waf-regional.rst
+
+   group-wafv2.rst
 
    group-workspaces.rst

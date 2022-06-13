@@ -18,6 +18,9 @@ Filters
    - :ref:`config-compliance <AWS.common.filters.config-compliance>`
 
 
+   - :ref:`engine <AWS.common.filters.engine>`
+
+
    - :ref:`event <AWS.common.filters.event>`
 
 
@@ -450,6 +453,113 @@ rules see https://cloudcustodian.io/docs/policy/lambda.html#config-rules
         - config-compliance
     required:
     - rules
+
+
+
+.. _AWS.common.filters.engine:
+
+engine
+++++++
+
+Filter a rds resource based on its Engine Metadata
+
+:example:
+
+.. code-block:: yaml
+
+    policies:
+        - name: find-deprecated-versions
+          resource: aws.rds
+          filters:
+            - type: engine
+              key: Status
+              value: deprecated
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      default:
+        type: object
+      key:
+        type: string
+      op:
+        enum:
+        - eq
+        - equal
+        - ne
+        - not-equal
+        - gt
+        - greater-than
+        - ge
+        - gte
+        - le
+        - lte
+        - lt
+        - less-than
+        - glob
+        - regex
+        - regex-case
+        - in
+        - ni
+        - not-in
+        - contains
+        - difference
+        - intersect
+      type:
+        enum:
+        - engine
+      value:
+        oneOf:
+        - type: array
+        - type: string
+        - type: boolean
+        - type: number
+        - type: 'null'
+      value_from:
+        additionalProperties: 'False'
+        properties:
+          expr:
+            oneOf:
+            - type: integer
+            - type: string
+          format:
+            enum:
+            - csv
+            - json
+            - txt
+            - csv2dict
+          url:
+            type: string
+        required:
+        - url
+        type: object
+      value_regex:
+        type: string
+      value_type:
+        enum:
+        - age
+        - integer
+        - expiration
+        - normalize
+        - size
+        - cidr
+        - cidr_size
+        - swap
+        - resource_count
+        - expr
+        - unique_size
+        - date
+        - version
+    required:
+    - type
 
 
 

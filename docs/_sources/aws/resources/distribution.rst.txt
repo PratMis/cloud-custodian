@@ -42,6 +42,8 @@ Filters
   
   - :ref:`waf-enabled <aws.distribution.filters.waf-enabled>`
 
+  - :ref:`wafv2-enabled <aws.distribution.filters.wafv2-enabled>`
+
 
 
 .. _aws.distribution.filters.distribution-config:
@@ -307,6 +309,40 @@ Parent base class for filters and actions.
 Permissions - waf:ListWebACLs
 
 
+.. _aws.distribution.filters.wafv2-enabled:
+
+wafv2-enabled
++++++++++++++
+Parent base class for filters and actions.
+    
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      state:
+        type: boolean
+      type:
+        enum:
+        - wafv2-enabled
+      web-acl:
+        type: string
+    required:
+    - type
+
+
+
+
+Permissions - wafv2:ListWebACLs
+
+
 
 
 Actions
@@ -342,6 +378,8 @@ Actions
   - :ref:`set-shield <aws.distribution.actions.set-shield>`
 
   - :ref:`set-waf <aws.distribution.actions.set-waf>`
+
+  - :ref:`set-wafv2 <aws.distribution.actions.set-wafv2>`
 
   - :ref:`tag <aws.common.actions.tag>`
   
@@ -579,4 +617,41 @@ Parent base class for filters and actions.
 
 
 Permissions - cloudfront:UpdateDistribution, waf:ListWebACLs
+
+
+.. _aws.distribution.actions.set-wafv2:
+
+set-wafv2
++++++++++
+Parent base class for filters and actions.
+    
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      force:
+        type: boolean
+      state:
+        type: boolean
+      type:
+        enum:
+        - set-wafv2
+      web-acl:
+        type: string
+    required:
+    - web-acl
+    - type
+
+
+
+
+Permissions - cloudfront:UpdateDistribution, wafv2:ListWebACLs
 

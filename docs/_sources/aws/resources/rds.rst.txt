@@ -21,6 +21,8 @@ Filters
 
   - :ref:`default-vpc <aws.rds.filters.default-vpc>`
 
+  - :ref:`engine <aws.common.filters.engine>`
+  
   - :ref:`event <aws.common.filters.event>`
   
   - :ref:`finding <aws.common.filters.finding>`
