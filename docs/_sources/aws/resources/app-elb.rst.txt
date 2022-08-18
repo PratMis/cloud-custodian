@@ -659,8 +659,19 @@ Permissions - elasticloadbalancing:DescribeTargetGroups
 
 waf-enabled
 +++++++++++
-Parent base class for filters and actions.
-    
+Filter Application LoadBalancer by waf-regional web-acl
+
+:example:
+
+.. code-block:: yaml
+
+        policies:
+          - name: filter-elb-waf-regional
+            resource: app-elb
+            filters:
+              - type: waf-enabled
+                state: false
+                web-acl: test
 
 .. container:: toggle
 
@@ -693,8 +704,19 @@ Permissions - waf-regional:ListResourcesForWebACL, waf-regional:ListWebACLs
 
 wafv2-enabled
 +++++++++++++
-Parent base class for filters and actions.
-    
+Filter Application LoadBalancer by wafv2 web-acl
+
+:example:
+
+.. code-block:: yaml
+
+        policies:
+          - name: filter-wafv2-elb
+            resource: app-elb
+            filters:
+              - type: wafv2-enabled
+                state: false
+                web-acl: testv2
 
 .. container:: toggle
 
@@ -1060,9 +1082,33 @@ Permissions - shield:CreateProtection, shield:ListProtections
 
 set-waf
 +++++++
-Enable/Disable waf protection on applicable resource.
+Enable wafv2 protection on Application LoadBalancer.
 
-    
+:example:
+
+.. code-block:: yaml
+
+        policies:
+          - name: set-waf-for-elb
+            resource: app-elb
+            filters:
+              - type: waf-enabled
+                state: false
+                web-acl: test
+            actions:
+              - type: set-waf
+                state: true
+                web-acl: test
+
+          - name: disassociate-wafv2-associate-waf-regional-elb
+            resource: app-elb
+            filters:
+              - type: wafv2-enabled
+                state: true
+            actions:
+              - type: set-waf
+                state: true
+                web-acl: test
 
 .. container:: toggle
 
@@ -1096,9 +1142,33 @@ Permissions - waf-regional:AssociateWebACL, waf-regional:ListWebACLs
 
 set-wafv2
 +++++++++
-Enable/Disable wafv2 protection on applicable resource.
+Enable wafv2 protection on Application LoadBalancer.
 
-    
+:example:
+
+.. code-block:: yaml
+
+        policies:
+          - name: set-wafv2-for-elb
+            resource: app-elb
+            filters:
+              - type: wafv2-enabled
+                state: false
+                web-acl: testv2
+            actions:
+              - type: set-wafv2
+                state: true
+                web-acl: testv2
+
+          - name: disassociate-waf-regional-associate-wafv2-elb
+            resource: app-elb
+            filters:
+              - type: waf-enabled
+                state: true
+            actions:
+              - type: set-wafv2
+                state: true
+                web-acl: testv2
 
 .. container:: toggle
 

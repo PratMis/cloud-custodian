@@ -276,12 +276,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/aws-common-filters.html#check-permissions">check-permissions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/aws-common-filters.html#client-properties">client-properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/aws-common-filters.html#config-compliance">config-compliance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../aws/resources/aws-common-filters.html#connection-aliases">connection-aliases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../aws/resources/aws-common-filters.html#domain-options">domain-options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/aws-common-filters.html#engine">engine</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/aws-common-filters.html#event">event</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/aws-common-filters.html#finding">finding</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/aws-common-filters.html#health-event">health-event</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/aws-common-filters.html#iam-analyzer">iam-analyzer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/aws-common-filters.html#image">image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../aws/resources/aws-common-filters.html#instance-attribute">instance-attribute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/aws-common-filters.html#logging">logging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/aws-common-filters.html#marked-for-op">marked-for-op</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/aws-common-filters.html#metrics">metrics</a></li>
@@ -577,6 +580,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/config-rule.html">aws.config-rule</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../aws/resources/config-rule.html#filters">Filters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../aws/resources/config-rule.html#actions">Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../aws/resources/group-connect.html">connect resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../aws/resources/connect-instance.html">aws.connect-instance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../aws/resources/connect-instance.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../aws/resources/connect-instance.html#actions">Actions</a></li>
 </ul>
 </li>
 </ul>
@@ -974,6 +985,14 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../aws/resources/group-fis.html">fis resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../aws/resources/fis-template.html">aws.fis-template</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../aws/resources/fis-template.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../aws/resources/fis-template.html#actions">Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../aws/resources/group-fsx.html">fsx resources</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/fsx.html">aws.fsx</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../aws/resources/fsx.html#filters">Filters</a></li>
@@ -1179,14 +1198,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/kms-key.html">aws.kms-key</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../aws/resources/kms-key.html#filters">Filters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../aws/resources/kms-key.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../aws/resources/group-lakeformation.html">lakeformation resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../aws/resources/lakeformation.html">aws.lakeformation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../aws/resources/lakeformation.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../aws/resources/lakeformation.html#actions">Actions</a></li>
 </ul>
 </li>
 </ul>
@@ -5299,13 +5310,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../developer/installing.html#install-python-3">Install Python 3</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../developer/installing.html#on-ubuntu">On Ubuntu</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../developer/installing.html#on-macos-with-homebrew">On macOS with Homebrew</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developer/installing.html#on-windows">On Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developer/installing.html#other-installation-methods">Other Installation Methods</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../developer/installing.html#basic-python-tools">Basic Python Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer/installing.html#install-poetry">Install Poetry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developer/installing.html#on-mac-linux">On Mac/Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developer/installing.html#on-windows-with-powershell">On Windows with Powershell</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../developer/installing.html#installing-custodian">Installing Custodian</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../developer/installing.html#installing-in-your-own-virtual-environment">Installing in Your Own Virtual Environment</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../developer/tests.html">Testing for Developers</a><ul>
@@ -5359,7 +5375,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="omnissm-ec2-systems-manager-automation">
+  <section id="omnissm-ec2-systems-manager-automation">
 <h1>OmniSSM - EC2 Systems Manager Automation<a class="headerlink" href="#omnissm-ec2-systems-manager-automation" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://godoc.org/github.com/capitalone/cloud-custodian/tools/omnissm"><img alt="GoDoc" src="https://godoc.org/github.com/capitalone/cloud-custodian/tools/omnissm?status.svg" /></a></p>
 <p>Automation for AWS Systems Manager using hybrid mode. Using hybrid mode for ec2 instances brings a few benefits.</p>

@@ -66,6 +66,8 @@ be applies for all resources.
 
    group-config.rst
 
+   group-connect.rst
+
    group-datapipeline.rst
 
    group-dax.rst
@@ -108,6 +110,8 @@ be applies for all resources.
 
    group-firehose.rst
 
+   group-fis.rst
+
    group-fsx.rst
 
    group-gamelift.rst
@@ -133,8 +137,6 @@ be applies for all resources.
    group-kinesisvideo.rst
 
    group-kms.rst
-
-   group-lakeformation.rst
 
    group-lambda.rst
 

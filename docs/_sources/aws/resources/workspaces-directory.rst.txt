@@ -14,6 +14,8 @@ Filters
 
   - :ref:`client-properties <aws.common.filters.client-properties>`
   
+  - :ref:`connection-aliases <aws.common.filters.connection-aliases>`
+  
   - :ref:`event <aws.common.filters.event>`
   
   - :ref:`finding <aws.common.filters.finding>`

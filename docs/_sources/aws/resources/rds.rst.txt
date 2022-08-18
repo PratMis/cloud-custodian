@@ -65,7 +65,8 @@ Filters
 
 consecutive-snapshots
 +++++++++++++++++++++
-Returns instances where number of consective daily snapshots is equal to/or greater than n days.
+Returns instances where number of consective daily snapshots is
+equal to/or greater than n days.
 
 :example:
 
