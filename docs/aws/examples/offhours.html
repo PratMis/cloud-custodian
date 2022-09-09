@@ -5231,6 +5231,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../tools/c7n-mailer.html#secured-string">Secured String</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../tools/c7n-mailer.html#aws">AWS</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../tools/c7n-mailer.html#azure">Azure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tools/c7n-mailer.html#gcp">GCP</a></li>
 </ul>
 </li>
 </ul>
@@ -5239,6 +5240,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-mailer.html#using-on-azure">Using on Azure</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/c7n-mailer.html#deploying-azure-functions">Deploying Azure Functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/c7n-mailer.html#configuring-function-identity">Configuring Function Identity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-mailer.html#using-on-gcp">Using on GCP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/c7n-mailer.html#deploying-gcp-functions">Deploying GCP Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-mailer.html#writing-an-email-template">Writing an email template</a></li>
@@ -5576,16 +5581,19 @@ above. The best current workaround is to define a separate policy with a unique
 resources with that tag name and a value of <code class="docutils literal notranslate"><span class="pre">on</span></code>. Note that this can only be
 used in opt-in mode, not opt-out.</p>
 <p>Another option is to escape the tag value with the following mapping, generated
-with the char’s unicode number <cite>“u” + hex(ord(the_char))[2:]</cite>.</p>
+with the char’s unicode number <cite>“u” + hex(ord(the_char))[2:]</cite>.
+This works for GCP resources as well.</p>
 <ul class="simple">
 <li><p>( and ) as u28 and u29</p></li>
 <li><p>[ and ] as u5b and u5d</p></li>
 <li><p>, as u2c</p></li>
 <li><p>; as u3b</p></li>
+<li><p>= as u3d</p></li>
+<li><p>/ as u2f</p></li>
 </ul>
 <p><strong>Examples</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># off=(M-F,18);tz=Australia/Sydney</span>
-<span class="n">off</span><span class="o">=</span><span class="n">u28M</span><span class="o">-</span><span class="n">Fu2c18u29u3btz</span><span class="o">=</span><span class="n">Australia</span><span class="o">/</span><span class="n">Sydney</span>
+<span class="n">offu3du28M</span><span class="o">-</span><span class="n">Fu2c18u29u3btzu3dAustraliau2fSydney</span>
 <span class="c1"># off=[(M-F,18),(S,13)]</span>
 <span class="n">off</span><span class="o">=</span><span class="n">u5bu28M</span><span class="o">-</span><span class="n">Fu2c18u29u2cu28Su2c13u29u5d</span>
 </pre></div>

@@ -5231,6 +5231,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#secured-string">Secured String</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#aws">AWS</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#azure">Azure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gcp">GCP</a></li>
 </ul>
 </li>
 </ul>
@@ -5239,6 +5240,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#using-on-azure">Using on Azure</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#deploying-azure-functions">Deploying Azure Functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#configuring-function-identity">Configuring Function Identity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-on-gcp">Using on GCP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#deploying-gcp-functions">Deploying GCP Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#writing-an-email-template">Writing an email template</a></li>
@@ -5453,7 +5458,7 @@ environment)</p>
 c7n integration with AWS CloudWatch and use the
 <a class="reference external" href="https://docs.datadoghq.com/integrations/amazon_web_services/">DataDog integration with AWS</a>
 to collect CloudWatch metrics. The mailer/messenger integration is only
-for the case you don’t want or you can’t use AWS CloudWatch.</p>
+for the case you don’t want or you can’t use AWS CloudWatch, e.g. in Azure or GCP.</p>
 <p>Note this integration requires the additional dependency of datadog python bindings:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">datadog</span>
 </pre></div>
@@ -5683,6 +5688,12 @@ and here is a description of the options:</p>
 <td align="left">array of strings</td>
 <td align="left">tags that we should look at for address information</td>
 </tr>
+<tr>
+<td align="center"></td>
+<td align="left"><code>email_base_url</code></td>
+<td align="left">string</td>
+<td align="left">Base URL to construct a valid email address from a resource owner</td>
+</tr>
 </tbody>
 </table>
 <section id="standard-lambda-function-config">
@@ -5853,7 +5864,7 @@ and here is a description of the options:</p>
 <tr>
 <td align="center"></td>
 <td align="left"><code>ldap_bind_password</code></td>
-<td align="left">string</td>
+<td align="left">secured string</td>
 <td align="left">ldap bind password</td>
 </tr>
 <tr>
@@ -6156,6 +6167,23 @@ Custodian tries to decrypt the string using KMS, if it fails c7n treats it as a 
 </div>
 <p>Note: <code class="docutils literal notranslate"><span class="pre">secrets.get</span></code> permission on the KeyVault for the Service Principal is required.</p>
 </section>
+<section id="gcp">
+<h4>GCP<a class="headerlink" href="#gcp" title="Permalink to this headline">¶</a></h4>
+<p>You can store your secrets as GCP Secret Manager secrets and reference them from the policy.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">plaintext_secret</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;raw_secret&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">secured_string</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gcp.secretmanager</span><span class="w"></span>
+<span class="w">    </span><span class="nt">secret</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">projects/12345678912/secrets/your-secret</span><span class="w"></span>
+</pre></div>
+</div>
+<p>An example of an SMTP password set as a secured string:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">smtp_password</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gcp.secretmanager</span><span class="w"></span>
+<span class="w">    </span><span class="nt">secret</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">projects/59808015552/secrets/smtp_pw</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Note: If you do not specify a version, <code class="docutils literal notranslate"><span class="pre">/versions/latest</span></code> will be appended to your secret location.</p>
+</section>
 </section>
 </section>
 <section id="configuring-a-policy-to-send-email">
@@ -6319,6 +6347,59 @@ user management activity must be performed manually.</p>
 <span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SystemAssigned</span><span class="w"></span>
 </pre></div>
 </div>
+</section>
+</section>
+<section id="using-on-gcp">
+<h2>Using on GCP<a class="headerlink" href="#using-on-gcp" title="Permalink to this headline">¶</a></h2>
+<p>Requires:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">c7n_gcp</span></code> package.  See <a class="reference external" href="https://cloudcustodian.io/docs/gcp/gettingstarted.html">GCP Getting Started</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">google-cloud-secret-manager</span></code> package, for pulling in secured string values.</p></li>
+<li><p>A working SMTP Account.</p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/pubsub/docs/">GCP Pubsub Subscription</a></p></li>
+</ul>
+<p>The mailer supports GCP Pubsub transports and SMTP/Email delivery, as well as Datadog and Splunk.
+Configuration for this scenario requires only minor changes from AWS deployments.</p>
+<p>The notify action in your policy will reflect transport type <code class="docutils literal notranslate"><span class="pre">projects</span></code> with the URL
+to a GCP Pub/Sub Topic.  For example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gcp-notify</span><span class="w"></span>
+<span class="w">    </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gcp.compute</span><span class="w"></span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example policy</span><span class="w"></span>
+<span class="w">    </span><span class="nt">actions</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">notify</span><span class="w"></span>
+<span class="w">        </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span><span class="w"></span>
+<span class="w">        </span><span class="nt">priority_header</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2&#39;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">subject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello from C7N Mailer</span><span class="w"></span>
+<span class="w">        </span><span class="nt">to</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">you@youremail.com</span><span class="w"></span>
+<span class="w">        </span><span class="nt">transport</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pubsub</span><span class="w"></span>
+<span class="w">          </span><span class="nt">topic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">projects/myproject/topics/mytopic</span><span class="w"></span>
+</pre></div>
+</div>
+<p>In your mailer configuration, you’ll need to provide your SMTP account information
+as well as your topic subscription path in the queue_url variable. Please note that the
+subscription you specify should be subscribed to the topic you assign in your policies’
+notify action for GCP resources.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">queue_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">projects/myproject/subscriptions/mysubscription</span><span class="w"></span>
+<span class="nt">from_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">you@youremail.com</span><span class="w"></span>
+<span class="c1"># c7n-mailer currently requires a role be present, even if it&#39;s empty</span><span class="w"></span>
+<span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
+
+<span class="nt">smtp_server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my.smtp.add.ress</span><span class="w"></span>
+<span class="nt">smtp_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span><span class="w"></span>
+<span class="nt">smtp_ssl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="nt">smtp_username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smtpuser</span><span class="w"></span>
+<span class="nt">smtp_password</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gcp.secretmanager</span><span class="w"></span>
+<span class="w">  </span><span class="nt">secret</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">projects/12345678912/secrets/smtppassword</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The mailer will transmit all messages found on the queue on each execution using SMTP/Email delivery.</p>
+<section id="deploying-gcp-functions">
+<h3>Deploying GCP Functions<a class="headerlink" href="#deploying-gcp-functions" title="Permalink to this headline">¶</a></h3>
+<p>GCP Cloud Functions for c7n-mailer are currently not supported.</p>
 </section>
 </section>
 <section id="writing-an-email-template">

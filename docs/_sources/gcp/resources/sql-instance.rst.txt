@@ -18,6 +18,10 @@ Filters
 
   - :ref:`metrics <gcp.sql-instance.filters.metrics>`
 
+  - :ref:`offhour <gcp.common.filters.offhour>`
+  
+  - :ref:`onhour <gcp.common.filters.onhour>`
+  
   - :ref:`reduce <gcp.common.filters.reduce>`
   
   - :ref:`scc-findings <gcp.common.filters.scc-findings>`
