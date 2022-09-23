@@ -1202,6 +1202,14 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="group-lakeformation.html">lakeformation resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datalake-location.html">aws.datalake-location</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="datalake-location.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalake-location.html#actions">Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="group-lambda.html">lambda resources</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="lambda.html">aws.lambda</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="lambda.html#filters">Filters</a></li>
@@ -5515,6 +5523,31 @@ a given set of ports, <em>note</em> OnlyPorts is an inverse match.</p>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">x.y.z</span><span class="w"></span>
 </pre></div>
 </div>
+<p><cite>value_type: cidr</cite> can also filter if cidr is a subset of cidr
+value range. In this example we are allowing any smaller cidrs within
+allowed_cidrs.csv.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ingress</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Cidr</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cidr</span><span class="w"></span>
+<span class="w">    </span><span class="nt">op</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">not-in</span><span class="w"></span>
+<span class="w">    </span><span class="nt">value_from</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s3://a-policy-data-us-west-2/allowed_cidrs.csv</span><span class="w"></span>
+<span class="w">      </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">csv</span><span class="w"></span>
+</pre></div>
+</div>
+<p>or value can be specified as a list:</p>
+<blockquote>
+<div><ul>
+<li><p>type: ingress
+Cidr:</p>
+<blockquote>
+<div><p>value_type: cidr
+op: not-in
+value: [“10.0.0.0/8”, “192.168.0.0/16”]</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
 <p><cite>Cidr</cite> can match ipv4 rules and <cite>CidrV6</cite> can match ipv6 rules.  In
 this example we are blocking global inbound connections to SSH or
 RDP.</p>
@@ -5689,6 +5722,31 @@ a given set of ports, <em>note</em> OnlyPorts is an inverse match.</p>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">x.y.z</span><span class="w"></span>
 </pre></div>
 </div>
+<p><cite>value_type: cidr</cite> can also filter if cidr is a subset of cidr
+value range. In this example we are allowing any smaller cidrs within
+allowed_cidrs.csv.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ingress</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Cidr</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cidr</span><span class="w"></span>
+<span class="w">    </span><span class="nt">op</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">not-in</span><span class="w"></span>
+<span class="w">    </span><span class="nt">value_from</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s3://a-policy-data-us-west-2/allowed_cidrs.csv</span><span class="w"></span>
+<span class="w">      </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">csv</span><span class="w"></span>
+</pre></div>
+</div>
+<p>or value can be specified as a list:</p>
+<blockquote>
+<div><ul>
+<li><p>type: ingress
+Cidr:</p>
+<blockquote>
+<div><p>value_type: cidr
+op: not-in
+value: [“10.0.0.0/8”, “192.168.0.0/16”]</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
 <p><cite>Cidr</cite> can match ipv4 rules and <cite>CidrV6</cite> can match ipv6 rules.  In
 this example we are blocking global inbound connections to SSH or
 RDP.</p>

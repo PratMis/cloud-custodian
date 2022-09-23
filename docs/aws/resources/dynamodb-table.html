@@ -1202,6 +1202,14 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="group-lakeformation.html">lakeformation resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datalake-location.html">aws.datalake-location</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="datalake-location.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalake-location.html#actions">Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="group-lambda.html">lambda resources</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="lambda.html">aws.lambda</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="lambda.html#filters">Filters</a></li>
@@ -5389,6 +5397,7 @@
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference internal" href="aws-common-filters.html#aws-common-filters-config-compliance"><span class="std std-ref">config-compliance</span></a></p></li>
+<li><p><a class="reference internal" href="#aws-dynamodb-table-filters-consecutive-backups"><span class="std std-ref">consecutive-backups</span></a></p></li>
 <li><p><a class="reference internal" href="#aws-dynamodb-table-filters-continuous-backup"><span class="std std-ref">continuous-backup</span></a></p></li>
 <li><p><a class="reference internal" href="aws-common-filters.html#aws-common-filters-event"><span class="std std-ref">event</span></a></p></li>
 <li><p><a class="reference internal" href="aws-common-filters.html#aws-common-filters-finding"><span class="std std-ref">finding</span></a></p></li>
@@ -5402,6 +5411,38 @@
 <li><p><a class="reference internal" href="aws-common-filters.html#aws-common-filters-value"><span class="std std-ref">value</span></a></p></li>
 </ul>
 </div></blockquote>
+<section id="consecutive-backups">
+<span id="aws-dynamodb-table-filters-consecutive-backups"></span><h3>consecutive-backups<a class="headerlink" href="#consecutive-backups" title="Permalink to this headline">¶</a></h3>
+<p>Returns tables where number of consective daily backups is
+equal to/or greater than n days.</p>
+<dl class="field-list simple">
+<dt class="field-odd">example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dynamodb-daily-backup-count</span><span class="w"></span>
+<span class="w">    </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dynamodb-table</span><span class="w"></span>
+<span class="w">    </span><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consecutive-backups</span><span class="w"></span>
+<span class="w">        </span><span class="nt">days</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container" style=""></div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">days</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">minimum</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">number</span><span class="w"></span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">enum</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consecutive-backups</span><span class="w"></span>
+<span class="nt">required</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">days</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>Permissions - dynamodb:ListBackups, dynamodb:DescribeBackup, dynamodb:DescribeTable</p>
+</section>
 <section id="continuous-backup">
 <span id="aws-dynamodb-table-filters-continuous-backup"></span><h3>continuous-backup<a class="headerlink" href="#continuous-backup" title="Permalink to this headline">¶</a></h3>
 <p>Check for continuous backups and point in time recovery (PITR) on a dynamodb table.</p>

@@ -1199,6 +1199,14 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../aws/resources/group-lakeformation.html">lakeformation resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../aws/resources/datalake-location.html">aws.datalake-location</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aws/resources/datalake-location.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../aws/resources/datalake-location.html#actions">Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/resources/group-lambda.html">lambda resources</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../aws/resources/lambda.html">aws.lambda</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../aws/resources/lambda.html#filters">Filters</a></li>
@@ -5446,8 +5454,11 @@
     <span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resource_manager</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Query a set of resources.&quot;&quot;&quot;</span>
         <span class="n">m</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve</span><span class="p">(</span><span class="n">resource_manager</span><span class="o">.</span><span class="n">resource_type</span><span class="p">)</span>
-        <span class="n">client</span> <span class="o">=</span> <span class="n">local_session</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session_factory</span><span class="p">)</span><span class="o">.</span><span class="n">client</span><span class="p">(</span>
-            <span class="n">m</span><span class="o">.</span><span class="n">service</span><span class="p">,</span> <span class="n">resource_manager</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">region</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resource_manager</span><span class="o">.</span><span class="n">get_client</span><span class="p">:</span>
+            <span class="n">client</span> <span class="o">=</span> <span class="n">resource_manager</span><span class="o">.</span><span class="n">get_client</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">client</span> <span class="o">=</span> <span class="n">local_session</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session_factory</span><span class="p">)</span><span class="o">.</span><span class="n">client</span><span class="p">(</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">service</span><span class="p">,</span> <span class="n">resource_manager</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">region</span><span class="p">)</span>
         <span class="n">enum_op</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">extra_args</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">enum_spec</span>
         <span class="k">if</span> <span class="n">extra_args</span><span class="p">:</span>
             <span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">extra_args</span><span class="p">)</span>
@@ -5820,6 +5831,8 @@
     <span class="n">permissions</span> <span class="o">=</span> <span class="p">()</span>
 
     <span class="n">_generate_arn</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">get_client</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="n">retry</span> <span class="o">=</span> <span class="nb">staticmethod</span><span class="p">(</span>
         <span class="n">get_retry</span><span class="p">((</span>
