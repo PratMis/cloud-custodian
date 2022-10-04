@@ -1506,6 +1506,11 @@
 <li class="toctree-l4"><a class="reference internal" href="../../aws/resources/catalog-portfolio.html#actions">Actions</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../aws/resources/catalog-product.html">aws.catalog-product</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aws/resources/catalog-product.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../aws/resources/catalog-product.html#actions">Actions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/resources/group-shield.html">shield resources</a><ul>
@@ -6210,6 +6215,9 @@
 <span class="sd">        passed as this value. Further customizations of dimensions require subclass metrics filter</span>
 <span class="sd">    :param cfn_type: AWS Cloudformation type</span>
 <span class="sd">    :param config_type: AWS Config Service resource type name</span>
+<span class="sd">    :param config_id: Resource attribute that maps to the resourceId field in AWS Config. Intended</span>
+<span class="sd">        for resources which use one ID attribute for service API calls and a different one for</span>
+<span class="sd">        AWS Config (example: IAM resources).</span>
 <span class="sd">    :param universal_taggable: Whether or not resource group tagging api can be used, in which case</span>
 <span class="sd">        we&#39;ll automatically register tag actions/filters. Note: values of True will register legacy</span>
 <span class="sd">        tag filters/actions, values of object() will just register current standard</span>
@@ -6251,6 +6259,7 @@
     <span class="n">dimension</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">cfn_type</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">config_type</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">config_id</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">universal_taggable</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">global_resource</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">metrics_namespace</span> <span class="o">=</span> <span class="kc">None</span>

@@ -1509,6 +1509,11 @@
 <li class="toctree-l4"><a class="reference internal" href="resources/catalog-portfolio.html#actions">Actions</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="resources/catalog-product.html">aws.catalog-product</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="resources/catalog-product.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resources/catalog-product.html#actions">Actions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="resources/group-shield.html">shield resources</a><ul>
@@ -5472,6 +5477,9 @@ modified date</p></li>
 passed as this value. Further customizations of dimensions require subclass metrics filter</p></li>
 <li><p><strong>cfn_type</strong> – AWS Cloudformation type</p></li>
 <li><p><strong>config_type</strong> – AWS Config Service resource type name</p></li>
+<li><p><strong>config_id</strong> – Resource attribute that maps to the resourceId field in AWS Config. Intended
+for resources which use one ID attribute for service API calls and a different one for
+AWS Config (example: IAM resources).</p></li>
 <li><p><strong>universal_taggable</strong> – Whether or not resource group tagging api can be used, in which case
 we’ll automatically register tag actions/filters. Note: values of True will register legacy
 tag filters/actions, values of object() will just register current standard
