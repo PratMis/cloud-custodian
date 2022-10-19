@@ -28,6 +28,8 @@ be applies for all resources.
 
    group-appflow.rst
 
+   group-appsync.rst
+
    group-autoscaling.rst
 
    group-backup.rst
