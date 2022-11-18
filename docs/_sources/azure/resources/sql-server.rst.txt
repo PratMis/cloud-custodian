@@ -58,6 +58,8 @@ Filters
 -------
 
 
+  - :ref:`auditing <azure.sql-server.filters.auditing>`
+
   - :ref:`azure-ad-administrators <azure.common.filters.azure-ad-administrators>`
   
   - :ref:`cost <azure.common.filters.cost>`
@@ -88,6 +90,51 @@ Filters
   
   - :ref:`vulnerability-assessment <azure.common.filters.vulnerability-assessment>`
   
+
+
+.. _azure.sql-server.filters.auditing:
+
+auditing
+++++++++
+Filter by the current auditing
+policy for this sql server.
+
+:example:
+
+Find SQL servers with auditing disabled
+
+.. code-block:: yaml
+
+    policies:
+      - name: sql-database-no-auditing
+        resource: azure.sql-server
+        filters:
+          - type: auditing
+            enabled: false
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      enabled:
+        type: boolean
+      type:
+        enum:
+        - auditing
+    required:
+    - type
+    - enabled
+    - type
+
+
+
 
 
 .. _azure.sql-server.filters.firewall-bypass:
