@@ -12,6 +12,8 @@ Filters
 -------
 
 
+  - :ref:`config-compliance <aws.common.filters.config-compliance>`
+  
   - :ref:`event <aws.common.filters.event>`
   
   - :ref:`finding <aws.common.filters.finding>`
@@ -170,7 +172,52 @@ Actions
   
   - :ref:`put-metric <aws.common.actions.put-metric>`
   
+  - :ref:`set-role <aws.iam-profile.actions.set-role>`
+
   - :ref:`webhook <aws.common.actions.webhook>`
   
 
+
+
+.. _aws.iam-profile.actions.set-role:
+
+set-role
+++++++++
+Upserts specified role name for IAM instance profiles.
+   Instance profile roles are removed when empty role name is specified.
+
+:example:
+
+.. code-block:: yaml
+
+    policies:
+      - name: iam-instance-profile-set-role
+        resource: iam-profile
+        actions:
+            - type: set-role
+              role: my-test-role
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      role:
+        type: string
+      type:
+        enum:
+        - set-role
+    required:
+    - type
+
+
+
+
+Permissions - iam:AddRoleToInstanceProfile, iam:RemoveRoleFromInstanceProfile
 

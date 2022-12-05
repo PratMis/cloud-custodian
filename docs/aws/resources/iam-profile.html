@@ -5404,12 +5404,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-org.html#additional-azure-instructions">Additional Azure Instructions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/cask.html">cask: easy custodian exec via docker</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/cask.html#install">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/cask.html#run">Run</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/cask.html#build">Build</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-mailer.html">c7n-mailer: Custodian Mailer</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-mailer.html#message-relay">Message Relay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-mailer.html#tutorial">Tutorial</a><ul>
@@ -5458,6 +5452,10 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html">Custodian policies for Infrastructure Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#install">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#outputs">Outputs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-logexporter.html">c7n-log-exporter: Cloud watch log exporter automation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-logexporter.html#features">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-logexporter.html#assumptions">Assumptions</a></li>
@@ -5571,10 +5569,10 @@
         <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">AWS Reference</a> &raquo;</li>
-          <li><a href="group-iam.html">iam resources</a> &raquo;</li>
-      <li>aws.iam-profile</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">AWS Reference</a></li>
+          <li class="breadcrumb-item"><a href="group-iam.html">iam resources</a></li>
+      <li class="breadcrumb-item active">aws.iam-profile</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
@@ -5592,6 +5590,7 @@
 <h2>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
+<li><p><a class="reference internal" href="aws-common-filters.html#aws-common-filters-config-compliance"><span class="std std-ref">config-compliance</span></a></p></li>
 <li><p><a class="reference internal" href="aws-common-filters.html#aws-common-filters-event"><span class="std std-ref">event</span></a></p></li>
 <li><p><a class="reference internal" href="aws-common-filters.html#aws-common-filters-finding"><span class="std std-ref">finding</span></a></p></li>
 <li><p><a class="reference internal" href="#aws-iam-profile-filters-has-specific-managed-policy"><span class="std std-ref">has-specific-managed-policy</span></a></p></li>
@@ -5698,9 +5697,42 @@ as not having the policy.</p>
 <li><p><a class="reference internal" href="aws-common-actions.html#aws-common-actions-post-finding"><span class="std std-ref">post-finding</span></a></p></li>
 <li><p><a class="reference internal" href="aws-common-actions.html#aws-common-actions-post-item"><span class="std std-ref">post-item</span></a></p></li>
 <li><p><a class="reference internal" href="aws-common-actions.html#aws-common-actions-put-metric"><span class="std std-ref">put-metric</span></a></p></li>
+<li><p><a class="reference internal" href="#aws-iam-profile-actions-set-role"><span class="std std-ref">set-role</span></a></p></li>
 <li><p><a class="reference internal" href="aws-common-actions.html#aws-common-actions-webhook"><span class="std std-ref">webhook</span></a></p></li>
 </ul>
 </div></blockquote>
+<section id="set-role">
+<span id="aws-iam-profile-actions-set-role"></span><h3>set-role<a class="headerlink" href="#set-role" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Upserts specified role name for IAM instance profiles.</dt><dd><p>Instance profile roles are removed when empty role name is specified.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iam-instance-profile-set-role</span><span class="w"></span>
+<span class="w">    </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iam-profile</span><span class="w"></span>
+<span class="w">    </span><span class="nt">actions</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set-role</span><span class="w"></span>
+<span class="w">          </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-test-role</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container" style=""></div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">role</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">enum</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set-role</span><span class="w"></span>
+<span class="nt">required</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>Permissions - iam:AddRoleToInstanceProfile, iam:RemoveRoleFromInstanceProfile</p>
+</section>
 </section>
 </section>
 

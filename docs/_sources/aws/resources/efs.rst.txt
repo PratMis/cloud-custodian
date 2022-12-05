@@ -20,6 +20,8 @@ Filters
   
   - :ref:`finding <aws.common.filters.finding>`
   
+  - :ref:`has-statement <aws.efs.filters.has-statement>`
+
   - :ref:`health-event <aws.common.filters.health-event>`
   
   - :ref:`json-diff <aws.efs.filters.json-diff>`
@@ -93,6 +95,99 @@ Effect and Condition for its policy document. For example:
 
 
 Permissions - elasticfilesystem:DescribeFileSystemPolicy
+
+
+.. _aws.efs.filters.has-statement:
+
+has-statement
++++++++++++++
+Find resources with matching access policy statements.
+:example:
+.. code-block:: yaml
+        policies:
+          - name: sns-check-statement-id
+            resource: sns
+            filters:
+              - type: has-statement
+                statement_ids:
+                  - BlockNonSSL
+        policies:
+          - name: sns-check-block-non-ssl
+            resource: sns
+            filters:
+              - type: has-statement
+                statements:
+                  - Effect: Deny
+                    Action: 'SNS:Publish'
+                    Principal: '*'
+                    Condition:
+                        Bool:
+                            "aws:SecureTransport": "false"
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      statement_ids:
+        items:
+          type: string
+        type: array
+      statements:
+        items:
+          properties:
+            Action:
+              anyOf:
+              - type: string
+              - type: array
+            Condition:
+              type: object
+            Effect:
+              enum:
+              - Allow
+              - Deny
+              type: string
+            NotAction:
+              anyOf:
+              - type: string
+              - type: array
+            NotPrincipal:
+              anyOf:
+              - type: object
+              - type: array
+            NotResource:
+              anyOf:
+              - type: string
+              - type: array
+            Principal:
+              anyOf:
+              - type: string
+              - type: object
+              - type: array
+            Resource:
+              anyOf:
+              - type: string
+              - type: array
+            Sid:
+              type: string
+          required:
+          - Effect
+          type: object
+        type: array
+      type:
+        enum:
+        - has-statement
+    required:
+    - type
+
+
+
 
 
 .. _aws.efs.filters.json-diff:
