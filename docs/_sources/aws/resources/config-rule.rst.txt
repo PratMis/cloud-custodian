@@ -24,12 +24,112 @@ Filters
   
   - :ref:`reduce <aws.common.filters.reduce>`
   
+  - :ref:`remediation <aws.config-rule.filters.remediation>`
+
   - :ref:`status <aws.config-rule.filters.status>`
 
   - :ref:`tag-count <aws.common.filters.tag-count>`
   
   - :ref:`value <aws.common.filters.value>`
   
+
+
+.. _aws.config-rule.filters.remediation:
+
+remediation
++++++++++++
+Filter to look for config rules that match the given remediation configuration settings
+
+This filter can be used in conjunction with account missing filter to look for
+managed config rules with missing remediation and to enable it accordingly.
+
+:example:
+
+.. code-block:: yaml
+
+    policies:
+      - name: config-managed-s3-bucket-public-write-remediate-event-with-filter
+        description: |
+          This policy detects if S3 bucket allows public write by the bucket policy
+          or ACL and remediates.
+        comment: |
+          This policy detects if S3 bucket policy or ACL allows public write access.
+          When the bucket is evaluated as 'NON_COMPLIANT', the action
+          'AWS-DisableS3BucketPublicReadWrite' is triggered and remediates.
+        resource: account
+        filters:
+          - type: missing
+            policy:
+              resource: config-rule
+              filters:
+                - type: remediation
+                  rule_name: &rule_name 'config-managed-s3-bucket-public-write-remediate-event'
+                  remediation: &remediation-config
+                    TargetId: AWS-DisableS3BucketPublicReadWrite
+                    Automatic: true
+                    MaximumAutomaticAttempts: 5
+                    RetryAttemptSeconds: 211
+                    Parameters:
+                      AutomationAssumeRole:
+                        StaticValue:
+                          Values:
+                            - 'arn:aws:iam::{account_id}:role/myrole'
+                      S3BucketName:
+                        ResourceValue:
+                          Value: RESOURCE_ID
+        actions:
+          - type: toggle-config-managed-rule
+            rule_name: *rule_name
+            managed_rule_id: S3_BUCKET_PUBLIC_WRITE_PROHIBITED
+            resource_types:
+              - 'AWS::S3::Bucket'
+            rule_parameters: '{}'
+            remediation: *remediation-config
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      remediation:
+        properties:
+          automatic:
+            type: boolean
+          execution_controls:
+            type: object
+          maximum_automatic_attempts:
+            maximum: 25
+            minimum: 1
+            type: integer
+          parameters:
+            type: object
+          retry_attempt_seconds:
+            maximum: 2678000
+            minimum: 1
+            type: integer
+          target_id:
+            type: string
+          target_type:
+            type: string
+        type: object
+      rule_name:
+        type: string
+      type:
+        enum:
+        - remediation
+    required:
+    - type
+
+
+
+
+Permissions - config:DescribeRemediationConfigurations
 
 
 .. _aws.config-rule.filters.status:

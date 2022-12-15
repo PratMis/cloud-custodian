@@ -34,6 +34,8 @@ Filters
   
   - :ref:`reduce <aws.common.filters.reduce>`
   
+  - :ref:`tag-count <aws.common.filters.tag-count>`
+  
   - :ref:`value <aws.common.filters.value>`
   
 

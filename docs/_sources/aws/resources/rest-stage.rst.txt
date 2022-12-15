@@ -477,7 +477,6 @@ Enable wafv2 protection on API Gateway stage.
       web-acl:
         type: string
     required:
-    - web-acl
     - type
 
 

@@ -16,6 +16,8 @@ Filters
 
   - :ref:`config-compliance <aws.common.filters.config-compliance>`
   
+  - :ref:`consecutive-aws-backups <aws.efs.filters.consecutive-aws-backups>`
+
   - :ref:`event <aws.common.filters.event>`
   
   - :ref:`finding <aws.common.filters.finding>`
@@ -95,6 +97,64 @@ Effect and Condition for its policy document. For example:
 
 
 Permissions - elasticfilesystem:DescribeFileSystemPolicy
+
+
+.. _aws.efs.filters.consecutive-aws-backups:
+
+consecutive-aws-backups
++++++++++++++++++++++++
+Returns resources where number of consective backups (based on the
+periodicity defined in the filter) is equal to/or greater than n units.
+This filter supports the resources that use AWS Backup service for backups.
+:example:
+.. code-block:: yaml
+        policies:
+          - name: dynamodb-consecutive-aws-backup-count
+            resource: dynamodb-table
+            filters:
+              - type: consecutive-aws-backups
+                count: 7
+                period: days
+                status: 'COMPLETED'
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      count:
+        minimum: 1
+        type: number
+      period:
+        enum:
+        - hours
+        - days
+        - weeks
+      status:
+        enum:
+        - COMPLETED
+        - PARTIAL
+        - DELETING
+        - EXPIRED
+      type:
+        enum:
+        - consecutive-aws-backups
+    required:
+    - count
+    - period
+    - status
+    - type
+
+
+
+
+Permissions - backup:ListRecoveryPointsByResource
 
 
 .. _aws.efs.filters.has-statement:

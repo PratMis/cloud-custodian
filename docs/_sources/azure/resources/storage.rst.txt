@@ -22,6 +22,8 @@ Filters
 -------
 
 
+  - :ref:`blob-services <azure.common.filters.blob-services>`
+  
   - :ref:`cost <azure.common.filters.cost>`
   
   - :ref:`event <azure.common.filters.event>`

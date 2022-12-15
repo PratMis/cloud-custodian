@@ -172,6 +172,8 @@ be applies for all resources.
 
    group-route53domains.rst
 
+   group-route53resolver.rst
+
    group-s3.rst
 
    group-s3control.rst
@@ -205,6 +207,8 @@ be applies for all resources.
    group-support.rst
 
    group-swf.rst
+
+   group-transfer.rst
 
    group-waf.rst
 

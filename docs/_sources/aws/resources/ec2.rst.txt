@@ -2198,6 +2198,8 @@ will just be stopped.
   .. code-block:: yaml
 
     properties:
+      force:
+        type: boolean
       hibernate:
         type: boolean
       terminate-ephemeral:

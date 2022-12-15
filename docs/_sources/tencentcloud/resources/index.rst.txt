@@ -20,6 +20,8 @@ be applies for all resources.
 
    tencentcloud-common-filters.rst
 
+   group-cam.rst
+
    group-cbs.rst
 
    group-cdb.rst
@@ -27,6 +29,8 @@ be applies for all resources.
    group-clb.rst
 
    group-cls.rst
+
+   group-cos.rst
 
    group-cvm.rst
 

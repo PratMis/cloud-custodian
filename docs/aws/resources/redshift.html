@@ -277,6 +277,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="aws-common-filters.html">AWS Common Filters</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="aws-common-filters.html#alarm">alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aws-common-filters.html#api-cache">api-cache</a></li>
 <li class="toctree-l3"><a class="reference internal" href="aws-common-filters.html#check-permissions">check-permissions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="aws-common-filters.html#client-properties">client-properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="aws-common-filters.html#config-compliance">config-compliance</a></li>
@@ -300,6 +301,7 @@
 <li class="toctree-l3"><a class="reference internal" href="aws-common-filters.html#ownership">ownership</a></li>
 <li class="toctree-l3"><a class="reference internal" href="aws-common-filters.html#reduce">reduce</a></li>
 <li class="toctree-l3"><a class="reference internal" href="aws-common-filters.html#security-group">security-group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aws-common-filters.html#ses-agg-send-stats">ses-agg-send-stats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="aws-common-filters.html#shield-metrics">shield-metrics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="aws-common-filters.html#subnet">subnet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="aws-common-filters.html#subscription-filter">subscription-filter</a></li>
@@ -1443,6 +1445,14 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="group-route53resolver.html">route53resolver resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="resolver-logs.html">aws.resolver-logs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="resolver-logs.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resolver-logs.html#actions">Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="group-s3.html">s3 resources</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="s3.html">aws.s3</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="s3.html#filters">Filters</a></li>
@@ -1655,6 +1665,19 @@
 <li class="toctree-l3"><a class="reference internal" href="swf-domain.html">aws.swf-domain</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="swf-domain.html#filters">Filters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="swf-domain.html#actions">Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="group-transfer.html">transfer resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="transfer-server.html">aws.transfer-server</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="transfer-server.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transfer-server.html#actions">Actions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="transfer-user.html">aws.transfer-user</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="transfer-user.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transfer-user.html#actions">Actions</a></li>
 </ul>
 </li>
 </ul>
@@ -1897,6 +1920,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../azure/resources/azure-common-filters.html">Azure Common Filters</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#authentication">authentication</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#azure-ad-administrators">azure-ad-administrators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#blob-services">blob-services</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#configuration">configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#configuration-parameter">configuration-parameter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#cost">cost</a></li>
@@ -2860,11 +2884,25 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../tencentcloud/resources/tencentcloud-common-filters.html">Tencent Cloud Common Filters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/tencentcloud-common-filters.html#check-permissions">check-permissions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/tencentcloud-common-filters.html#event">event</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/tencentcloud-common-filters.html#marked-for-op">marked-for-op</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/tencentcloud-common-filters.html#metrics">metrics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/tencentcloud-common-filters.html#reduce">reduce</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/tencentcloud-common-filters.html#value">value</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tencentcloud/resources/group-cam.html">cam resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/cam-policy.html">tencentcloud.cam-policy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tencentcloud/resources/cam-policy.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tencentcloud/resources/cam-policy.html#actions">Actions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/cam-user.html">tencentcloud.cam-user</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tencentcloud/resources/cam-user.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tencentcloud/resources/cam-user.html#actions">Actions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../tencentcloud/resources/group-cbs.html">cbs resources</a><ul>
@@ -2900,6 +2938,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/cls.html">tencentcloud.cls</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../tencentcloud/resources/cls.html#filters">Filters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../tencentcloud/resources/cls.html#actions">Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tencentcloud/resources/group-cos.html">cos resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/cos.html">tencentcloud.cos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tencentcloud/resources/cos.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tencentcloud/resources/cos.html#actions">Actions</a></li>
 </ul>
 </li>
 </ul>
@@ -5591,6 +5637,8 @@
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference internal" href="aws-common-filters.html#aws-common-filters-config-compliance"><span class="std std-ref">config-compliance</span></a></p></li>
+<li><p><a class="reference internal" href="#aws-redshift-filters-consecutive-aws-backups"><span class="std std-ref">consecutive-aws-backups</span></a></p></li>
+<li><p><a class="reference internal" href="#aws-redshift-filters-consecutive-snapshots"><span class="std std-ref">consecutive-snapshots</span></a></p></li>
 <li><p><a class="reference internal" href="#aws-redshift-filters-default-vpc"><span class="std std-ref">default-vpc</span></a></p></li>
 <li><p><a class="reference internal" href="aws-common-filters.html#aws-common-filters-event"><span class="std std-ref">event</span></a></p></li>
 <li><p><a class="reference internal" href="aws-common-filters.html#aws-common-filters-finding"><span class="std std-ref">finding</span></a></p></li>
@@ -5610,6 +5658,108 @@
 <li><p><a class="reference internal" href="aws-common-filters.html#aws-common-filters-value"><span class="std std-ref">value</span></a></p></li>
 </ul>
 </div></blockquote>
+<section id="consecutive-aws-backups">
+<span id="aws-redshift-filters-consecutive-aws-backups"></span><h3>consecutive-aws-backups<a class="headerlink" href="#consecutive-aws-backups" title="Permalink to this headline">¶</a></h3>
+<p>Returns resources where number of consective backups (based on the
+periodicity defined in the filter) is equal to/or greater than n units.
+This filter supports the resources that use AWS Backup service for backups.
+:example:
+.. code-block:: yaml</p>
+<blockquote>
+<div><dl>
+<dt>policies:</dt><dd><ul>
+<li><p>name: dynamodb-consecutive-aws-backup-count
+resource: dynamodb-table
+filters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>type: consecutive-aws-backups
+count: 7
+period: days
+status: ‘COMPLETED’</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<div class="toggle docutils container">
+<div class="header docutils container" style=""></div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">count</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">minimum</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">number</span><span class="w"></span>
+<span class="w">  </span><span class="nt">period</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">enum</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hours</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">days</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">weeks</span><span class="w"></span>
+<span class="w">  </span><span class="nt">status</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">enum</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">COMPLETED</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PARTIAL</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DELETING</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EXPIRED</span><span class="w"></span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">enum</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consecutive-aws-backups</span><span class="w"></span>
+<span class="nt">required</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">period</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>Permissions - backup:ListRecoveryPointsByResource</p>
+</section>
+<section id="consecutive-snapshots">
+<span id="aws-redshift-filters-consecutive-snapshots"></span><h3>consecutive-snapshots<a class="headerlink" href="#consecutive-snapshots" title="Permalink to this headline">¶</a></h3>
+<p>Returns Clusters where number of consective daily backups is
+equal to/or greater than n days.</p>
+<dl class="field-list simple">
+<dt class="field-odd">example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redshift-daily-snapshot-count</span><span class="w"></span>
+<span class="w">    </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redshift</span><span class="w"></span>
+<span class="w">    </span><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consecutive-snapshots</span><span class="w"></span>
+<span class="w">        </span><span class="nt">count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span><span class="w"></span>
+<span class="w">        </span><span class="nt">period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">days</span><span class="w"></span>
+<span class="w">        </span><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">available</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container" style=""></div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">count</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">minimum</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">number</span><span class="w"></span>
+<span class="w">  </span><span class="nt">period</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">enum</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hours</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">days</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">weeks</span><span class="w"></span>
+<span class="w">  </span><span class="nt">status</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">enum</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">available</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">creating</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">final snapshot</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">failed</span><span class="w"></span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">enum</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consecutive-snapshots</span><span class="w"></span>
+<span class="nt">required</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">period</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>Permissions - redshift:DescribeClusterSnapshots, redshift:DescribeClusters</p>
+</section>
 <section id="default-vpc">
 <span id="aws-redshift-filters-default-vpc"></span><h3>default-vpc<a class="headerlink" href="#default-vpc" title="Permalink to this headline">¶</a></h3>
 <p>Matches if an redshift database is in the default vpc</p>

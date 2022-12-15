@@ -56,6 +56,10 @@ Filters
 
   - :ref:`service-limit <aws.account.filters.service-limit>`
 
+  - :ref:`ses-agg-send-stats <aws.common.filters.ses-agg-send-stats>`
+  
+  - :ref:`ses-send-stats <aws.account.filters.ses-send-stats>`
+
   - :ref:`shield-enabled <aws.account.filters.shield-enabled>`
 
   - :ref:`value <aws.common.filters.value>`
@@ -1136,6 +1140,24 @@ Intended for use at a logical account/subscription/project level
 
 This works as an effectively an embedded policy thats evaluated.
 
+:example:
+
+Notify if an s3 bucket is missing
+
+.. code-block:: yaml
+
+        policies:
+          - name: missing-s3-bucket
+            resource: account
+            filters:
+              - type: missing
+                policy:
+                  resource: s3
+                  filters:
+                    - Name: my-bucket
+            actions:
+              - notify
+
 .. container:: toggle
 
   
@@ -1568,6 +1590,59 @@ advisor.  In this case, some of these checks have no results.
 Permissions - support:DescribeTrustedAdvisorCheckRefreshStatuses, support:DescribeTrustedAdvisorCheckResult, support:DescribeTrustedAdvisorChecks, support:RefreshTrustedAdvisorCheck
 
 
+.. _aws.account.filters.ses-send-stats:
+
+ses-send-stats
+++++++++++++++
+This filter annotates the account resource with SES send statistics for the
+last n number of days, not including the current date.
+
+The stats are aggregated into daily metrics. Additionally, the filter also
+calculates and annotates the max daily bounce rate (percentage). Using this filter,
+users can alert when the bounce rate for a particular day is higher than the limit.
+
+:example:
+
+.. code-block:: yaml
+
+        policies:
+          - name: ses-send-stats
+            resource: account
+            filters:
+              - type: ses-send-stats
+                days: 5
+              - type: value
+                key: '"c7n:ses-max-bounce-rate"'
+                op: ge
+                value: 10
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      days:
+        minimum: 2
+        type: number
+      type:
+        enum:
+        - ses-send-stats
+    required:
+    - days
+    - type
+
+
+
+
+Permissions - ses:GetSendStatistics
+
+
 .. _aws.account.filters.shield-enabled:
 
 shield-enabled
@@ -1688,6 +1763,8 @@ Actions
   - :ref:`set-shield-advanced <aws.account.actions.set-shield-advanced>`
 
   - :ref:`set-xray-encrypt <aws.account.actions.set-xray-encrypt>`
+
+  - :ref:`toggle-config-managed-rule <aws.account.actions.toggle-config-managed-rule>`
 
   - :ref:`webhook <aws.common.actions.webhook>`
   
@@ -2224,4 +2301,128 @@ Enable specific xray encryption.
 
 
 Permissions - xray:PutEncryptionConfig
+
+
+.. _aws.account.actions.toggle-config-managed-rule:
+
+toggle-config-managed-rule
+++++++++++++++++++++++++++
+Enables or disables an AWS Config Managed Rule
+
+:example:
+
+.. code-block:: yaml
+
+    policies:
+      - name: config-managed-s3-bucket-public-write-remediate-event
+        description: |
+          This policy detects if S3 bucket allows public write by the bucket policy
+          or ACL and remediates.
+        comment: |
+          This policy detects if S3 bucket policy or ACL allows public write access.
+          When the bucket is evaluated as 'NON_COMPLIANT', the action
+          'AWS-DisableS3BucketPublicReadWrite' is triggered and remediates.
+        resource: account
+        filters:
+          - type: missing
+            policy:
+              resource: config-rule
+              filters:
+                - type: remediation
+                  rule_name: &rule_name 'config-managed-s3-bucket-public-write-remediate-event'
+                  remediation: &remediation-config
+                    TargetId: AWS-DisableS3BucketPublicReadWrite
+                    Automatic: true
+                    MaximumAutomaticAttempts: 5
+                    RetryAttemptSeconds: 211
+                    Parameters:
+                      AutomationAssumeRole:
+                        StaticValue:
+                          Values:
+                            - 'arn:aws:iam::{account_id}:role/myrole'
+                      S3BucketName:
+                        ResourceValue:
+                          Value: RESOURCE_ID
+        actions:
+          - type: toggle-config-managed-rule
+            rule_name: *rule_name
+            managed_rule_id: S3_BUCKET_PUBLIC_WRITE_PROHIBITED
+            resource_types:
+              - 'AWS::S3::Bucket'
+            rule_parameters: '{}'
+            remediation: *remediation-config
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      enabled:
+        default: true
+        type: boolean
+      managed_rule_id:
+        type: string
+      remediation:
+        properties:
+          Automatic:
+            type: boolean
+          ExecutionControls:
+            type: object
+          MaximumAutomaticAttempts:
+            maximum: 25
+            minimum: 1
+            type: integer
+          Parameters:
+            type: object
+          RetryAttemptSeconds:
+            maximum: 2678000
+            minimum: 1
+            type: integer
+          TargetId:
+            type: string
+          TargetType:
+            type: string
+        type: object
+      resource_id:
+        type: string
+      resource_tag:
+        properties:
+          key:
+            type: string
+          value:
+            type: string
+        required:
+        - key
+        - value
+        type: object
+      resource_types:
+        items:
+          pattern: ^AWS::*
+          type: string
+        type: array
+      rule_name:
+        type: string
+      rule_parameters:
+        type: string
+      rule_prefix:
+        type: string
+      tags:
+        type: object
+      type:
+        enum:
+        - toggle-config-managed-rule
+    required:
+    - rule_name
+    - type
+
+
+
+
+Permissions - config:DescribeConfigRules, config:DescribeRemediationConfigurations, config:PutRemediationConfigurations, config:PutConfigRule
 

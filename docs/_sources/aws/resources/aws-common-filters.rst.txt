@@ -9,6 +9,9 @@ Filters
    - :ref:`alarm <AWS.common.filters.alarm>`
 
 
+   - :ref:`api-cache <AWS.common.filters.api-cache>`
+
+
    - :ref:`check-permissions <AWS.common.filters.check-permissions>`
 
 
@@ -76,6 +79,9 @@ Filters
 
 
    - :ref:`security-group <AWS.common.filters.security-group>`
+
+
+   - :ref:`ses-agg-send-stats <AWS.common.filters.ses-agg-send-stats>`
 
 
    - :ref:`shield-metrics <AWS.common.filters.shield-metrics>`
@@ -164,6 +170,110 @@ Filter log metric filters based on associated alarms.
       type:
         enum:
         - alarm
+      value:
+        oneOf:
+        - type: array
+        - type: string
+        - type: boolean
+        - type: number
+        - type: 'null'
+      value_from:
+        additionalProperties: 'False'
+        properties:
+          expr:
+            oneOf:
+            - type: integer
+            - type: string
+          format:
+            enum:
+            - csv
+            - json
+            - txt
+            - csv2dict
+          url:
+            type: string
+        required:
+        - url
+        type: object
+      value_regex:
+        type: string
+      value_type:
+        enum:
+        - age
+        - integer
+        - expiration
+        - normalize
+        - size
+        - cidr
+        - cidr_size
+        - swap
+        - resource_count
+        - expr
+        - unique_size
+        - date
+        - version
+    required:
+    - type
+
+
+
+.. _AWS.common.filters.api-cache:
+
+api-cache
++++++++++
+
+Filter AppSync GraphQLApi based on the api cache attributes
+:example:
+.. code-block:: yaml
+   policies:
+     - name: filter-graphql-api-cache
+       resource: aws.graphql-api
+       filters:
+        - type: api-cache
+          key: 'apiCachingBehavior'
+          value: 'FULL_REQUEST_CACHING'
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      default:
+        type: object
+      key:
+        type: string
+      op:
+        enum:
+        - eq
+        - equal
+        - ne
+        - not-equal
+        - gt
+        - greater-than
+        - ge
+        - gte
+        - le
+        - lte
+        - lt
+        - less-than
+        - glob
+        - regex
+        - regex-case
+        - in
+        - ni
+        - not-in
+        - contains
+        - difference
+        - intersect
+      type:
+        enum:
+        - api-cache
       value:
         oneOf:
         - type: array
@@ -1301,27 +1411,29 @@ Filter Connect resources based on instance attributes
 logging
 +++++++
 
-Checks Redshift logging status and attributes.
+Filter by wafv2 logging configuration
 
 :example:
 
 .. code-block:: yaml
 
+    policies:
+      - name: wafv2-logging-enabled
+        resource: aws.wafv2
+        filters:
+          - not:
+              - type: logging
+                key: ResourceArn
+                value: present
 
-        policies:
-
-            - name: redshift-logging-bucket-and-prefix-test
-              resource: redshift
-              filters:
-               - type: logging
-                 key: LoggingEnabled
-                 value: true
-               - type: logging
-                 key: S3KeyPrefix
-                 value: "accounts/{account_id}"
-               - type: logging
-                 key: BucketName
-                 value: "redshiftlogs"
+      - name: check-redacted-fields
+        resource: aws.wafv2
+        filters:
+          - type: logging
+            key: RedactedFields[].SingleHeader.Name
+            value: user-agent
+            op: in
+            value_type: swap
 
 .. container:: toggle
 
@@ -2319,6 +2431,112 @@ Filter a resource by its associated security groups.
       type:
         enum:
         - security-group
+      value:
+        oneOf:
+        - type: array
+        - type: string
+        - type: boolean
+        - type: number
+        - type: 'null'
+      value_from:
+        additionalProperties: 'False'
+        properties:
+          expr:
+            oneOf:
+            - type: integer
+            - type: string
+          format:
+            enum:
+            - csv
+            - json
+            - txt
+            - csv2dict
+          url:
+            type: string
+        required:
+        - url
+        type: object
+      value_regex:
+        type: string
+      value_type:
+        enum:
+        - age
+        - integer
+        - expiration
+        - normalize
+        - size
+        - cidr
+        - cidr_size
+        - swap
+        - resource_count
+        - expr
+        - unique_size
+        - date
+        - version
+    required:
+    - type
+
+
+
+.. _AWS.common.filters.ses-agg-send-stats:
+
+ses-agg-send-stats
+++++++++++++++++++
+
+This filter queries SES send statistics and aggregates all
+the data points into a single report.
+
+:example:
+
+.. code-block:: yaml
+
+        policies:
+          - name: ses-aggregated-send-stats-policy
+            resource: account
+            filters:
+              - type: ses-agg-send-stats
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      default:
+        type: object
+      key:
+        type: string
+      op:
+        enum:
+        - eq
+        - equal
+        - ne
+        - not-equal
+        - gt
+        - greater-than
+        - ge
+        - gte
+        - le
+        - lte
+        - lt
+        - less-than
+        - glob
+        - regex
+        - regex-case
+        - in
+        - ni
+        - not-in
+        - contains
+        - difference
+        - intersect
+      type:
+        enum:
+        - ses-agg-send-stats
       value:
         oneOf:
         - type: array

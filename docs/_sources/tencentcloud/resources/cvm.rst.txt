@@ -5,7 +5,24 @@
 tencentcloud.cvm
 ================
 
-CVM
+CVM Cloud Virtual Machine
+
+Docs on CVM resource
+https://www.tencentcloud.com/document/product/213
+
+:example:
+
+.. code-block:: yaml
+
+    policies:
+    - name: tencentcloud-cvm
+      resource: tencentcloud.cvm
+      filters:
+        - type: value
+          key: InstanceType
+          op: in
+          value:
+            - S1.SMALL1
 
 
 Filters

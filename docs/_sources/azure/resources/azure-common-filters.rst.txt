@@ -12,6 +12,9 @@ Filters
    - :ref:`azure-ad-administrators <Azure.common.filters.azure-ad-administrators>`
 
 
+   - :ref:`blob-services <Azure.common.filters.blob-services>`
+
+
    - :ref:`configuration <Azure.common.filters.configuration>`
 
 
@@ -260,6 +263,118 @@ Find SQL Servers without AD Administrator
       type:
         enum:
         - azure-ad-administrators
+      value:
+        oneOf:
+        - type: array
+        - type: string
+        - type: boolean
+        - type: number
+        - type: 'null'
+      value_from:
+        additionalProperties: 'False'
+        properties:
+          expr:
+            oneOf:
+            - type: integer
+            - type: string
+          format:
+            enum:
+            - csv
+            - json
+            - txt
+            - csv2dict
+          url:
+            type: string
+        required:
+        - url
+        type: object
+      value_regex:
+        type: string
+      value_type:
+        enum:
+        - age
+        - integer
+        - expiration
+        - normalize
+        - size
+        - cidr
+        - cidr_size
+        - swap
+        - resource_count
+        - expr
+        - unique_size
+        - date
+        - version
+    required:
+    - type
+
+
+
+.. _Azure.common.filters.blob-services:
+
+blob-services
++++++++++++++
+
+Filter by the current blob services
+configuration for this storage account.
+:example:
+Find storage accounts with blob services soft delete disabled
+or retention less than 7 days
+.. code-block:: yaml
+    policies:
+      - name: storage-no-soft-delete
+        resource: azure.storage
+        filters:
+          - or:
+              - type: blob-services
+                key: deleteRetentionPolicy.enabled
+                value: false
+              - type: blob-services
+                key: deleteRetentionPolicy.days
+                value: 7
+                op: lt
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      default:
+        type: object
+      key:
+        type: string
+      op:
+        enum:
+        - eq
+        - equal
+        - ne
+        - not-equal
+        - gt
+        - greater-than
+        - ge
+        - gte
+        - le
+        - lte
+        - lt
+        - less-than
+        - glob
+        - regex
+        - regex-case
+        - in
+        - ni
+        - not-in
+        - contains
+        - difference
+        - intersect
+      type:
+        enum:
+        - blob-services
       value:
         oneOf:
         - type: array

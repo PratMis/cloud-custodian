@@ -7,6 +7,9 @@ tencentcloud.clb
 
 CLB
 
+Docs on CLB resources
+https://www.tencentcloud.com/document/product/214
+
 
 Filters
 -------

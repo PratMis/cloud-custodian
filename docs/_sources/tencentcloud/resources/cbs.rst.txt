@@ -5,7 +5,26 @@
 tencentcloud.cbs
 ================
 
-CBS
+CBS: Cloud Block Storage
+
+Docs on CBS
+https://www.tencentcloud.com/document/product/362
+
+:example:
+
+.. code-block:: yaml
+
+    policies:
+    - name: cbs_not_encrypt
+      resource: tencentcloud.cbs
+      filters:
+        - type: value
+          key: Encrypt
+          value: false
+    - name: cbs_unattached
+      resource: tencentcloud.cbs
+      filters:
+        - DiskState: UNATTACHED
 
 
 Filters

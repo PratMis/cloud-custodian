@@ -6,6 +6,9 @@ Tencent Cloud Common Filters
 Filters
 
 
+   - :ref:`check-permissions <Tencent Cloud.common.filters.check-permissions>`
+
+
    - :ref:`event <Tencent Cloud.common.filters.event>`
 
 
@@ -20,6 +23,62 @@ Filters
 
    - :ref:`value <Tencent Cloud.common.filters.value>`
 
+
+
+
+.. _Tencent Cloud.common.filters.check-permissions:
+
+check-permissions
++++++++++++++++++
+
+CheckPermissions
+
+:example:
+
+.. code-block:: yaml
+
+    policies:
+    - name: cam-policy-check-permissions
+      resource: tencentcloud.cam-policy
+      filters:
+      - type: check-permissions
+        match: allowed
+        actions:
+        - cos:GetBucket
+        match-operator: or
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      actions:
+        items:
+          type: string
+        type: array
+      match:
+        oneOf:
+        - enum:
+          - allowed
+          - denied
+        - $ref: '#/definitions/filters/valuekv'
+        - $ref: '#/definitions/filters/value'
+      match-operator:
+        enum:
+        - and
+        - or
+      type:
+        enum:
+        - check-permissions
+    required:
+    - actions
+    - match
 
 
 
@@ -159,7 +218,37 @@ TagActionFilter
 metrics
 +++++++
 
-MetricsFilter
+Supports metrics filters on resources.
+
+Docs on cloud monitor metrics
+https://www.tencentcloud.com/document/product/248
+
+:example:
+
+.. code-block:: yaml
+
+    policies:
+      - name: cvm-underutilized
+        resource: tencentcloud.cvm
+        filters:
+          - type: metrics
+            name: CPUUsage
+            days: 3
+            period: 3600
+            value: 1.5
+            statistics: Average
+            op: less-than
+      - name: clb_metrics_filter
+        resource: tencentcloud.clb
+        filters:
+          - type: metrics
+            name: TotalReq
+            statistics: Sum
+            period: 3600
+            days: 30
+            value: 0
+            missing-value: 0
+            op: eq
 
 .. container:: toggle
 

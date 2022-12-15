@@ -7,6 +7,24 @@ tencentcloud.security-group
 
 security-group
 
+Docs on security-group
+https://www.tencentcloud.com/document/product/215/38750
+
+:example:
+
+.. code-block:: yaml
+
+    policies:
+    - name: security_group_default_restrict
+      resource: tencentcloud.security-group
+      filters:
+        - or:
+            - SecurityGroupName: ccsTest
+            - SecurityGroupName: base-ritch
+        - or:
+            - IpPermissions: not-null
+            - IpPermissionsEgress: not-null
+
 
 Filters
 -------
@@ -68,8 +86,21 @@ Parent base class for filters and actions.
 
 ingress
 +++++++
-Parent base class for filters and actions.
-    
+:example:
+
+.. code-block:: yaml
+
+    policies:
+    - name: cidr_not_limit_filter
+      resource: tencentcloud.security-group
+      filters:
+        - or:
+            - type: ingress
+              Cidr:
+                value: 0.0.0.0/0
+            - type: ingress
+              CidrV6:
+                value: '::/0'
 
 .. container:: toggle
 

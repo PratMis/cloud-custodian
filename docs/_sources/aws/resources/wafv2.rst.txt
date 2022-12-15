@@ -20,6 +20,8 @@ Filters
   
   - :ref:`json-diff <aws.wafv2.filters.json-diff>`
 
+  - :ref:`logging <aws.common.filters.logging>`
+  
   - :ref:`marked-for-op <aws.common.filters.marked-for-op>`
   
   - :ref:`metrics <aws.common.filters.metrics>`

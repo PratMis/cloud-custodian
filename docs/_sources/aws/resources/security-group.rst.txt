@@ -778,6 +778,17 @@ workflows.
                 value:
                   - nat_gateway
 
+        policies:
+          - name: security-groups-used-by-alb
+            resource: security-group
+            filters:
+              - used
+              - type: value
+                key: c7n:InterfaceResourceTypes
+                op: intersect
+                value:
+                  - elb-app
+
 .. container:: toggle
 
   

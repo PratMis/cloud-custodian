@@ -7,6 +7,23 @@ tencentcloud.cbs-snapshot
 
 cbs-snapshot
 
+Docs on cbs-snapshot
+https://www.tencentcloud.com/document/product/362/31638
+
+:example:
+
+.. code-block:: yaml
+
+    policies:
+    - name: cbs-old-snapshot
+      resource: tencentcloud.cbs-snapshot
+      filters:
+        - type: value
+          key: CreateTime
+          value_type: age
+          op: greater-than
+          value: 90
+
 
 Filters
 -------
