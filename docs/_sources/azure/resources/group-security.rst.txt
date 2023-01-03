@@ -10,6 +10,8 @@ Security resources
 
    advisor-recommendation.rst
 
+   defender-alert.rst
+
    defender-autoprovisioning.rst
 
    defender-pricing.rst

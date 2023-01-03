@@ -20,6 +20,8 @@ Filters
   
   - :ref:`image-age <aws.ami.filters.image-age>`
 
+  - :ref:`image-attribute <aws.ami.filters.image-attribute>`
+
   - :ref:`marked-for-op <aws.common.filters.marked-for-op>`
   
   - :ref:`ops-item <aws.common.filters.ops-item>`
@@ -148,6 +150,135 @@ Filters images based on the age (in days)
 
 
 
+
+
+.. _aws.ami.filters.image-attribute:
+
+image-attribute
++++++++++++++++
+AMI Image Value Filter on a given image attribute.
+
+Filters AMI's with the given AMI attribute
+
+:example:
+
+.. code-block:: yaml
+
+        policies:
+          - name: ami-unused-recently
+            resource: ami
+            filters:
+              - type: image-attribute
+                attribute: lastLaunchedTime
+                key: "Value"
+                op: gte
+                value_type: age
+                value: 30
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      attribute:
+        enum:
+        - description
+        - kernel
+        - ramdisk
+        - launchPermissions
+        - productCodes
+        - blockDeviceMapping
+        - sriovNetSupport
+        - bootMode
+        - tpmSupport
+        - uefiData
+        - lastLaunchedTime
+        - imdsSupport
+      default:
+        type: object
+      key:
+        type: string
+      op:
+        enum:
+        - eq
+        - equal
+        - ne
+        - not-equal
+        - gt
+        - greater-than
+        - ge
+        - gte
+        - le
+        - lte
+        - lt
+        - less-than
+        - glob
+        - regex
+        - regex-case
+        - in
+        - ni
+        - not-in
+        - contains
+        - difference
+        - intersect
+      type:
+        enum:
+        - image-attribute
+      value:
+        oneOf:
+        - type: array
+        - type: string
+        - type: boolean
+        - type: number
+        - type: 'null'
+      value_from:
+        additionalProperties: 'False'
+        properties:
+          expr:
+            oneOf:
+            - type: integer
+            - type: string
+          format:
+            enum:
+            - csv
+            - json
+            - txt
+            - csv2dict
+          url:
+            type: string
+        required:
+        - url
+        type: object
+      value_regex:
+        type: string
+      value_type:
+        enum:
+        - age
+        - integer
+        - expiration
+        - normalize
+        - size
+        - cidr
+        - cidr_size
+        - swap
+        - resource_count
+        - expr
+        - unique_size
+        - date
+        - version
+    required:
+    - attribute
+
+
+
+
+Permissions - ec2:DescribeImageAttribute
 
 
 .. _aws.ami.filters.unused:
