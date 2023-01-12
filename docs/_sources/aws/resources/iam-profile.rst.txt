@@ -40,16 +40,63 @@ Filter an IAM instance profile that contains an IAM role that has a specific man
    policy. If an IAM instance profile does not contain an IAM role, then it will be treated
    as not having the policy.
 
-:Example:
+:example:
+
+Check for instance profile roles with 'admin-policy' attached:
 
 .. code-block:: yaml
 
     policies:
-      - name: iam-profile-has-admin-policy
-        resource: iam-profile
+      - name: iam-profiles-have-admin
+        resource: aws.iam-profile
         filters:
           - type: has-specific-managed-policy
             value: admin-policy
+
+:example:
+
+Check for instance profile roles with an attached policy matching
+a given list:
+
+.. code-block:: yaml
+
+    policies:
+      - name: iam-profiles-with-selected-policies
+        resource: aws.iam-profile
+        filters:
+          - type: has-specific-managed-policy
+            value:
+              - AmazonS3FullAccess
+              - AWSOrganizationsFullAccess
+
+:example:
+
+Check for instance profile roles with attached policy names matching
+a pattern:
+
+.. code-block:: yaml
+
+    policies:
+      - name: iam-profiles-with-full-access-policies
+        resource: aws.iam-profile
+        filters:
+          - type: has-specific-managed-policy
+            op: glob
+            value: "*FullAccess"
+
+Check for instance profile roles with attached policy ARNs matching
+a pattern:
+
+.. code-block:: yaml
+
+    policies:
+      - name: iam-profiles-with-aws-full-access-policies
+        resource: aws.iam-profile
+        filters:
+          - type: has-specific-managed-policy
+            key: PolicyArn
+            op: regex
+            value: "arn:aws:iam::aws:policy/.*FullAccess"
 
 .. container:: toggle
 
@@ -62,11 +109,78 @@ Filter an IAM instance profile that contains an IAM role that has a specific man
   .. code-block:: yaml
 
     properties:
+      default:
+        type: object
+      key:
+        type: string
+      op:
+        enum:
+        - eq
+        - equal
+        - ne
+        - not-equal
+        - gt
+        - greater-than
+        - ge
+        - gte
+        - le
+        - lte
+        - lt
+        - less-than
+        - glob
+        - regex
+        - regex-case
+        - in
+        - ni
+        - not-in
+        - contains
+        - difference
+        - intersect
       type:
         enum:
         - has-specific-managed-policy
       value:
+        oneOf:
+        - type: array
+        - type: string
+        - type: boolean
+        - type: number
+        - type: 'null'
+      value_from:
+        additionalProperties: 'False'
+        properties:
+          expr:
+            oneOf:
+            - type: integer
+            - type: string
+          format:
+            enum:
+            - csv
+            - json
+            - txt
+            - csv2dict
+          url:
+            type: string
+        required:
+        - url
+        type: object
+      value_regex:
         type: string
+      value_type:
+        enum:
+        - age
+        - integer
+        - expiration
+        - normalize
+        - size
+        - cidr
+        - cidr_size
+        - swap
+        - resource_count
+        - expr
+        - unique_size
+        - date
+        - version
     required:
     - type
 

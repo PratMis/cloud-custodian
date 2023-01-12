@@ -10,4 +10,6 @@ vpc resources
 
    nat-gateway.rst
 
+   security-group.rst
+
    vpc.rst

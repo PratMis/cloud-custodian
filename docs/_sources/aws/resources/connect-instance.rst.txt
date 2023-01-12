@@ -44,7 +44,83 @@ Actions
   
   - :ref:`put-metric <aws.common.actions.put-metric>`
   
+  - :ref:`set-attributes <aws.connect-instance.actions.set-attributes>`
+
   - :ref:`webhook <aws.common.actions.webhook>`
   
 
+
+
+.. _aws.connect-instance.actions.set-attributes:
+
+set-attributes
+++++++++++++++
+Set the attributes for the connect resources
+
+:example:
+
+.. code-block:: yaml
+
+    policies:
+      - name: connect-set-contact-lens
+        resource: connect-instance
+        filters:
+          - type: instance-attribute
+            key: Attribute.Value
+            value: false
+            attribute_type: CONTACT_LENS
+        actions:
+          - type: set-attributes
+            attribute_type: CONTACT_LENS
+            value: true
+      - name: connect-disable-contact-lens
+        resource: connect-instance
+        filters:
+          - type: instance-attribute
+            key: Attribute.Value
+            value: true
+            attribute_type: CONTACT_LENS
+        actions:
+          - type: set-attributes
+            attribute_type: CONTACT_LENS
+            value: false
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      attribute_type:
+        anyOf:
+        - enum:
+          - INBOUND_CALLS
+          - OUTBOUND_CALLS
+          - CONTACTFLOW_LOGS
+          - CONTACT_LENS
+          - AUTO_RESOLVE_BEST_VOICES
+          - USE_CUSTOM_TTS_VOICES
+          - EARLY_MEDIA
+          - MULTI_PARTY_CONFERENCE
+          - HIGH_VOLUME_OUTBOUND
+          - ENHANCED_CONTACT_MONITORING
+        - type: string
+      type:
+        enum:
+        - set-attributes
+      value: {}
+    required:
+    - value
+    - attribute_type
+    - type
+
+
+
+
+Permissions - connect:UpdateInstanceAttribute
 

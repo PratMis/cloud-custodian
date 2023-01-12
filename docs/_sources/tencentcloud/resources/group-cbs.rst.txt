@@ -9,3 +9,5 @@ cbs resources
 
 
    cbs.rst
+
+   cbs-snapshot.rst

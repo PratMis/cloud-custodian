@@ -148,20 +148,64 @@ Permissions - iam:ListRolePolicies
 
 has-specific-managed-policy
 +++++++++++++++++++++++++++
-Filter IAM roles that has a specific policy attached
-
-For example, if the user wants to check all roles with 'admin-policy':
+Find IAM roles that have a specific policy attached
 
 :example:
+
+Check for roles with 'admin-policy' attached:
 
 .. code-block:: yaml
 
     policies:
       - name: iam-roles-have-admin
-        resource: iam-role
+        resource: aws.iam-role
         filters:
           - type: has-specific-managed-policy
             value: admin-policy
+
+:example:
+
+Check for roles with an attached policy matching
+a given list:
+
+.. code-block:: yaml
+
+    policies:
+      - name: iam-roles-with-selected-policies
+        resource: aws.iam-role
+        filters:
+          - type: has-specific-managed-policy
+            op: in
+            value:
+              - AmazonS3FullAccess
+              - AWSOrganizationsFullAccess
+
+:example:
+
+Check for roles with attached policy names matching a pattern:
+
+.. code-block:: yaml
+
+    policies:
+      - name: iam-roles-with-full-access-policies
+        resource: aws.iam-role
+        filters:
+          - type: has-specific-managed-policy
+            op: glob
+            value: "*FullAccess"
+
+Check for roles with attached policy ARNs matching a pattern:
+
+.. code-block:: yaml
+
+    policies:
+      - name: iam-roles-with-aws-full-access-policies
+        resource: aws.iam-role
+        filters:
+          - type: has-specific-managed-policy
+            key: PolicyArn
+            op: regex
+            value: "arn:aws:iam::aws:policy/.*FullAccess"
 
 .. container:: toggle
 
@@ -174,11 +218,78 @@ For example, if the user wants to check all roles with 'admin-policy':
   .. code-block:: yaml
 
     properties:
+      default:
+        type: object
+      key:
+        type: string
+      op:
+        enum:
+        - eq
+        - equal
+        - ne
+        - not-equal
+        - gt
+        - greater-than
+        - ge
+        - gte
+        - le
+        - lte
+        - lt
+        - less-than
+        - glob
+        - regex
+        - regex-case
+        - in
+        - ni
+        - not-in
+        - contains
+        - difference
+        - intersect
       type:
         enum:
         - has-specific-managed-policy
       value:
+        oneOf:
+        - type: array
+        - type: string
+        - type: boolean
+        - type: number
+        - type: 'null'
+      value_from:
+        additionalProperties: 'False'
+        properties:
+          expr:
+            oneOf:
+            - type: integer
+            - type: string
+          format:
+            enum:
+            - csv
+            - json
+            - txt
+            - csv2dict
+          url:
+            type: string
+        required:
+        - url
+        type: object
+      value_regex:
         type: string
+      value_type:
+        enum:
+        - age
+        - integer
+        - expiration
+        - normalize
+        - size
+        - cidr
+        - cidr_size
+        - swap
+        - resource_count
+        - expr
+        - unique_size
+        - date
+        - version
     required:
     - type
 

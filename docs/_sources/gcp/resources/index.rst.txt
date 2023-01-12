@@ -20,6 +20,8 @@ be applies for all resources.
 
    gcp-common-filters.rst
 
+   group-apikeys.rst
+
    group-appengine.rst
 
    group-bigquery.rst

@@ -46,6 +46,8 @@ Filters
 
   - :ref:`ops-item <aws.common.filters.ops-item>`
   
+  - :ref:`organization <aws.account.filters.organization>`
+
   - :ref:`password-policy <aws.account.filters.password-policy>`
 
   - :ref:`reduce <aws.common.filters.reduce>`
@@ -1185,6 +1187,134 @@ Notify if an s3 bucket is missing
 
 
 
+
+
+.. _aws.account.filters.organization:
+
+organization
+++++++++++++
+Check organization enrollment and configuration
+
+:example:
+
+determine if an account is not in an organization
+
+.. code-block:: yaml
+
+  policies:
+    - name: no-org
+      resource: account
+      filters:
+        - type: organization
+          key: Id
+          value: absent
+
+
+:example:
+
+determine if an account is setup for organization policies
+
+.. code-block:: yaml
+
+   policies:
+     - name: org-policies-not-enabled
+       resource: account
+       filters:
+         - type: organization
+           key: FeatureSet
+           value: ALL
+           op: not-equal
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      default:
+        type: object
+      key:
+        type: string
+      op:
+        enum:
+        - eq
+        - equal
+        - ne
+        - not-equal
+        - gt
+        - greater-than
+        - ge
+        - gte
+        - le
+        - lte
+        - lt
+        - less-than
+        - glob
+        - regex
+        - regex-case
+        - in
+        - ni
+        - not-in
+        - contains
+        - difference
+        - intersect
+      type:
+        enum:
+        - organization
+      value:
+        oneOf:
+        - type: array
+        - type: string
+        - type: boolean
+        - type: number
+        - type: 'null'
+      value_from:
+        additionalProperties: 'False'
+        properties:
+          expr:
+            oneOf:
+            - type: integer
+            - type: string
+          format:
+            enum:
+            - csv
+            - json
+            - txt
+            - csv2dict
+          url:
+            type: string
+        required:
+        - url
+        type: object
+      value_regex:
+        type: string
+      value_type:
+        enum:
+        - age
+        - integer
+        - expiration
+        - normalize
+        - size
+        - cidr
+        - cidr_size
+        - swap
+        - resource_count
+        - expr
+        - unique_size
+        - date
+        - version
+    required:
+    - type
+
+
+
+
+Permissions - organizations:DescribeOrganization
 
 
 .. _aws.account.filters.password-policy:

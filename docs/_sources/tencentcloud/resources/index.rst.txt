@@ -36,8 +36,6 @@ be applies for all resources.
 
    group-es.rst
 
-   group-security-group.rst
-
    group-tcr.rst
 
    group-vpc.rst
