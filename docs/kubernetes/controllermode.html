@@ -176,6 +176,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../aws/examples/s3globalgrants.html">S3 - Global Grants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aws/examples/s3lifecyclepolicyonbucketdelete.html">S3 - Add lifecycle policy on bucket delete</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../aws/examples/sagemakernotebookdeletepublicorunencrypted.html">SageMaker Notebook - Delete Public or Unencrypted</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../aws/examples/securitygroupsaddpermission.html">Security Groups - add permission</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../aws/examples/securitygroupsdetectremediate.html">Security Groups - Detect and Remediate Violations</a></li>
@@ -970,6 +971,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../aws/resources/emr-security-configuration.html">aws.emr-security-configuration</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../aws/resources/emr-security-configuration.html#filters">Filters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../aws/resources/emr-security-configuration.html#actions">Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../aws/resources/group-emr-serverless.html">emr-serverless resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../aws/resources/emr-serverless-app.html">aws.emr-serverless-app</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../aws/resources/emr-serverless-app.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../aws/resources/emr-serverless-app.html#actions">Actions</a></li>
 </ul>
 </li>
 </ul>
@@ -1896,450 +1905,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../azure/advanced/contribute.html#arm-templates">ARM templates</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../azure/advanced/contribute.html#cassettes">Cassettes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../azure/advanced/contribute.html#running-tests">Running tests</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../azure/resources/index.html">Azure Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/azure-modes.html">Azure Execution Modes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-modes.html#pull">pull</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-modes.html#azure-event-grid">azure-event-grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-modes.html#azure-periodic">azure-periodic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-modes.html#container-event">container-event</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-modes.html#container-periodic">container-periodic</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/azure-common-actions.html">Azure Common Actions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-actions.html#auto-tag-date">auto-tag-date</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-actions.html#auto-tag-user">auto-tag-user</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-actions.html#delete">delete</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-actions.html#lock">lock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-actions.html#logic-app">logic-app</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-actions.html#mark-for-op">mark-for-op</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-actions.html#notify">notify</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-actions.html#tag">tag</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-actions.html#tag-trim">tag-trim</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-actions.html#untag">untag</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-actions.html#webhook">webhook</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/azure-common-filters.html">Azure Common Filters</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#authentication">authentication</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#azure-ad-administrators">azure-ad-administrators</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#blob-services">blob-services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#configuration">configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#configuration-parameter">configuration-parameter</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#cost">cost</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#diagnostic-settings">diagnostic-settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#effective-route-table">effective-route-table</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#event">event</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#firewall-rules">firewall-rules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#instance-view">instance-view</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#marked-for-op">marked-for-op</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#metric">metric</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#offer">offer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#offhour">offhour</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#onhour">onhour</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#parent">parent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#policy-compliant">policy-compliant</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#reduce">reduce</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#resource-lock">resource-lock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#storage-diagnostic-settings">storage-diagnostic-settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#value">value</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#vm-extensions">vm-extensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/azure-common-filters.html#vulnerability-assessment">vulnerability-assessment</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-ai-%2B-machine-learning.html">AI + Machine Learning resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/cognitiveservice.html">azure.cognitiveservice</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/cognitiveservice.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/cognitiveservice.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/databricks.html">azure.databricks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/databricks.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/databricks.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/search.html">azure.search</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/search.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/search.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-active-directory.html">Active Directory resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/roleassignment.html">azure.roleassignment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/roleassignment.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/roleassignment.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/roledefinition.html">azure.roledefinition</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/roledefinition.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/roledefinition.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-analytics.html">Analytics resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/datafactory.html">azure.datafactory</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/datafactory.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/datafactory.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/hdinsight.html">azure.hdinsight</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/hdinsight.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/hdinsight.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-compute.html">Compute resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/aks.html">azure.aks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/aks.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/aks.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/appserviceplan.html">azure.appserviceplan</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/appserviceplan.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/appserviceplan.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/batch.html">azure.batch</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/batch.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/batch.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/image.html">azure.image</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/image.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/image.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/logic-app-workflow.html">azure.logic-app-workflow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/logic-app-workflow.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/logic-app-workflow.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/service-fabric-cluster.html">azure.service-fabric-cluster</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/service-fabric-cluster.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/service-fabric-cluster.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/service-fabric-cluster-managed.html">azure.service-fabric-cluster-managed</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/service-fabric-cluster-managed.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/service-fabric-cluster-managed.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/vm.html">azure.vm</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/vm.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/vm.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/vmss.html">azure.vmss</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/vmss.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/vmss.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/webapp.html">azure.webapp</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/webapp.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/webapp.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-containers.html">Containers resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/aks.html">azure.aks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/aks.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/aks.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/container-group.html">azure.container-group</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/container-group.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/container-group.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/container-registry.html">azure.container-registry</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/container-registry.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/container-registry.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/containerservice.html">azure.containerservice</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/containerservice.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/containerservice.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-cost.html">Cost resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/cost-management-export.html">azure.cost-management-export</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/cost-management-export.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/cost-management-export.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-databases.html">Databases resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/cosmosdb.html">azure.cosmosdb</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/cosmosdb.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/cosmosdb.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/cosmosdb-collection.html">azure.cosmosdb-collection</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/cosmosdb-collection.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/cosmosdb-collection.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/cosmosdb-database.html">azure.cosmosdb-database</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/cosmosdb-database.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/cosmosdb-database.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/mysql.html">azure.mysql</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/mysql.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/mysql.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/postgresql-database.html">azure.postgresql-database</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/postgresql-database.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/postgresql-database.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/postgresql-server.html">azure.postgresql-server</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/postgresql-server.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/postgresql-server.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/redis.html">azure.redis</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/redis.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/redis.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/sql-database.html">azure.sql-database</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/sql-database.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/sql-database.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/sql-server.html">azure.sql-server</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/sql-server.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/sql-server.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-events.html">Events resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/eventhub.html">azure.eventhub</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/eventhub.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/eventhub.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/eventsubscription.html">azure.eventsubscription</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/eventsubscription.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/eventsubscription.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-generic.html">Generic resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/armresource.html">azure.armresource</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/armresource.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/armresource.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/policyassignments.html">azure.policyassignments</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/policyassignments.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/policyassignments.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-integration.html">Integration resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/api-management.html">azure.api-management</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/api-management.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/api-management.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-internet-of-things.html">Internet Of Things resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/iothub.html">azure.iothub</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/iothub.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/iothub.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-media.html">Media resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/cdnprofile.html">azure.cdnprofile</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/cdnprofile.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/cdnprofile.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-network.html">Network resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/application-gateway.html">azure.application-gateway</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/application-gateway.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/application-gateway.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/front-door.html">azure.front-door</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/front-door.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/front-door.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/traffic-manager-profile.html">azure.traffic-manager-profile</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/traffic-manager-profile.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/traffic-manager-profile.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-networking.html">Networking resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/dnszone.html">azure.dnszone</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/dnszone.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/dnszone.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/loadbalancer.html">azure.loadbalancer</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/loadbalancer.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/loadbalancer.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/networkinterface.html">azure.networkinterface</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/networkinterface.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/networkinterface.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/networksecuritygroup.html">azure.networksecuritygroup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/networksecuritygroup.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/networksecuritygroup.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/publicip.html">azure.publicip</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/publicip.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/publicip.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/recordset.html">azure.recordset</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/recordset.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/recordset.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/routetable.html">azure.routetable</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/routetable.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/routetable.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/vnet.html">azure.vnet</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/vnet.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/vnet.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-resource-group.html">Resource Group resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/resourcegroup.html">azure.resourcegroup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/resourcegroup.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/resourcegroup.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-security.html">Security resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/advisor-recommendation.html">azure.advisor-recommendation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/advisor-recommendation.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/advisor-recommendation.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/defender-alert.html">azure.defender-alert</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/defender-alert.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/defender-alert.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/defender-autoprovisioning.html">azure.defender-autoprovisioning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/defender-autoprovisioning.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/defender-autoprovisioning.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/defender-pricing.html">azure.defender-pricing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/defender-pricing.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/defender-pricing.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/defender-setting.html">azure.defender-setting</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/defender-setting.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/defender-setting.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/keyvault.html">azure.keyvault</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/keyvault.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/keyvault.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/keyvault-certificate.html">azure.keyvault-certificate</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/keyvault-certificate.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/keyvault-certificate.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/keyvault-key.html">azure.keyvault-key</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/keyvault-key.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/keyvault-key.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-storage.html">Storage resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/datalake.html">azure.datalake</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/datalake.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/datalake.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/disk.html">azure.disk</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/disk.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/disk.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/storage.html">azure.storage</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/storage.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/storage.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/storage-container.html">azure.storage-container</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/storage-container.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/storage-container.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-subscription.html">Subscription resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/policyassignments.html">azure.policyassignments</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/policyassignments.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/policyassignments.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/resourcegroup.html">azure.resourcegroup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/resourcegroup.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/resourcegroup.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/subscription.html">azure.subscription</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/subscription.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/subscription.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../azure/resources/group-web.html">Web resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/appserviceplan.html">azure.appserviceplan</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/appserviceplan.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/appserviceplan.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../azure/resources/webapp.html">azure.webapp</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/webapp.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../azure/resources/webapp.html#actions">Actions</a></li>
 </ul>
 </li>
 </ul>
@@ -5516,10 +5081,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/c7n-left.html">Custodian policies for Infrastructure Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/c7n-left.html#install">Install</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/c7n-left.html#usage">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/c7n-left.html#outputs">Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/c7n-left.html">Custodian policies for Infrastructure Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/c7n-left.html#install">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/c7n-left.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/c7n-left.html#filters">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/c7n-left.html#outputs">Outputs</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/c7n-logexporter.html">c7n-log-exporter: Cloud watch log exporter automation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/c7n-logexporter.html#features">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/c7n-logexporter.html#assumptions">Assumptions</a></li>
@@ -5662,33 +5230,33 @@ create a service inside of your Kubernetes Cluster or use a cloud provider to ru
 <section id="option-1-manual-installation">
 <h1>Option 1: Manual installation<a class="headerlink" href="#option-1-manual-installation" title="Permalink to this headline">¶</a></h1>
 <p>To get started, create a new directory of policies:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir policies
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>policies
 </pre></div>
 </div>
 <p>Next, in your policy directory, create a new policy.yaml file and add the following contents:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;example-warn-policy&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;k8s.pod&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">sample</span><span class="nv"> </span><span class="s">policy&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">mode</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8s-admission</span><span class="w"></span>
-<span class="w">      </span><span class="nt">on-match</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">warn</span><span class="w"></span>
-<span class="w">      </span><span class="nt">operations</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CREATE</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;example-warn-policy&#39;</span>
+<span class="w">    </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;k8s.pod&#39;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">sample</span><span class="nv"> </span><span class="s">policy&#39;</span>
+<span class="w">    </span><span class="nt">mode</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8s-admission</span>
+<span class="w">      </span><span class="nt">on-match</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">warn</span>
+<span class="w">      </span><span class="nt">operations</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CREATE</span>
 </pre></div>
 </div>
 <p>Next, generate the MuttatingWebhookConfiguration manifest. replace $endpoint with the https endpoint
 of your web server, e.g. <code class="docutils literal notranslate"><span class="pre">https://example.org</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c7n-kates --policy-dir policies --generate --endpoint <span class="nv">$endpoint</span> &gt; webhook.yaml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c7n-kates<span class="w"> </span>--policy-dir<span class="w"> </span>policies<span class="w"> </span>--generate<span class="w"> </span>--endpoint<span class="w"> </span><span class="nv">$endpoint</span><span class="w"> </span>&gt;<span class="w"> </span>webhook.yaml
 </pre></div>
 </div>
 <p>This will create a manifest containing a webhook that will inspect the operations and resource types
 that are applicable to your policies. Next, apply the manifest to your Kubernetes Cluster:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl apply -f webhook.yaml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>webhook.yaml
 </pre></div>
 </div>
 <p>Next, on your server, start c7n-kates:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c7n-kates --policy-dir policies
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c7n-kates<span class="w"> </span>--policy-dir<span class="w"> </span>policies
 </pre></div>
 </div>
 </section>
@@ -5697,7 +5265,7 @@ that are applicable to your policies. Next, apply the manifest to your Kubernete
 <p>First configure the chart. The following  will configure a sample policy, use
 cert-manager to sign your webhook, and operate against all pods when they are
 created or updated. Adjust values.yaml as needed.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat <span class="s">&lt;&lt; EOF &gt; values.yaml</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span><span class="s">&lt;&lt; EOF &gt; values.yaml</span>
 <span class="s">certManager:</span>
 <span class="s">  enabled: true</span>
 
@@ -5725,47 +5293,47 @@ created or updated. Adjust values.yaml as needed.</p>
 <span class="s">    scope: Namespaced</span>
 <span class="s">EOF</span>
 
-helm repo add c7n https://cloud-custodian.github.io/helm-charts/<span class="sb">`</span>
-helm install c7n-kube c7n/c7n-kube --values values.yaml
+helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>c7n<span class="w"> </span>https://cloud-custodian.github.io/helm-charts/<span class="sb">`</span>
+helm<span class="w"> </span>install<span class="w"> </span>c7n-kube<span class="w"> </span>c7n/c7n-kube<span class="w"> </span>--values<span class="w"> </span>values.yaml
 </pre></div>
 </div>
 <section id="testing">
 <h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
 <p>We can apply a pod manifest to see the warning, create a new file <code class="docutils literal notranslate"><span class="pre">pod.yaml</span></code> and add the following:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span><span class="w"></span>
-<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span><span class="w"></span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:1.14.2</span><span class="w"></span>
-<span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">containers</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:1.14.2</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
 </pre></div>
 </div>
 <p>Next, we can apply the new pod manifest:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl apply -f pod.yaml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>pod.yaml
 </pre></div>
 </div>
 <p>Which should result in the following message:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Warning: example-warn-policy:This is a sample policy
-pod/nginx created
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Warning:<span class="w"> </span>example-warn-policy:This<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>sample<span class="w"> </span>policy
+pod/nginx<span class="w"> </span>created
 </pre></div>
 </div>
 <p>On the server, you should see:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c7n-kates --policy-dir policies
-<span class="m">2022</span>-09-14 <span class="m">20</span>:33:49,116: c7n_kube.server:INFO Loaded <span class="m">1</span> policies
-<span class="m">2022</span>-09-14 <span class="m">20</span>:33:49,314: c7n_kube.server:INFO Serving at <span class="m">0</span>.0.0.0 <span class="m">8800</span>
-<span class="m">2022</span>-09-14 <span class="m">20</span>:33:50,558: c7n_kube.server:INFO <span class="o">{</span><span class="s2">&quot;kind&quot;</span>:<span class="s2">&quot;AdmissionReview&quot;</span>,<span class="s2">&quot;apiVersion&quot;</span>:<span class="s2">&quot;admission.k8s.io/v1&quot;</span>,<span class="s2">&quot;request&quot;</span>:<span class="o">{</span><span class="s2">&quot;uid&quot;</span>:<span class="s2">&quot;2ec4911a-8a9d-4c8d-8aa5-2d3709877fd0&quot;</span>,<span class="s2">&quot;kind&quot;</span>:<span class="o">{</span><span class="s2">&quot;group&quot;</span>:<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;version&quot;</span>:<span class="s2">&quot;v1&quot;</span>,<span class="s2">&quot;kind&quot;</span>:<span class="s2">&quot;Pod&quot;</span><span class="o">}</span>,<span class="s2">&quot;resource&quot;</span>:<span class="o">{</span><span class="s2">&quot;group&quot;</span>:<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;version&quot;</span>:<span class="s2">&quot;v1&quot;</span>,<span class="s2">&quot;resource&quot;</span>:<span class="s2">&quot;pods&quot;</span><span class="o">}</span>,<span class="s2">&quot;requestKind&quot;</span>:<span class="o">{</span><span class="s2">&quot;group&quot;</span>:<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;version&quot;</span>:<span class="s2">&quot;v1&quot;</span>,<span class="s2">&quot;kind&quot;</span>:<span class="s2">&quot;Pod&quot;</span><span class="o">}</span>,<span class="s2">&quot;requestResource&quot;</span>:<span class="o">{</span><span class="s2">&quot;group&quot;</span>:<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;version&quot;</span>:<span class="s2">&quot;v1&quot;</span>,<span class="s2">&quot;resource&quot;</span>:<span class="s2">&quot;pods&quot;</span><span class="o">}</span>,<span class="s2">&quot;name&quot;</span>:<span class="s2">&quot;nginx&quot;</span>,<span class="s2">&quot;namespace&quot;</span>:<span class="s2">&quot;default&quot;</span>,<span class="s2">&quot;operation&quot;</span>:<span class="s2">&quot;CREATE&quot;</span>,<span class="s2">&quot;userInfo&quot;</span>:<span class="o">{</span><span class="s2">&quot;username&quot;</span>:<span class="s2">&quot;kubernetes-admin&quot;</span>,<span class="s2">&quot;groups&quot;</span>:<span class="o">[</span><span class="s2">&quot;system:masters&quot;</span>,<span class="s2">&quot;system:authenticated&quot;</span><span class="o">]}</span>,<span class="s2">&quot;object&quot;</span>:<span class="o">{</span><span class="s2">&quot;kind&quot;</span>:<span class="s2">&quot;Pod&quot;</span>,<span class="s2">&quot;apiVersion&quot;</span>:<span class="s2">&quot;v1&quot;</span>,<span class="s2">&quot;metadata&quot;</span>:<span class="o">{</span><span class="s2">&quot;name&quot;</span>:<span class="s2">&quot;nginx&quot;</span>,<span class="s2">&quot;namespace&quot;</span>:<span class="s2">&quot;default&quot;</span>,<span class="s2">&quot;uid&quot;</span>:<span class="s2">&quot;eae00ed2-72d2-4ab4-9012-51ba11a284d0&quot;</span>,<span class="s2">&quot;creationTimestamp&quot;</span>:<span class="s2">&quot;2022-09-14T20:33:50Z&quot;</span>,<span class="s2">&quot;annotations&quot;</span>:<span class="o">{</span><span class="s2">&quot;kubectl.kubernetes.io/last-applied-configuration&quot;</span>:<span class="s2">&quot;{\&quot;apiVersion\&quot;:\&quot;v1\&quot;,\&quot;kind\&quot;:\&quot;Pod\&quot;,\&quot;metadata\&quot;:{\&quot;annotations\&quot;:{},\&quot;name\&quot;:\&quot;nginx\&quot;,\&quot;namespace\&quot;:\&quot;default\&quot;},\&quot;spec\&quot;:{\&quot;containers\&quot;:[{\&quot;image\&quot;:\&quot;nginx:1.14.2\&quot;,\&quot;name\&quot;:\&quot;nginx\&quot;,\&quot;ports\&quot;:[{\&quot;containerPort\&quot;:80}]}]}}\n&quot;</span><span class="o">}</span>,<span class="s2">&quot;managedFields&quot;</span>:<span class="o">[{</span><span class="s2">&quot;manager&quot;</span>:<span class="s2">&quot;kubectl-client-side-apply&quot;</span>,<span class="s2">&quot;operation&quot;</span>:<span class="s2">&quot;Update&quot;</span>,<span class="s2">&quot;apiVersion&quot;</span>:<span class="s2">&quot;v1&quot;</span>,<span class="s2">&quot;time&quot;</span>:<span class="s2">&quot;2022-09-14T20:33:50Z&quot;</span>,<span class="s2">&quot;fieldsType&quot;</span>:<span class="s2">&quot;FieldsV1&quot;</span>,<span class="s2">&quot;fieldsV1&quot;</span>:<span class="o">{</span><span class="s2">&quot;f:metadata&quot;</span>:<span class="o">{</span><span class="s2">&quot;f:annotations&quot;</span>:<span class="o">{</span><span class="s2">&quot;.&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:kubectl.kubernetes.io/last-applied-configuration&quot;</span>:<span class="o">{}}}</span>,<span class="s2">&quot;f:spec&quot;</span>:<span class="o">{</span><span class="s2">&quot;f:containers&quot;</span>:<span class="o">{</span><span class="s2">&quot;k:{\&quot;name\&quot;:\&quot;nginx\&quot;}&quot;</span>:<span class="o">{</span><span class="s2">&quot;.&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:image&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:imagePullPolicy&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:name&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:ports&quot;</span>:<span class="o">{</span><span class="s2">&quot;.&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;k:{\&quot;containerPort\&quot;:80,\&quot;protocol\&quot;:\&quot;TCP\&quot;}&quot;</span>:<span class="o">{</span><span class="s2">&quot;.&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:containerPort&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:protocol&quot;</span>:<span class="o">{}}}</span>,<span class="s2">&quot;f:resources&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:terminationMessagePath&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:terminationMessagePolicy&quot;</span>:<span class="o">{}}}</span>,<span class="s2">&quot;f:dnsPolicy&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:enableServiceLinks&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:restartPolicy&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:schedulerName&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:securityContext&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:terminationGracePeriodSeconds&quot;</span>:<span class="o">{}}}}]}</span>,<span class="s2">&quot;spec&quot;</span>:<span class="o">{</span><span class="s2">&quot;volumes&quot;</span>:<span class="o">[{</span><span class="s2">&quot;name&quot;</span>:<span class="s2">&quot;kube-api-access-mb9m2&quot;</span>,<span class="s2">&quot;projected&quot;</span>:<span class="o">{</span><span class="s2">&quot;sources&quot;</span>:<span class="o">[{</span><span class="s2">&quot;serviceAccountToken&quot;</span>:<span class="o">{</span><span class="s2">&quot;expirationSeconds&quot;</span>:3607,<span class="s2">&quot;path&quot;</span>:<span class="s2">&quot;token&quot;</span><span class="o">}}</span>,<span class="o">{</span><span class="s2">&quot;configMap&quot;</span>:<span class="o">{</span><span class="s2">&quot;name&quot;</span>:<span class="s2">&quot;kube-root-ca.crt&quot;</span>,<span class="s2">&quot;items&quot;</span>:<span class="o">[{</span><span class="s2">&quot;key&quot;</span>:<span class="s2">&quot;ca.crt&quot;</span>,<span class="s2">&quot;path&quot;</span>:<span class="s2">&quot;ca.crt&quot;</span><span class="o">}]}}</span>,<span class="o">{</span><span class="s2">&quot;downwardAPI&quot;</span>:<span class="o">{</span><span class="s2">&quot;items&quot;</span>:<span class="o">[{</span><span class="s2">&quot;path&quot;</span>:<span class="s2">&quot;namespace&quot;</span>,<span class="s2">&quot;fieldRef&quot;</span>:<span class="o">{</span><span class="s2">&quot;apiVersion&quot;</span>:<span class="s2">&quot;v1&quot;</span>,<span class="s2">&quot;fieldPath&quot;</span>:<span class="s2">&quot;metadata.namespace&quot;</span><span class="o">}}]}}]</span>,<span class="s2">&quot;defaultMode&quot;</span>:420<span class="o">}}]</span>,<span class="s2">&quot;containers&quot;</span>:<span class="o">[{</span><span class="s2">&quot;name&quot;</span>:<span class="s2">&quot;nginx&quot;</span>,<span class="s2">&quot;image&quot;</span>:<span class="s2">&quot;nginx:1.14.2&quot;</span>,<span class="s2">&quot;ports&quot;</span>:<span class="o">[{</span><span class="s2">&quot;containerPort&quot;</span>:80,<span class="s2">&quot;protocol&quot;</span>:<span class="s2">&quot;TCP&quot;</span><span class="o">}]</span>,<span class="s2">&quot;resources&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;volumeMounts&quot;</span>:<span class="o">[{</span><span class="s2">&quot;name&quot;</span>:<span class="s2">&quot;kube-api-access-mb9m2&quot;</span>,<span class="s2">&quot;readOnly&quot;</span>:true,<span class="s2">&quot;mountPath&quot;</span>:<span class="s2">&quot;/var/run/secrets/kubernetes.io/serviceaccount&quot;</span><span class="o">}]</span>,<span class="s2">&quot;terminationMessagePath&quot;</span>:<span class="s2">&quot;/dev/termination-log&quot;</span>,<span class="s2">&quot;terminationMessagePolicy&quot;</span>:<span class="s2">&quot;File&quot;</span>,<span class="s2">&quot;imagePullPolicy&quot;</span>:<span class="s2">&quot;IfNotPresent&quot;</span><span class="o">}]</span>,<span class="s2">&quot;restartPolicy&quot;</span>:<span class="s2">&quot;Always&quot;</span>,<span class="s2">&quot;terminationGracePeriodSeconds&quot;</span>:30,<span class="s2">&quot;dnsPolicy&quot;</span>:<span class="s2">&quot;ClusterFirst&quot;</span>,<span class="s2">&quot;serviceAccountName&quot;</span>:<span class="s2">&quot;default&quot;</span>,<span class="s2">&quot;serviceAccount&quot;</span>:<span class="s2">&quot;default&quot;</span>,<span class="s2">&quot;securityContext&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;schedulerName&quot;</span>:<span class="s2">&quot;default-scheduler&quot;</span>,<span class="s2">&quot;tolerations&quot;</span>:<span class="o">[{</span><span class="s2">&quot;key&quot;</span>:<span class="s2">&quot;node.kubernetes.io/not-ready&quot;</span>,<span class="s2">&quot;operator&quot;</span>:<span class="s2">&quot;Exists&quot;</span>,<span class="s2">&quot;effect&quot;</span>:<span class="s2">&quot;NoExecute&quot;</span>,<span class="s2">&quot;tolerationSeconds&quot;</span>:300<span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;key&quot;</span>:<span class="s2">&quot;node.kubernetes.io/unreachable&quot;</span>,<span class="s2">&quot;operator&quot;</span>:<span class="s2">&quot;Exists&quot;</span>,<span class="s2">&quot;effect&quot;</span>:<span class="s2">&quot;NoExecute&quot;</span>,<span class="s2">&quot;tolerationSeconds&quot;</span>:300<span class="o">}]</span>,<span class="s2">&quot;priority&quot;</span>:0,<span class="s2">&quot;enableServiceLinks&quot;</span>:true,<span class="s2">&quot;preemptionPolicy&quot;</span>:<span class="s2">&quot;PreemptLowerPriority&quot;</span><span class="o">}</span>,<span class="s2">&quot;status&quot;</span>:<span class="o">{</span><span class="s2">&quot;phase&quot;</span>:<span class="s2">&quot;Pending&quot;</span>,<span class="s2">&quot;qosClass&quot;</span>:<span class="s2">&quot;BestEffort&quot;</span><span class="o">}}</span>,<span class="s2">&quot;oldObject&quot;</span>:null,<span class="s2">&quot;dryRun&quot;</span>:false,<span class="s2">&quot;options&quot;</span>:<span class="o">{</span><span class="s2">&quot;kind&quot;</span>:<span class="s2">&quot;CreateOptions&quot;</span>,<span class="s2">&quot;apiVersion&quot;</span>:<span class="s2">&quot;meta.k8s.io/v1&quot;</span>,<span class="s2">&quot;fieldManager&quot;</span>:<span class="s2">&quot;kubectl-client-side-apply&quot;</span><span class="o">}}}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c7n-kates<span class="w"> </span>--policy-dir<span class="w"> </span>policies
+<span class="m">2022</span>-09-14<span class="w"> </span><span class="m">20</span>:33:49,116:<span class="w"> </span>c7n_kube.server:INFO<span class="w"> </span>Loaded<span class="w"> </span><span class="m">1</span><span class="w"> </span>policies
+<span class="m">2022</span>-09-14<span class="w"> </span><span class="m">20</span>:33:49,314:<span class="w"> </span>c7n_kube.server:INFO<span class="w"> </span>Serving<span class="w"> </span>at<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span><span class="m">8800</span>
+<span class="m">2022</span>-09-14<span class="w"> </span><span class="m">20</span>:33:50,558:<span class="w"> </span>c7n_kube.server:INFO<span class="w"> </span><span class="o">{</span><span class="s2">&quot;kind&quot;</span>:<span class="s2">&quot;AdmissionReview&quot;</span>,<span class="s2">&quot;apiVersion&quot;</span>:<span class="s2">&quot;admission.k8s.io/v1&quot;</span>,<span class="s2">&quot;request&quot;</span>:<span class="o">{</span><span class="s2">&quot;uid&quot;</span>:<span class="s2">&quot;2ec4911a-8a9d-4c8d-8aa5-2d3709877fd0&quot;</span>,<span class="s2">&quot;kind&quot;</span>:<span class="o">{</span><span class="s2">&quot;group&quot;</span>:<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;version&quot;</span>:<span class="s2">&quot;v1&quot;</span>,<span class="s2">&quot;kind&quot;</span>:<span class="s2">&quot;Pod&quot;</span><span class="o">}</span>,<span class="s2">&quot;resource&quot;</span>:<span class="o">{</span><span class="s2">&quot;group&quot;</span>:<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;version&quot;</span>:<span class="s2">&quot;v1&quot;</span>,<span class="s2">&quot;resource&quot;</span>:<span class="s2">&quot;pods&quot;</span><span class="o">}</span>,<span class="s2">&quot;requestKind&quot;</span>:<span class="o">{</span><span class="s2">&quot;group&quot;</span>:<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;version&quot;</span>:<span class="s2">&quot;v1&quot;</span>,<span class="s2">&quot;kind&quot;</span>:<span class="s2">&quot;Pod&quot;</span><span class="o">}</span>,<span class="s2">&quot;requestResource&quot;</span>:<span class="o">{</span><span class="s2">&quot;group&quot;</span>:<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;version&quot;</span>:<span class="s2">&quot;v1&quot;</span>,<span class="s2">&quot;resource&quot;</span>:<span class="s2">&quot;pods&quot;</span><span class="o">}</span>,<span class="s2">&quot;name&quot;</span>:<span class="s2">&quot;nginx&quot;</span>,<span class="s2">&quot;namespace&quot;</span>:<span class="s2">&quot;default&quot;</span>,<span class="s2">&quot;operation&quot;</span>:<span class="s2">&quot;CREATE&quot;</span>,<span class="s2">&quot;userInfo&quot;</span>:<span class="o">{</span><span class="s2">&quot;username&quot;</span>:<span class="s2">&quot;kubernetes-admin&quot;</span>,<span class="s2">&quot;groups&quot;</span>:<span class="o">[</span><span class="s2">&quot;system:masters&quot;</span>,<span class="s2">&quot;system:authenticated&quot;</span><span class="o">]}</span>,<span class="s2">&quot;object&quot;</span>:<span class="o">{</span><span class="s2">&quot;kind&quot;</span>:<span class="s2">&quot;Pod&quot;</span>,<span class="s2">&quot;apiVersion&quot;</span>:<span class="s2">&quot;v1&quot;</span>,<span class="s2">&quot;metadata&quot;</span>:<span class="o">{</span><span class="s2">&quot;name&quot;</span>:<span class="s2">&quot;nginx&quot;</span>,<span class="s2">&quot;namespace&quot;</span>:<span class="s2">&quot;default&quot;</span>,<span class="s2">&quot;uid&quot;</span>:<span class="s2">&quot;eae00ed2-72d2-4ab4-9012-51ba11a284d0&quot;</span>,<span class="s2">&quot;creationTimestamp&quot;</span>:<span class="s2">&quot;2022-09-14T20:33:50Z&quot;</span>,<span class="s2">&quot;annotations&quot;</span>:<span class="o">{</span><span class="s2">&quot;kubectl.kubernetes.io/last-applied-configuration&quot;</span>:<span class="s2">&quot;{\&quot;apiVersion\&quot;:\&quot;v1\&quot;,\&quot;kind\&quot;:\&quot;Pod\&quot;,\&quot;metadata\&quot;:{\&quot;annotations\&quot;:{},\&quot;name\&quot;:\&quot;nginx\&quot;,\&quot;namespace\&quot;:\&quot;default\&quot;},\&quot;spec\&quot;:{\&quot;containers\&quot;:[{\&quot;image\&quot;:\&quot;nginx:1.14.2\&quot;,\&quot;name\&quot;:\&quot;nginx\&quot;,\&quot;ports\&quot;:[{\&quot;containerPort\&quot;:80}]}]}}\n&quot;</span><span class="o">}</span>,<span class="s2">&quot;managedFields&quot;</span>:<span class="o">[{</span><span class="s2">&quot;manager&quot;</span>:<span class="s2">&quot;kubectl-client-side-apply&quot;</span>,<span class="s2">&quot;operation&quot;</span>:<span class="s2">&quot;Update&quot;</span>,<span class="s2">&quot;apiVersion&quot;</span>:<span class="s2">&quot;v1&quot;</span>,<span class="s2">&quot;time&quot;</span>:<span class="s2">&quot;2022-09-14T20:33:50Z&quot;</span>,<span class="s2">&quot;fieldsType&quot;</span>:<span class="s2">&quot;FieldsV1&quot;</span>,<span class="s2">&quot;fieldsV1&quot;</span>:<span class="o">{</span><span class="s2">&quot;f:metadata&quot;</span>:<span class="o">{</span><span class="s2">&quot;f:annotations&quot;</span>:<span class="o">{</span><span class="s2">&quot;.&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:kubectl.kubernetes.io/last-applied-configuration&quot;</span>:<span class="o">{}}}</span>,<span class="s2">&quot;f:spec&quot;</span>:<span class="o">{</span><span class="s2">&quot;f:containers&quot;</span>:<span class="o">{</span><span class="s2">&quot;k:{\&quot;name\&quot;:\&quot;nginx\&quot;}&quot;</span>:<span class="o">{</span><span class="s2">&quot;.&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:image&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:imagePullPolicy&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:name&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:ports&quot;</span>:<span class="o">{</span><span class="s2">&quot;.&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;k:{\&quot;containerPort\&quot;:80,\&quot;protocol\&quot;:\&quot;TCP\&quot;}&quot;</span>:<span class="o">{</span><span class="s2">&quot;.&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:containerPort&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:protocol&quot;</span>:<span class="o">{}}}</span>,<span class="s2">&quot;f:resources&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:terminationMessagePath&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:terminationMessagePolicy&quot;</span>:<span class="o">{}}}</span>,<span class="s2">&quot;f:dnsPolicy&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:enableServiceLinks&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:restartPolicy&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:schedulerName&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:securityContext&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;f:terminationGracePeriodSeconds&quot;</span>:<span class="o">{}}}}]}</span>,<span class="s2">&quot;spec&quot;</span>:<span class="o">{</span><span class="s2">&quot;volumes&quot;</span>:<span class="o">[{</span><span class="s2">&quot;name&quot;</span>:<span class="s2">&quot;kube-api-access-mb9m2&quot;</span>,<span class="s2">&quot;projected&quot;</span>:<span class="o">{</span><span class="s2">&quot;sources&quot;</span>:<span class="o">[{</span><span class="s2">&quot;serviceAccountToken&quot;</span>:<span class="o">{</span><span class="s2">&quot;expirationSeconds&quot;</span>:3607,<span class="s2">&quot;path&quot;</span>:<span class="s2">&quot;token&quot;</span><span class="o">}}</span>,<span class="o">{</span><span class="s2">&quot;configMap&quot;</span>:<span class="o">{</span><span class="s2">&quot;name&quot;</span>:<span class="s2">&quot;kube-root-ca.crt&quot;</span>,<span class="s2">&quot;items&quot;</span>:<span class="o">[{</span><span class="s2">&quot;key&quot;</span>:<span class="s2">&quot;ca.crt&quot;</span>,<span class="s2">&quot;path&quot;</span>:<span class="s2">&quot;ca.crt&quot;</span><span class="o">}]}}</span>,<span class="o">{</span><span class="s2">&quot;downwardAPI&quot;</span>:<span class="o">{</span><span class="s2">&quot;items&quot;</span>:<span class="o">[{</span><span class="s2">&quot;path&quot;</span>:<span class="s2">&quot;namespace&quot;</span>,<span class="s2">&quot;fieldRef&quot;</span>:<span class="o">{</span><span class="s2">&quot;apiVersion&quot;</span>:<span class="s2">&quot;v1&quot;</span>,<span class="s2">&quot;fieldPath&quot;</span>:<span class="s2">&quot;metadata.namespace&quot;</span><span class="o">}}]}}]</span>,<span class="s2">&quot;defaultMode&quot;</span>:420<span class="o">}}]</span>,<span class="s2">&quot;containers&quot;</span>:<span class="o">[{</span><span class="s2">&quot;name&quot;</span>:<span class="s2">&quot;nginx&quot;</span>,<span class="s2">&quot;image&quot;</span>:<span class="s2">&quot;nginx:1.14.2&quot;</span>,<span class="s2">&quot;ports&quot;</span>:<span class="o">[{</span><span class="s2">&quot;containerPort&quot;</span>:80,<span class="s2">&quot;protocol&quot;</span>:<span class="s2">&quot;TCP&quot;</span><span class="o">}]</span>,<span class="s2">&quot;resources&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;volumeMounts&quot;</span>:<span class="o">[{</span><span class="s2">&quot;name&quot;</span>:<span class="s2">&quot;kube-api-access-mb9m2&quot;</span>,<span class="s2">&quot;readOnly&quot;</span>:true,<span class="s2">&quot;mountPath&quot;</span>:<span class="s2">&quot;/var/run/secrets/kubernetes.io/serviceaccount&quot;</span><span class="o">}]</span>,<span class="s2">&quot;terminationMessagePath&quot;</span>:<span class="s2">&quot;/dev/termination-log&quot;</span>,<span class="s2">&quot;terminationMessagePolicy&quot;</span>:<span class="s2">&quot;File&quot;</span>,<span class="s2">&quot;imagePullPolicy&quot;</span>:<span class="s2">&quot;IfNotPresent&quot;</span><span class="o">}]</span>,<span class="s2">&quot;restartPolicy&quot;</span>:<span class="s2">&quot;Always&quot;</span>,<span class="s2">&quot;terminationGracePeriodSeconds&quot;</span>:30,<span class="s2">&quot;dnsPolicy&quot;</span>:<span class="s2">&quot;ClusterFirst&quot;</span>,<span class="s2">&quot;serviceAccountName&quot;</span>:<span class="s2">&quot;default&quot;</span>,<span class="s2">&quot;serviceAccount&quot;</span>:<span class="s2">&quot;default&quot;</span>,<span class="s2">&quot;securityContext&quot;</span>:<span class="o">{}</span>,<span class="s2">&quot;schedulerName&quot;</span>:<span class="s2">&quot;default-scheduler&quot;</span>,<span class="s2">&quot;tolerations&quot;</span>:<span class="o">[{</span><span class="s2">&quot;key&quot;</span>:<span class="s2">&quot;node.kubernetes.io/not-ready&quot;</span>,<span class="s2">&quot;operator&quot;</span>:<span class="s2">&quot;Exists&quot;</span>,<span class="s2">&quot;effect&quot;</span>:<span class="s2">&quot;NoExecute&quot;</span>,<span class="s2">&quot;tolerationSeconds&quot;</span>:300<span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;key&quot;</span>:<span class="s2">&quot;node.kubernetes.io/unreachable&quot;</span>,<span class="s2">&quot;operator&quot;</span>:<span class="s2">&quot;Exists&quot;</span>,<span class="s2">&quot;effect&quot;</span>:<span class="s2">&quot;NoExecute&quot;</span>,<span class="s2">&quot;tolerationSeconds&quot;</span>:300<span class="o">}]</span>,<span class="s2">&quot;priority&quot;</span>:0,<span class="s2">&quot;enableServiceLinks&quot;</span>:true,<span class="s2">&quot;preemptionPolicy&quot;</span>:<span class="s2">&quot;PreemptLowerPriority&quot;</span><span class="o">}</span>,<span class="s2">&quot;status&quot;</span>:<span class="o">{</span><span class="s2">&quot;phase&quot;</span>:<span class="s2">&quot;Pending&quot;</span>,<span class="s2">&quot;qosClass&quot;</span>:<span class="s2">&quot;BestEffort&quot;</span><span class="o">}}</span>,<span class="s2">&quot;oldObject&quot;</span>:null,<span class="s2">&quot;dryRun&quot;</span>:false,<span class="s2">&quot;options&quot;</span>:<span class="o">{</span><span class="s2">&quot;kind&quot;</span>:<span class="s2">&quot;CreateOptions&quot;</span>,<span class="s2">&quot;apiVersion&quot;</span>:<span class="s2">&quot;meta.k8s.io/v1&quot;</span>,<span class="s2">&quot;fieldManager&quot;</span>:<span class="s2">&quot;kubectl-client-side-apply&quot;</span><span class="o">}}}</span>
 
-<span class="m">2022</span>-09-14 <span class="m">20</span>:33:50,559: custodian.k8s.policy:INFO Got event:<span class="o">{</span><span class="s1">&#39;kind&#39;</span>: <span class="s1">&#39;AdmissionReview&#39;</span>, <span class="s1">&#39;apiVersion&#39;</span>: <span class="s1">&#39;admission.k8s.io/v1&#39;</span>, <span class="s1">&#39;request&#39;</span>: <span class="o">{</span><span class="s1">&#39;uid&#39;</span>: <span class="s1">&#39;2ec4911a-8a9d-4c8d-8aa5-2d3709877fd0&#39;</span>, <span class="s1">&#39;kind&#39;</span>: <span class="o">{</span><span class="s1">&#39;group&#39;</span>: <span class="s1">&#39;&#39;</span>, <span class="s1">&#39;version&#39;</span>: <span class="s1">&#39;v1&#39;</span>, <span class="s1">&#39;kind&#39;</span>: <span class="s1">&#39;Pod&#39;</span><span class="o">}</span>, <span class="s1">&#39;resource&#39;</span>: <span class="o">{</span><span class="s1">&#39;group&#39;</span>: <span class="s1">&#39;&#39;</span>, <span class="s1">&#39;version&#39;</span>: <span class="s1">&#39;v1&#39;</span>, <span class="s1">&#39;resource&#39;</span>: <span class="s1">&#39;pods&#39;</span><span class="o">}</span>, <span class="s1">&#39;requestKind&#39;</span>: <span class="o">{</span><span class="s1">&#39;group&#39;</span>: <span class="s1">&#39;&#39;</span>, <span class="s1">&#39;version&#39;</span>: <span class="s1">&#39;v1&#39;</span>, <span class="s1">&#39;kind&#39;</span>: <span class="s1">&#39;Pod&#39;</span><span class="o">}</span>, <span class="s1">&#39;requestResource&#39;</span>: <span class="o">{</span><span class="s1">&#39;group&#39;</span>: <span class="s1">&#39;&#39;</span>, <span class="s1">&#39;version&#39;</span>: <span class="s1">&#39;v1&#39;</span>, <span class="s1">&#39;resource&#39;</span>: <span class="s1">&#39;pods&#39;</span><span class="o">}</span>, <span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;nginx&#39;</span>, <span class="s1">&#39;namespace&#39;</span>: <span class="s1">&#39;default&#39;</span>, <span class="s1">&#39;operation&#39;</span>: <span class="s1">&#39;CREATE&#39;</span>, <span class="s1">&#39;userInfo&#39;</span>: <span class="o">{</span><span class="s1">&#39;username&#39;</span>: <span class="s1">&#39;kubernetes-admin&#39;</span>, <span class="s1">&#39;groups&#39;</span>: <span class="o">[</span><span class="s1">&#39;system:masters&#39;</span>, <span class="s1">&#39;system:authenticated&#39;</span><span class="o">]}</span>, <span class="s1">&#39;object&#39;</span>: <span class="o">{</span><span class="s1">&#39;kind&#39;</span>: <span class="s1">&#39;Pod&#39;</span>, <span class="s1">&#39;apiVersion&#39;</span>: <span class="s1">&#39;v1&#39;</span>, <span class="s1">&#39;metadata&#39;</span>: <span class="o">{</span><span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;nginx&#39;</span>, <span class="s1">&#39;namespace&#39;</span>: <span class="s1">&#39;default&#39;</span>, <span class="s1">&#39;uid&#39;</span>: <span class="s1">&#39;eae00ed2-72d2-4ab4-9012-51ba11a284d0&#39;</span>, <span class="s1">&#39;creationTimestamp&#39;</span>: <span class="s1">&#39;2022-09-14T20:33:50Z&#39;</span>, <span class="s1">&#39;annotations&#39;</span>: <span class="o">{</span><span class="s1">&#39;kubectl.kubernetes.io/last-applied-configuration&#39;</span>: <span class="s1">&#39;{&quot;apiVersion&quot;:&quot;v1&quot;,&quot;kind&quot;:&quot;Pod&quot;,&quot;metadata&quot;:{&quot;annotations&quot;:{},&quot;name&quot;:&quot;nginx&quot;,&quot;namespace&quot;:&quot;default&quot;},&quot;spec&quot;:{&quot;containers&quot;:[{&quot;image&quot;:&quot;nginx:1.14.2&quot;,&quot;name&quot;:&quot;nginx&quot;,&quot;ports&quot;:[{&quot;containerPort&quot;:80}]}]}}\n&#39;</span><span class="o">}</span>, <span class="s1">&#39;managedFields&#39;</span>: <span class="o">[{</span><span class="s1">&#39;manager&#39;</span>: <span class="s1">&#39;kubectl-client-side-apply&#39;</span>, <span class="s1">&#39;operation&#39;</span>: <span class="s1">&#39;Update&#39;</span>, <span class="s1">&#39;apiVersion&#39;</span>: <span class="s1">&#39;v1&#39;</span>, <span class="s1">&#39;time&#39;</span>: <span class="s1">&#39;2022-09-14T20:33:50Z&#39;</span>, <span class="s1">&#39;fieldsType&#39;</span>: <span class="s1">&#39;FieldsV1&#39;</span>, <span class="s1">&#39;fieldsV1&#39;</span>: <span class="o">{</span><span class="s1">&#39;f:metadata&#39;</span>: <span class="o">{</span><span class="s1">&#39;f:annotations&#39;</span>: <span class="o">{</span><span class="s1">&#39;.&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;f:kubectl.kubernetes.io/last-applied-configuration&#39;</span>: <span class="o">{}}}</span>, <span class="s1">&#39;f:spec&#39;</span>: <span class="o">{</span><span class="s1">&#39;f:containers&#39;</span>: <span class="o">{</span><span class="s1">&#39;k:{&quot;name&quot;:&quot;nginx&quot;}&#39;</span>: <span class="o">{</span><span class="s1">&#39;.&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;f:image&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;f:imagePullPolicy&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;f:name&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;f:ports&#39;</span>: <span class="o">{</span><span class="s1">&#39;.&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;k:{&quot;containerPort&quot;:80,&quot;protocol&quot;:&quot;TCP&quot;}&#39;</span>: <span class="o">{</span><span class="s1">&#39;.&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;f:containerPort&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;f:protocol&#39;</span>: <span class="o">{}}}</span>, <span class="s1">&#39;f:resources&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;f:terminationMessagePath&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;f:terminationMessagePolicy&#39;</span>: <span class="o">{}}}</span>, <span class="s1">&#39;f:dnsPolicy&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;f:enableServiceLinks&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;f:restartPolicy&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;f:schedulerName&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;f:securityContext&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;f:terminationGracePeriodSeconds&#39;</span>: <span class="o">{}}}}]}</span>, <span class="s1">&#39;spec&#39;</span>: <span class="o">{</span><span class="s1">&#39;volumes&#39;</span>: <span class="o">[{</span><span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;kube-api-access-mb9m2&#39;</span>, <span class="s1">&#39;projected&#39;</span>: <span class="o">{</span><span class="s1">&#39;sources&#39;</span>: <span class="o">[{</span><span class="s1">&#39;serviceAccountToken&#39;</span>: <span class="o">{</span><span class="s1">&#39;expirationSeconds&#39;</span>: <span class="m">3607</span>, <span class="s1">&#39;path&#39;</span>: <span class="s1">&#39;token&#39;</span><span class="o">}}</span>, <span class="o">{</span><span class="s1">&#39;configMap&#39;</span>: <span class="o">{</span><span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;kube-root-ca.crt&#39;</span>, <span class="s1">&#39;items&#39;</span>: <span class="o">[{</span><span class="s1">&#39;key&#39;</span>: <span class="s1">&#39;ca.crt&#39;</span>, <span class="s1">&#39;path&#39;</span>: <span class="s1">&#39;ca.crt&#39;</span><span class="o">}]}}</span>, <span class="o">{</span><span class="s1">&#39;downwardAPI&#39;</span>: <span class="o">{</span><span class="s1">&#39;items&#39;</span>: <span class="o">[{</span><span class="s1">&#39;path&#39;</span>: <span class="s1">&#39;namespace&#39;</span>, <span class="s1">&#39;fieldRef&#39;</span>: <span class="o">{</span><span class="s1">&#39;apiVersion&#39;</span>: <span class="s1">&#39;v1&#39;</span>, <span class="s1">&#39;fieldPath&#39;</span>: <span class="s1">&#39;metadata.namespace&#39;</span><span class="o">}}]}}]</span>, <span class="s1">&#39;defaultMode&#39;</span>: <span class="m">420</span><span class="o">}}]</span>, <span class="s1">&#39;containers&#39;</span>: <span class="o">[{</span><span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;nginx&#39;</span>, <span class="s1">&#39;image&#39;</span>: <span class="s1">&#39;nginx:1.14.2&#39;</span>, <span class="s1">&#39;ports&#39;</span>: <span class="o">[{</span><span class="s1">&#39;containerPort&#39;</span>: <span class="m">80</span>, <span class="s1">&#39;protocol&#39;</span>: <span class="s1">&#39;TCP&#39;</span><span class="o">}]</span>, <span class="s1">&#39;resources&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;volumeMounts&#39;</span>: <span class="o">[{</span><span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;kube-api-access-mb9m2&#39;</span>, <span class="s1">&#39;readOnly&#39;</span>: True, <span class="s1">&#39;mountPath&#39;</span>: <span class="s1">&#39;/var/run/secrets/kubernetes.io/serviceaccount&#39;</span><span class="o">}]</span>, <span class="s1">&#39;terminationMessagePath&#39;</span>: <span class="s1">&#39;/dev/termination-log&#39;</span>, <span class="s1">&#39;terminationMessagePolicy&#39;</span>: <span class="s1">&#39;File&#39;</span>, <span class="s1">&#39;imagePullPolicy&#39;</span>: <span class="s1">&#39;IfNotPresent&#39;</span><span class="o">}]</span>, <span class="s1">&#39;restartPolicy&#39;</span>: <span class="s1">&#39;Always&#39;</span>, <span class="s1">&#39;terminationGracePeriodSeconds&#39;</span>: <span class="m">30</span>, <span class="s1">&#39;dnsPolicy&#39;</span>: <span class="s1">&#39;ClusterFirst&#39;</span>, <span class="s1">&#39;serviceAccountName&#39;</span>: <span class="s1">&#39;default&#39;</span>, <span class="s1">&#39;serviceAccount&#39;</span>: <span class="s1">&#39;default&#39;</span>, <span class="s1">&#39;securityContext&#39;</span>: <span class="o">{}</span>, <span class="s1">&#39;schedulerName&#39;</span>: <span class="s1">&#39;default-scheduler&#39;</span>, <span class="s1">&#39;tolerations&#39;</span>: <span class="o">[{</span><span class="s1">&#39;key&#39;</span>: <span class="s1">&#39;node.kubernetes.io/not-ready&#39;</span>, <span class="s1">&#39;operator&#39;</span>: <span class="s1">&#39;Exists&#39;</span>, <span class="s1">&#39;effect&#39;</span>: <span class="s1">&#39;NoExecute&#39;</span>, <span class="s1">&#39;tolerationSeconds&#39;</span>: <span class="m">300</span><span class="o">}</span>, <span class="o">{</span><span class="s1">&#39;key&#39;</span>: <span class="s1">&#39;node.kubernetes.io/unreachable&#39;</span>, <span class="s1">&#39;operator&#39;</span>: <span class="s1">&#39;Exists&#39;</span>, <span class="s1">&#39;effect&#39;</span>: <span class="s1">&#39;NoExecute&#39;</span>, <span class="s1">&#39;tolerationSeconds&#39;</span>: <span class="m">300</span><span class="o">}]</span>, <span class="s1">&#39;priority&#39;</span>: <span class="m">0</span>, <span class="s1">&#39;enableServiceLinks&#39;</span>: True, <span class="s1">&#39;preemptionPolicy&#39;</span>: <span class="s1">&#39;PreemptLowerPriority&#39;</span><span class="o">}</span>, <span class="s1">&#39;status&#39;</span>: <span class="o">{</span><span class="s1">&#39;phase&#39;</span>: <span class="s1">&#39;Pending&#39;</span>, <span class="s1">&#39;qosClass&#39;</span>: <span class="s1">&#39;BestEffort&#39;</span><span class="o">}}</span>, <span class="s1">&#39;oldObject&#39;</span>: None, <span class="s1">&#39;dryRun&#39;</span>: False, <span class="s1">&#39;options&#39;</span>: <span class="o">{</span><span class="s1">&#39;kind&#39;</span>: <span class="s1">&#39;CreateOptions&#39;</span>, <span class="s1">&#39;apiVersion&#39;</span>: <span class="s1">&#39;meta.k8s.io/v1&#39;</span>, <span class="s1">&#39;fieldManager&#39;</span>: <span class="s1">&#39;kubectl-client-side-apply&#39;</span><span class="o">}}}</span>
-<span class="m">2022</span>-09-14 <span class="m">20</span>:33:50,559: custodian.k8s.policy:INFO Matching event against:<span class="o">{</span><span class="s1">&#39;operations&#39;</span>: <span class="o">[</span><span class="s1">&#39;CREATE&#39;</span><span class="o">]</span>, <span class="s1">&#39;resources&#39;</span>: <span class="s1">&#39;pods&#39;</span>, <span class="s1">&#39;group&#39;</span>: <span class="s1">&#39;core&#39;</span>, <span class="s1">&#39;apiVersions&#39;</span>: <span class="s1">&#39;v1&#39;</span>, <span class="s1">&#39;scope&#39;</span>: <span class="s1">&#39;Namespaced&#39;</span><span class="o">}</span>
-<span class="m">2022</span>-09-14 <span class="m">20</span>:33:50,560: custodian.k8s.policy:INFO Event Matched
-<span class="m">2022</span>-09-14 <span class="m">20</span>:33:50,639: custodian.k8s.policy:INFO Filtered from <span class="m">1</span> to <span class="m">1</span> resource<span class="o">(</span>s<span class="o">)</span>
-<span class="m">2022</span>-09-14 <span class="m">20</span>:33:50,639: custodian.k8s.policy:INFO allowing admission because on-match:warn, matched:1
-<span class="m">10</span>.0.201.111 - - <span class="o">[</span><span class="m">14</span>/Sep/2022 <span class="m">20</span>:33:50<span class="o">]</span> <span class="s2">&quot;POST /?timeout=10s HTTP/1.1&quot;</span> <span class="m">200</span> -
-<span class="m">2022</span>-09-14 <span class="m">20</span>:33:50,640: c7n_kube.server:INFO <span class="o">{</span><span class="s2">&quot;apiVersion&quot;</span>: <span class="s2">&quot;admission.k8s.io/v1&quot;</span>, <span class="s2">&quot;kind&quot;</span>: <span class="s2">&quot;AdmissionReview&quot;</span>, <span class="s2">&quot;response&quot;</span>: <span class="o">{</span><span class="s2">&quot;allowed&quot;</span>: true, <span class="s2">&quot;warnings&quot;</span>: <span class="o">[</span><span class="s2">&quot;example-warn-policy:This is a sample policy&quot;</span><span class="o">]</span>, <span class="s2">&quot;uid&quot;</span>: <span class="s2">&quot;2ec4911a-8a9d-4c8d-8aa5-2d3709877fd0&quot;</span>, <span class="s2">&quot;status&quot;</span>: <span class="o">{</span><span class="s2">&quot;code&quot;</span>: <span class="m">200</span>, <span class="s2">&quot;message&quot;</span>: <span class="s2">&quot;OK&quot;</span><span class="o">}}}</span>
+<span class="m">2022</span>-09-14<span class="w"> </span><span class="m">20</span>:33:50,559:<span class="w"> </span>custodian.k8s.policy:INFO<span class="w"> </span>Got<span class="w"> </span>event:<span class="o">{</span><span class="s1">&#39;kind&#39;</span>:<span class="w"> </span><span class="s1">&#39;AdmissionReview&#39;</span>,<span class="w"> </span><span class="s1">&#39;apiVersion&#39;</span>:<span class="w"> </span><span class="s1">&#39;admission.k8s.io/v1&#39;</span>,<span class="w"> </span><span class="s1">&#39;request&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;uid&#39;</span>:<span class="w"> </span><span class="s1">&#39;2ec4911a-8a9d-4c8d-8aa5-2d3709877fd0&#39;</span>,<span class="w"> </span><span class="s1">&#39;kind&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;group&#39;</span>:<span class="w"> </span><span class="s1">&#39;&#39;</span>,<span class="w"> </span><span class="s1">&#39;version&#39;</span>:<span class="w"> </span><span class="s1">&#39;v1&#39;</span>,<span class="w"> </span><span class="s1">&#39;kind&#39;</span>:<span class="w"> </span><span class="s1">&#39;Pod&#39;</span><span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;resource&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;group&#39;</span>:<span class="w"> </span><span class="s1">&#39;&#39;</span>,<span class="w"> </span><span class="s1">&#39;version&#39;</span>:<span class="w"> </span><span class="s1">&#39;v1&#39;</span>,<span class="w"> </span><span class="s1">&#39;resource&#39;</span>:<span class="w"> </span><span class="s1">&#39;pods&#39;</span><span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;requestKind&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;group&#39;</span>:<span class="w"> </span><span class="s1">&#39;&#39;</span>,<span class="w"> </span><span class="s1">&#39;version&#39;</span>:<span class="w"> </span><span class="s1">&#39;v1&#39;</span>,<span class="w"> </span><span class="s1">&#39;kind&#39;</span>:<span class="w"> </span><span class="s1">&#39;Pod&#39;</span><span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;requestResource&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;group&#39;</span>:<span class="w"> </span><span class="s1">&#39;&#39;</span>,<span class="w"> </span><span class="s1">&#39;version&#39;</span>:<span class="w"> </span><span class="s1">&#39;v1&#39;</span>,<span class="w"> </span><span class="s1">&#39;resource&#39;</span>:<span class="w"> </span><span class="s1">&#39;pods&#39;</span><span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;name&#39;</span>:<span class="w"> </span><span class="s1">&#39;nginx&#39;</span>,<span class="w"> </span><span class="s1">&#39;namespace&#39;</span>:<span class="w"> </span><span class="s1">&#39;default&#39;</span>,<span class="w"> </span><span class="s1">&#39;operation&#39;</span>:<span class="w"> </span><span class="s1">&#39;CREATE&#39;</span>,<span class="w"> </span><span class="s1">&#39;userInfo&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;username&#39;</span>:<span class="w"> </span><span class="s1">&#39;kubernetes-admin&#39;</span>,<span class="w"> </span><span class="s1">&#39;groups&#39;</span>:<span class="w"> </span><span class="o">[</span><span class="s1">&#39;system:masters&#39;</span>,<span class="w"> </span><span class="s1">&#39;system:authenticated&#39;</span><span class="o">]}</span>,<span class="w"> </span><span class="s1">&#39;object&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;kind&#39;</span>:<span class="w"> </span><span class="s1">&#39;Pod&#39;</span>,<span class="w"> </span><span class="s1">&#39;apiVersion&#39;</span>:<span class="w"> </span><span class="s1">&#39;v1&#39;</span>,<span class="w"> </span><span class="s1">&#39;metadata&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;name&#39;</span>:<span class="w"> </span><span class="s1">&#39;nginx&#39;</span>,<span class="w"> </span><span class="s1">&#39;namespace&#39;</span>:<span class="w"> </span><span class="s1">&#39;default&#39;</span>,<span class="w"> </span><span class="s1">&#39;uid&#39;</span>:<span class="w"> </span><span class="s1">&#39;eae00ed2-72d2-4ab4-9012-51ba11a284d0&#39;</span>,<span class="w"> </span><span class="s1">&#39;creationTimestamp&#39;</span>:<span class="w"> </span><span class="s1">&#39;2022-09-14T20:33:50Z&#39;</span>,<span class="w"> </span><span class="s1">&#39;annotations&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;kubectl.kubernetes.io/last-applied-configuration&#39;</span>:<span class="w"> </span><span class="s1">&#39;{&quot;apiVersion&quot;:&quot;v1&quot;,&quot;kind&quot;:&quot;Pod&quot;,&quot;metadata&quot;:{&quot;annotations&quot;:{},&quot;name&quot;:&quot;nginx&quot;,&quot;namespace&quot;:&quot;default&quot;},&quot;spec&quot;:{&quot;containers&quot;:[{&quot;image&quot;:&quot;nginx:1.14.2&quot;,&quot;name&quot;:&quot;nginx&quot;,&quot;ports&quot;:[{&quot;containerPort&quot;:80}]}]}}\n&#39;</span><span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;managedFields&#39;</span>:<span class="w"> </span><span class="o">[{</span><span class="s1">&#39;manager&#39;</span>:<span class="w"> </span><span class="s1">&#39;kubectl-client-side-apply&#39;</span>,<span class="w"> </span><span class="s1">&#39;operation&#39;</span>:<span class="w"> </span><span class="s1">&#39;Update&#39;</span>,<span class="w"> </span><span class="s1">&#39;apiVersion&#39;</span>:<span class="w"> </span><span class="s1">&#39;v1&#39;</span>,<span class="w"> </span><span class="s1">&#39;time&#39;</span>:<span class="w"> </span><span class="s1">&#39;2022-09-14T20:33:50Z&#39;</span>,<span class="w"> </span><span class="s1">&#39;fieldsType&#39;</span>:<span class="w"> </span><span class="s1">&#39;FieldsV1&#39;</span>,<span class="w"> </span><span class="s1">&#39;fieldsV1&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;f:metadata&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;f:annotations&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;.&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;f:kubectl.kubernetes.io/last-applied-configuration&#39;</span>:<span class="w"> </span><span class="o">{}}}</span>,<span class="w"> </span><span class="s1">&#39;f:spec&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;f:containers&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;k:{&quot;name&quot;:&quot;nginx&quot;}&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;.&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;f:image&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;f:imagePullPolicy&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;f:name&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;f:ports&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;.&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;k:{&quot;containerPort&quot;:80,&quot;protocol&quot;:&quot;TCP&quot;}&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;.&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;f:containerPort&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;f:protocol&#39;</span>:<span class="w"> </span><span class="o">{}}}</span>,<span class="w"> </span><span class="s1">&#39;f:resources&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;f:terminationMessagePath&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;f:terminationMessagePolicy&#39;</span>:<span class="w"> </span><span class="o">{}}}</span>,<span class="w"> </span><span class="s1">&#39;f:dnsPolicy&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;f:enableServiceLinks&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;f:restartPolicy&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;f:schedulerName&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;f:securityContext&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;f:terminationGracePeriodSeconds&#39;</span>:<span class="w"> </span><span class="o">{}}}}]}</span>,<span class="w"> </span><span class="s1">&#39;spec&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;volumes&#39;</span>:<span class="w"> </span><span class="o">[{</span><span class="s1">&#39;name&#39;</span>:<span class="w"> </span><span class="s1">&#39;kube-api-access-mb9m2&#39;</span>,<span class="w"> </span><span class="s1">&#39;projected&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;sources&#39;</span>:<span class="w"> </span><span class="o">[{</span><span class="s1">&#39;serviceAccountToken&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;expirationSeconds&#39;</span>:<span class="w"> </span><span class="m">3607</span>,<span class="w"> </span><span class="s1">&#39;path&#39;</span>:<span class="w"> </span><span class="s1">&#39;token&#39;</span><span class="o">}}</span>,<span class="w"> </span><span class="o">{</span><span class="s1">&#39;configMap&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;name&#39;</span>:<span class="w"> </span><span class="s1">&#39;kube-root-ca.crt&#39;</span>,<span class="w"> </span><span class="s1">&#39;items&#39;</span>:<span class="w"> </span><span class="o">[{</span><span class="s1">&#39;key&#39;</span>:<span class="w"> </span><span class="s1">&#39;ca.crt&#39;</span>,<span class="w"> </span><span class="s1">&#39;path&#39;</span>:<span class="w"> </span><span class="s1">&#39;ca.crt&#39;</span><span class="o">}]}}</span>,<span class="w"> </span><span class="o">{</span><span class="s1">&#39;downwardAPI&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;items&#39;</span>:<span class="w"> </span><span class="o">[{</span><span class="s1">&#39;path&#39;</span>:<span class="w"> </span><span class="s1">&#39;namespace&#39;</span>,<span class="w"> </span><span class="s1">&#39;fieldRef&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;apiVersion&#39;</span>:<span class="w"> </span><span class="s1">&#39;v1&#39;</span>,<span class="w"> </span><span class="s1">&#39;fieldPath&#39;</span>:<span class="w"> </span><span class="s1">&#39;metadata.namespace&#39;</span><span class="o">}}]}}]</span>,<span class="w"> </span><span class="s1">&#39;defaultMode&#39;</span>:<span class="w"> </span><span class="m">420</span><span class="o">}}]</span>,<span class="w"> </span><span class="s1">&#39;containers&#39;</span>:<span class="w"> </span><span class="o">[{</span><span class="s1">&#39;name&#39;</span>:<span class="w"> </span><span class="s1">&#39;nginx&#39;</span>,<span class="w"> </span><span class="s1">&#39;image&#39;</span>:<span class="w"> </span><span class="s1">&#39;nginx:1.14.2&#39;</span>,<span class="w"> </span><span class="s1">&#39;ports&#39;</span>:<span class="w"> </span><span class="o">[{</span><span class="s1">&#39;containerPort&#39;</span>:<span class="w"> </span><span class="m">80</span>,<span class="w"> </span><span class="s1">&#39;protocol&#39;</span>:<span class="w"> </span><span class="s1">&#39;TCP&#39;</span><span class="o">}]</span>,<span class="w"> </span><span class="s1">&#39;resources&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;volumeMounts&#39;</span>:<span class="w"> </span><span class="o">[{</span><span class="s1">&#39;name&#39;</span>:<span class="w"> </span><span class="s1">&#39;kube-api-access-mb9m2&#39;</span>,<span class="w"> </span><span class="s1">&#39;readOnly&#39;</span>:<span class="w"> </span>True,<span class="w"> </span><span class="s1">&#39;mountPath&#39;</span>:<span class="w"> </span><span class="s1">&#39;/var/run/secrets/kubernetes.io/serviceaccount&#39;</span><span class="o">}]</span>,<span class="w"> </span><span class="s1">&#39;terminationMessagePath&#39;</span>:<span class="w"> </span><span class="s1">&#39;/dev/termination-log&#39;</span>,<span class="w"> </span><span class="s1">&#39;terminationMessagePolicy&#39;</span>:<span class="w"> </span><span class="s1">&#39;File&#39;</span>,<span class="w"> </span><span class="s1">&#39;imagePullPolicy&#39;</span>:<span class="w"> </span><span class="s1">&#39;IfNotPresent&#39;</span><span class="o">}]</span>,<span class="w"> </span><span class="s1">&#39;restartPolicy&#39;</span>:<span class="w"> </span><span class="s1">&#39;Always&#39;</span>,<span class="w"> </span><span class="s1">&#39;terminationGracePeriodSeconds&#39;</span>:<span class="w"> </span><span class="m">30</span>,<span class="w"> </span><span class="s1">&#39;dnsPolicy&#39;</span>:<span class="w"> </span><span class="s1">&#39;ClusterFirst&#39;</span>,<span class="w"> </span><span class="s1">&#39;serviceAccountName&#39;</span>:<span class="w"> </span><span class="s1">&#39;default&#39;</span>,<span class="w"> </span><span class="s1">&#39;serviceAccount&#39;</span>:<span class="w"> </span><span class="s1">&#39;default&#39;</span>,<span class="w"> </span><span class="s1">&#39;securityContext&#39;</span>:<span class="w"> </span><span class="o">{}</span>,<span class="w"> </span><span class="s1">&#39;schedulerName&#39;</span>:<span class="w"> </span><span class="s1">&#39;default-scheduler&#39;</span>,<span class="w"> </span><span class="s1">&#39;tolerations&#39;</span>:<span class="w"> </span><span class="o">[{</span><span class="s1">&#39;key&#39;</span>:<span class="w"> </span><span class="s1">&#39;node.kubernetes.io/not-ready&#39;</span>,<span class="w"> </span><span class="s1">&#39;operator&#39;</span>:<span class="w"> </span><span class="s1">&#39;Exists&#39;</span>,<span class="w"> </span><span class="s1">&#39;effect&#39;</span>:<span class="w"> </span><span class="s1">&#39;NoExecute&#39;</span>,<span class="w"> </span><span class="s1">&#39;tolerationSeconds&#39;</span>:<span class="w"> </span><span class="m">300</span><span class="o">}</span>,<span class="w"> </span><span class="o">{</span><span class="s1">&#39;key&#39;</span>:<span class="w"> </span><span class="s1">&#39;node.kubernetes.io/unreachable&#39;</span>,<span class="w"> </span><span class="s1">&#39;operator&#39;</span>:<span class="w"> </span><span class="s1">&#39;Exists&#39;</span>,<span class="w"> </span><span class="s1">&#39;effect&#39;</span>:<span class="w"> </span><span class="s1">&#39;NoExecute&#39;</span>,<span class="w"> </span><span class="s1">&#39;tolerationSeconds&#39;</span>:<span class="w"> </span><span class="m">300</span><span class="o">}]</span>,<span class="w"> </span><span class="s1">&#39;priority&#39;</span>:<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="s1">&#39;enableServiceLinks&#39;</span>:<span class="w"> </span>True,<span class="w"> </span><span class="s1">&#39;preemptionPolicy&#39;</span>:<span class="w"> </span><span class="s1">&#39;PreemptLowerPriority&#39;</span><span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;status&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;phase&#39;</span>:<span class="w"> </span><span class="s1">&#39;Pending&#39;</span>,<span class="w"> </span><span class="s1">&#39;qosClass&#39;</span>:<span class="w"> </span><span class="s1">&#39;BestEffort&#39;</span><span class="o">}}</span>,<span class="w"> </span><span class="s1">&#39;oldObject&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;dryRun&#39;</span>:<span class="w"> </span>False,<span class="w"> </span><span class="s1">&#39;options&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;kind&#39;</span>:<span class="w"> </span><span class="s1">&#39;CreateOptions&#39;</span>,<span class="w"> </span><span class="s1">&#39;apiVersion&#39;</span>:<span class="w"> </span><span class="s1">&#39;meta.k8s.io/v1&#39;</span>,<span class="w"> </span><span class="s1">&#39;fieldManager&#39;</span>:<span class="w"> </span><span class="s1">&#39;kubectl-client-side-apply&#39;</span><span class="o">}}}</span>
+<span class="m">2022</span>-09-14<span class="w"> </span><span class="m">20</span>:33:50,559:<span class="w"> </span>custodian.k8s.policy:INFO<span class="w"> </span>Matching<span class="w"> </span>event<span class="w"> </span>against:<span class="o">{</span><span class="s1">&#39;operations&#39;</span>:<span class="w"> </span><span class="o">[</span><span class="s1">&#39;CREATE&#39;</span><span class="o">]</span>,<span class="w"> </span><span class="s1">&#39;resources&#39;</span>:<span class="w"> </span><span class="s1">&#39;pods&#39;</span>,<span class="w"> </span><span class="s1">&#39;group&#39;</span>:<span class="w"> </span><span class="s1">&#39;core&#39;</span>,<span class="w"> </span><span class="s1">&#39;apiVersions&#39;</span>:<span class="w"> </span><span class="s1">&#39;v1&#39;</span>,<span class="w"> </span><span class="s1">&#39;scope&#39;</span>:<span class="w"> </span><span class="s1">&#39;Namespaced&#39;</span><span class="o">}</span>
+<span class="m">2022</span>-09-14<span class="w"> </span><span class="m">20</span>:33:50,560:<span class="w"> </span>custodian.k8s.policy:INFO<span class="w"> </span>Event<span class="w"> </span>Matched
+<span class="m">2022</span>-09-14<span class="w"> </span><span class="m">20</span>:33:50,639:<span class="w"> </span>custodian.k8s.policy:INFO<span class="w"> </span>Filtered<span class="w"> </span>from<span class="w"> </span><span class="m">1</span><span class="w"> </span>to<span class="w"> </span><span class="m">1</span><span class="w"> </span>resource<span class="o">(</span>s<span class="o">)</span>
+<span class="m">2022</span>-09-14<span class="w"> </span><span class="m">20</span>:33:50,639:<span class="w"> </span>custodian.k8s.policy:INFO<span class="w"> </span>allowing<span class="w"> </span>admission<span class="w"> </span>because<span class="w"> </span>on-match:warn,<span class="w"> </span>matched:1
+<span class="m">10</span>.0.201.111<span class="w"> </span>-<span class="w"> </span>-<span class="w"> </span><span class="o">[</span><span class="m">14</span>/Sep/2022<span class="w"> </span><span class="m">20</span>:33:50<span class="o">]</span><span class="w"> </span><span class="s2">&quot;POST /?timeout=10s HTTP/1.1&quot;</span><span class="w"> </span><span class="m">200</span><span class="w"> </span>-
+<span class="m">2022</span>-09-14<span class="w"> </span><span class="m">20</span>:33:50,640:<span class="w"> </span>c7n_kube.server:INFO<span class="w"> </span><span class="o">{</span><span class="s2">&quot;apiVersion&quot;</span>:<span class="w"> </span><span class="s2">&quot;admission.k8s.io/v1&quot;</span>,<span class="w"> </span><span class="s2">&quot;kind&quot;</span>:<span class="w"> </span><span class="s2">&quot;AdmissionReview&quot;</span>,<span class="w"> </span><span class="s2">&quot;response&quot;</span>:<span class="w"> </span><span class="o">{</span><span class="s2">&quot;allowed&quot;</span>:<span class="w"> </span>true,<span class="w"> </span><span class="s2">&quot;warnings&quot;</span>:<span class="w"> </span><span class="o">[</span><span class="s2">&quot;example-warn-policy:This is a sample policy&quot;</span><span class="o">]</span>,<span class="w"> </span><span class="s2">&quot;uid&quot;</span>:<span class="w"> </span><span class="s2">&quot;2ec4911a-8a9d-4c8d-8aa5-2d3709877fd0&quot;</span>,<span class="w"> </span><span class="s2">&quot;status&quot;</span>:<span class="w"> </span><span class="o">{</span><span class="s2">&quot;code&quot;</span>:<span class="w"> </span><span class="m">200</span>,<span class="w"> </span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="o">}}}</span>
 </pre></div>
 </div>
 </section>
@@ -5780,273 +5348,273 @@ the incoming resource, i.e. the new object. In the case of the <code class="docu
 used.</p>
 <p>In addition to the value filter and any other built in filters, <code class="docutils literal notranslate"><span class="pre">k8s-admission</span></code> mode policies can also
 filter resources based on the event itself. For instance:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event-filter-example</span><span class="w"></span>
-<span class="w">    </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8s.pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">mode</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8s-admission</span><span class="w"></span>
-<span class="w">      </span><span class="nt">on-match</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deny</span><span class="w"></span>
-<span class="w">      </span><span class="nt">operations</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CREATE</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UPDATE</span><span class="w"></span>
-<span class="w">  </span><span class="w w-Error"> </span><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
-<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event</span><span class="w"></span>
-<span class="w">       </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">request.userInfo.username</span><span class="w"></span>
-<span class="w">       </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event-filter-example</span>
+<span class="w">    </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8s.pod</span>
+<span class="w">    </span><span class="nt">mode</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8s-admission</span>
+<span class="w">      </span><span class="nt">on-match</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deny</span>
+<span class="w">      </span><span class="nt">operations</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CREATE</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UPDATE</span>
+<span class="w">  </span><span class="w w-Error"> </span><span class="nt">filters</span><span class="p">:</span>
+<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event</span>
+<span class="w">       </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">request.userInfo.username</span>
+<span class="w">       </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo</span>
 </pre></div>
 </div>
 <p>A sample event looks like:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="s2">&quot;AdmissionReview&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">   </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="s2">&quot;admission.k8s.io/v1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">   </span><span class="nt">&quot;request&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;uid&quot;</span><span class="p">:</span><span class="s2">&quot;662c3df2-ade6-4165-b395-770857bc17b7&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;kind&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="s2">&quot;Pod&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;resource&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;resource&quot;</span><span class="p">:</span><span class="s2">&quot;pods&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;requestKind&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="s2">&quot;Pod&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;requestResource&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;resource&quot;</span><span class="p">:</span><span class="s2">&quot;pods&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;static-web&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;operation&quot;</span><span class="p">:</span><span class="s2">&quot;CREATE&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;userInfo&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="s2">&quot;kubernetes-admin&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;groups&quot;</span><span class="p">:[</span><span class="w"></span>
-<span class="w">            </span><span class="s2">&quot;system:masters&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="s2">&quot;system:authenticated&quot;</span><span class="w"></span>
-<span class="w">         </span><span class="p">]</span><span class="w"></span>
-<span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;object&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="s2">&quot;Pod&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;metadata&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;static-web&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;uid&quot;</span><span class="p">:</span><span class="s2">&quot;e96b4e07-633e-426d-9a7f-db39676cf0b4&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;creationTimestamp&quot;</span><span class="p">:</span><span class="s2">&quot;2022-08-25T22:08:33Z&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;labels&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">               </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="s2">&quot;myrole&quot;</span><span class="w"></span>
-<span class="w">            </span><span class="p">},</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;annotations&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">               </span><span class="nt">&quot;kubectl.kubernetes.io/last-applied-configuration&quot;</span><span class="p">:</span><span class="s2">&quot;{\&quot;apiVersion\&quot;:\&quot;v1\&quot;,\&quot;kind\&quot;:\&quot;Pod\&quot;,\&quot;metadata\&quot;:{\&quot;annotations\&quot;:{},\&quot;labels\&quot;:{\&quot;role\&quot;:\&quot;myrole\&quot;},\&quot;name\&quot;:\&quot;static-web\&quot;,\&quot;namespace\&quot;:\&quot;default\&quot;},\&quot;spec\&quot;:{\&quot;containers\&quot;:[{\&quot;image\&quot;:\&quot;nginx\&quot;,\&quot;name\&quot;:\&quot;web\&quot;,\&quot;ports\&quot;:[{\&quot;containerPort\&quot;:80,\&quot;name\&quot;:\&quot;web\&quot;,\&quot;protocol\&quot;:\&quot;TCP\&quot;}]}]}}\n&quot;</span><span class="w"></span>
-<span class="w">            </span><span class="p">},</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;managedFields&quot;</span><span class="p">:[</span><span class="w"></span>
-<span class="w">               </span><span class="p">{</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;manager&quot;</span><span class="p">:</span><span class="s2">&quot;kubectl-client-side-apply&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;operation&quot;</span><span class="p">:</span><span class="s2">&quot;Update&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="s2">&quot;2022-08-25T22:08:33Z&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;fieldsType&quot;</span><span class="p">:</span><span class="s2">&quot;FieldsV1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;fieldsV1&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">                     </span><span class="nt">&quot;f:metadata&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;f:annotations&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">                           </span><span class="nt">&quot;.&quot;</span><span class="p">:{</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="s2">&quot;AdmissionReview&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="s2">&quot;admission.k8s.io/v1&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;request&quot;</span><span class="p">:{</span>
+<span class="w">      </span><span class="nt">&quot;uid&quot;</span><span class="p">:</span><span class="s2">&quot;662c3df2-ade6-4165-b395-770857bc17b7&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;kind&quot;</span><span class="p">:{</span>
+<span class="w">         </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="s2">&quot;Pod&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;resource&quot;</span><span class="p">:{</span>
+<span class="w">         </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;resource&quot;</span><span class="p">:</span><span class="s2">&quot;pods&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;requestKind&quot;</span><span class="p">:{</span>
+<span class="w">         </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="s2">&quot;Pod&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;requestResource&quot;</span><span class="p">:{</span>
+<span class="w">         </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;resource&quot;</span><span class="p">:</span><span class="s2">&quot;pods&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;static-web&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;operation&quot;</span><span class="p">:</span><span class="s2">&quot;CREATE&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;userInfo&quot;</span><span class="p">:{</span>
+<span class="w">         </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="s2">&quot;kubernetes-admin&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;groups&quot;</span><span class="p">:[</span>
+<span class="w">            </span><span class="s2">&quot;system:masters&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;system:authenticated&quot;</span>
+<span class="w">         </span><span class="p">]</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;object&quot;</span><span class="p">:{</span>
+<span class="w">         </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="s2">&quot;Pod&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;metadata&quot;</span><span class="p">:{</span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;static-web&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;uid&quot;</span><span class="p">:</span><span class="s2">&quot;e96b4e07-633e-426d-9a7f-db39676cf0b4&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;creationTimestamp&quot;</span><span class="p">:</span><span class="s2">&quot;2022-08-25T22:08:33Z&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;labels&quot;</span><span class="p">:{</span>
+<span class="w">               </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="s2">&quot;myrole&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;annotations&quot;</span><span class="p">:{</span>
+<span class="w">               </span><span class="nt">&quot;kubectl.kubernetes.io/last-applied-configuration&quot;</span><span class="p">:</span><span class="s2">&quot;{\&quot;apiVersion\&quot;:\&quot;v1\&quot;,\&quot;kind\&quot;:\&quot;Pod\&quot;,\&quot;metadata\&quot;:{\&quot;annotations\&quot;:{},\&quot;labels\&quot;:{\&quot;role\&quot;:\&quot;myrole\&quot;},\&quot;name\&quot;:\&quot;static-web\&quot;,\&quot;namespace\&quot;:\&quot;default\&quot;},\&quot;spec\&quot;:{\&quot;containers\&quot;:[{\&quot;image\&quot;:\&quot;nginx\&quot;,\&quot;name\&quot;:\&quot;web\&quot;,\&quot;ports\&quot;:[{\&quot;containerPort\&quot;:80,\&quot;name\&quot;:\&quot;web\&quot;,\&quot;protocol\&quot;:\&quot;TCP\&quot;}]}]}}\n&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;managedFields&quot;</span><span class="p">:[</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;manager&quot;</span><span class="p">:</span><span class="s2">&quot;kubectl-client-side-apply&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;operation&quot;</span><span class="p">:</span><span class="s2">&quot;Update&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="s2">&quot;2022-08-25T22:08:33Z&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;fieldsType&quot;</span><span class="p">:</span><span class="s2">&quot;FieldsV1&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;fieldsV1&quot;</span><span class="p">:{</span>
+<span class="w">                     </span><span class="nt">&quot;f:metadata&quot;</span><span class="p">:{</span>
+<span class="w">                        </span><span class="nt">&quot;f:annotations&quot;</span><span class="p">:{</span>
+<span class="w">                           </span><span class="nt">&quot;.&quot;</span><span class="p">:{</span>
 
-<span class="w">                           </span><span class="p">},</span><span class="w"></span>
-<span class="w">                           </span><span class="nt">&quot;f:kubectl.kubernetes.io/last-applied-configuration&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                           </span><span class="p">},</span>
+<span class="w">                           </span><span class="nt">&quot;f:kubectl.kubernetes.io/last-applied-configuration&quot;</span><span class="p">:{</span>
 
-<span class="w">                           </span><span class="p">}</span><span class="w"></span>
-<span class="w">                        </span><span class="p">},</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;f:labels&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">                           </span><span class="nt">&quot;.&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                           </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">&quot;f:labels&quot;</span><span class="p">:{</span>
+<span class="w">                           </span><span class="nt">&quot;.&quot;</span><span class="p">:{</span>
 
-<span class="w">                           </span><span class="p">},</span><span class="w"></span>
-<span class="w">                           </span><span class="nt">&quot;f:role&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                           </span><span class="p">},</span>
+<span class="w">                           </span><span class="nt">&quot;f:role&quot;</span><span class="p">:{</span>
 
-<span class="w">                           </span><span class="p">}</span><span class="w"></span>
-<span class="w">                        </span><span class="p">}</span><span class="w"></span>
-<span class="w">                     </span><span class="p">},</span><span class="w"></span>
-<span class="w">                     </span><span class="nt">&quot;f:spec&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;f:containers&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">                           </span><span class="nt">&quot;k:{\&quot;name\&quot;:\&quot;web\&quot;}&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">                              </span><span class="nt">&quot;.&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                           </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                     </span><span class="p">},</span>
+<span class="w">                     </span><span class="nt">&quot;f:spec&quot;</span><span class="p">:{</span>
+<span class="w">                        </span><span class="nt">&quot;f:containers&quot;</span><span class="p">:{</span>
+<span class="w">                           </span><span class="nt">&quot;k:{\&quot;name\&quot;:\&quot;web\&quot;}&quot;</span><span class="p">:{</span>
+<span class="w">                              </span><span class="nt">&quot;.&quot;</span><span class="p">:{</span>
 
-<span class="w">                              </span><span class="p">},</span><span class="w"></span>
-<span class="w">                              </span><span class="nt">&quot;f:image&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                              </span><span class="p">},</span>
+<span class="w">                              </span><span class="nt">&quot;f:image&quot;</span><span class="p">:{</span>
 
-<span class="w">                              </span><span class="p">},</span><span class="w"></span>
-<span class="w">                              </span><span class="nt">&quot;f:imagePullPolicy&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                              </span><span class="p">},</span>
+<span class="w">                              </span><span class="nt">&quot;f:imagePullPolicy&quot;</span><span class="p">:{</span>
 
-<span class="w">                              </span><span class="p">},</span><span class="w"></span>
-<span class="w">                              </span><span class="nt">&quot;f:name&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                              </span><span class="p">},</span>
+<span class="w">                              </span><span class="nt">&quot;f:name&quot;</span><span class="p">:{</span>
 
-<span class="w">                              </span><span class="p">},</span><span class="w"></span>
-<span class="w">                              </span><span class="nt">&quot;f:ports&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">                                 </span><span class="nt">&quot;.&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                              </span><span class="p">},</span>
+<span class="w">                              </span><span class="nt">&quot;f:ports&quot;</span><span class="p">:{</span>
+<span class="w">                                 </span><span class="nt">&quot;.&quot;</span><span class="p">:{</span>
 
-<span class="w">                                 </span><span class="p">},</span><span class="w"></span>
-<span class="w">                                 </span><span class="nt">&quot;k:{\&quot;containerPort\&quot;:80,\&quot;protocol\&quot;:\&quot;TCP\&quot;}&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">                                    </span><span class="nt">&quot;.&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                                 </span><span class="p">},</span>
+<span class="w">                                 </span><span class="nt">&quot;k:{\&quot;containerPort\&quot;:80,\&quot;protocol\&quot;:\&quot;TCP\&quot;}&quot;</span><span class="p">:{</span>
+<span class="w">                                    </span><span class="nt">&quot;.&quot;</span><span class="p">:{</span>
 
-<span class="w">                                    </span><span class="p">},</span><span class="w"></span>
-<span class="w">                                    </span><span class="nt">&quot;f:containerPort&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                                    </span><span class="p">},</span>
+<span class="w">                                    </span><span class="nt">&quot;f:containerPort&quot;</span><span class="p">:{</span>
 
-<span class="w">                                    </span><span class="p">},</span><span class="w"></span>
-<span class="w">                                    </span><span class="nt">&quot;f:name&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                                    </span><span class="p">},</span>
+<span class="w">                                    </span><span class="nt">&quot;f:name&quot;</span><span class="p">:{</span>
 
-<span class="w">                                    </span><span class="p">},</span><span class="w"></span>
-<span class="w">                                    </span><span class="nt">&quot;f:protocol&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                                    </span><span class="p">},</span>
+<span class="w">                                    </span><span class="nt">&quot;f:protocol&quot;</span><span class="p">:{</span>
 
-<span class="w">                                    </span><span class="p">}</span><span class="w"></span>
-<span class="w">                                 </span><span class="p">}</span><span class="w"></span>
-<span class="w">                              </span><span class="p">},</span><span class="w"></span>
-<span class="w">                              </span><span class="nt">&quot;f:resources&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                                    </span><span class="p">}</span>
+<span class="w">                                 </span><span class="p">}</span>
+<span class="w">                              </span><span class="p">},</span>
+<span class="w">                              </span><span class="nt">&quot;f:resources&quot;</span><span class="p">:{</span>
 
-<span class="w">                              </span><span class="p">},</span><span class="w"></span>
-<span class="w">                              </span><span class="nt">&quot;f:terminationMessagePath&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                              </span><span class="p">},</span>
+<span class="w">                              </span><span class="nt">&quot;f:terminationMessagePath&quot;</span><span class="p">:{</span>
 
-<span class="w">                              </span><span class="p">},</span><span class="w"></span>
-<span class="w">                              </span><span class="nt">&quot;f:terminationMessagePolicy&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                              </span><span class="p">},</span>
+<span class="w">                              </span><span class="nt">&quot;f:terminationMessagePolicy&quot;</span><span class="p">:{</span>
 
-<span class="w">                              </span><span class="p">}</span><span class="w"></span>
-<span class="w">                           </span><span class="p">}</span><span class="w"></span>
-<span class="w">                        </span><span class="p">},</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;f:dnsPolicy&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                              </span><span class="p">}</span>
+<span class="w">                           </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">&quot;f:dnsPolicy&quot;</span><span class="p">:{</span>
 
-<span class="w">                        </span><span class="p">},</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;f:enableServiceLinks&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">&quot;f:enableServiceLinks&quot;</span><span class="p">:{</span>
 
-<span class="w">                        </span><span class="p">},</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;f:restartPolicy&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">&quot;f:restartPolicy&quot;</span><span class="p">:{</span>
 
-<span class="w">                        </span><span class="p">},</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;f:schedulerName&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">&quot;f:schedulerName&quot;</span><span class="p">:{</span>
 
-<span class="w">                        </span><span class="p">},</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;f:securityContext&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">&quot;f:securityContext&quot;</span><span class="p">:{</span>
 
-<span class="w">                        </span><span class="p">},</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;f:terminationGracePeriodSeconds&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">&quot;f:terminationGracePeriodSeconds&quot;</span><span class="p">:{</span>
 
-<span class="w">                        </span><span class="p">}</span><span class="w"></span>
-<span class="w">                     </span><span class="p">}</span><span class="w"></span>
-<span class="w">                  </span><span class="p">}</span><span class="w"></span>
-<span class="w">               </span><span class="p">}</span><span class="w"></span>
-<span class="w">            </span><span class="p">]</span><span class="w"></span>
-<span class="w">         </span><span class="p">},</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;spec&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;volumes&quot;</span><span class="p">:[</span><span class="w"></span>
-<span class="w">               </span><span class="p">{</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;kube-api-access-7pc2d&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;projected&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">                     </span><span class="nt">&quot;sources&quot;</span><span class="p">:[</span><span class="w"></span>
-<span class="w">                        </span><span class="p">{</span><span class="w"></span>
-<span class="w">                           </span><span class="nt">&quot;serviceAccountToken&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">                              </span><span class="nt">&quot;expirationSeconds&quot;</span><span class="p">:</span><span class="mi">3607</span><span class="p">,</span><span class="w"></span>
-<span class="w">                              </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;token&quot;</span><span class="w"></span>
-<span class="w">                           </span><span class="p">}</span><span class="w"></span>
-<span class="w">                        </span><span class="p">},</span><span class="w"></span>
-<span class="w">                        </span><span class="p">{</span><span class="w"></span>
-<span class="w">                           </span><span class="nt">&quot;configMap&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">                              </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;kube-root-ca.crt&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                              </span><span class="nt">&quot;items&quot;</span><span class="p">:[</span><span class="w"></span>
-<span class="w">                                 </span><span class="p">{</span><span class="w"></span>
-<span class="w">                                    </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;ca.crt&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                    </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;ca.crt&quot;</span><span class="w"></span>
-<span class="w">                                 </span><span class="p">}</span><span class="w"></span>
-<span class="w">                              </span><span class="p">]</span><span class="w"></span>
-<span class="w">                           </span><span class="p">}</span><span class="w"></span>
-<span class="w">                        </span><span class="p">},</span><span class="w"></span>
-<span class="w">                        </span><span class="p">{</span><span class="w"></span>
-<span class="w">                           </span><span class="nt">&quot;downwardAPI&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">                              </span><span class="nt">&quot;items&quot;</span><span class="p">:[</span><span class="w"></span>
-<span class="w">                                 </span><span class="p">{</span><span class="w"></span>
-<span class="w">                                    </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;namespace&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                    </span><span class="nt">&quot;fieldRef&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">                                       </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                       </span><span class="nt">&quot;fieldPath&quot;</span><span class="p">:</span><span class="s2">&quot;metadata.namespace&quot;</span><span class="w"></span>
-<span class="w">                                    </span><span class="p">}</span><span class="w"></span>
-<span class="w">                                 </span><span class="p">}</span><span class="w"></span>
-<span class="w">                              </span><span class="p">]</span><span class="w"></span>
-<span class="w">                           </span><span class="p">}</span><span class="w"></span>
-<span class="w">                        </span><span class="p">}</span><span class="w"></span>
-<span class="w">                     </span><span class="p">],</span><span class="w"></span>
-<span class="w">                     </span><span class="nt">&quot;defaultMode&quot;</span><span class="p">:</span><span class="mi">420</span><span class="w"></span>
-<span class="w">                  </span><span class="p">}</span><span class="w"></span>
-<span class="w">               </span><span class="p">}</span><span class="w"></span>
-<span class="w">            </span><span class="p">],</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;containers&quot;</span><span class="p">:[</span><span class="w"></span>
-<span class="w">               </span><span class="p">{</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;web&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;image&quot;</span><span class="p">:</span><span class="s2">&quot;nginx&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;ports&quot;</span><span class="p">:[</span><span class="w"></span>
-<span class="w">                     </span><span class="p">{</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;web&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;containerPort&quot;</span><span class="p">:</span><span class="mi">80</span><span class="p">,</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;protocol&quot;</span><span class="p">:</span><span class="s2">&quot;TCP&quot;</span><span class="w"></span>
-<span class="w">                     </span><span class="p">}</span><span class="w"></span>
-<span class="w">                  </span><span class="p">],</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;resources&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                     </span><span class="p">}</span>
+<span class="w">                  </span><span class="p">}</span>
+<span class="w">               </span><span class="p">}</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;spec&quot;</span><span class="p">:{</span>
+<span class="w">            </span><span class="nt">&quot;volumes&quot;</span><span class="p">:[</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;kube-api-access-7pc2d&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;projected&quot;</span><span class="p">:{</span>
+<span class="w">                     </span><span class="nt">&quot;sources&quot;</span><span class="p">:[</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                           </span><span class="nt">&quot;serviceAccountToken&quot;</span><span class="p">:{</span>
+<span class="w">                              </span><span class="nt">&quot;expirationSeconds&quot;</span><span class="p">:</span><span class="mi">3607</span><span class="p">,</span>
+<span class="w">                              </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;token&quot;</span>
+<span class="w">                           </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                           </span><span class="nt">&quot;configMap&quot;</span><span class="p">:{</span>
+<span class="w">                              </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;kube-root-ca.crt&quot;</span><span class="p">,</span>
+<span class="w">                              </span><span class="nt">&quot;items&quot;</span><span class="p">:[</span>
+<span class="w">                                 </span><span class="p">{</span>
+<span class="w">                                    </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;ca.crt&quot;</span><span class="p">,</span>
+<span class="w">                                    </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;ca.crt&quot;</span>
+<span class="w">                                 </span><span class="p">}</span>
+<span class="w">                              </span><span class="p">]</span>
+<span class="w">                           </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                           </span><span class="nt">&quot;downwardAPI&quot;</span><span class="p">:{</span>
+<span class="w">                              </span><span class="nt">&quot;items&quot;</span><span class="p">:[</span>
+<span class="w">                                 </span><span class="p">{</span>
+<span class="w">                                    </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;namespace&quot;</span><span class="p">,</span>
+<span class="w">                                    </span><span class="nt">&quot;fieldRef&quot;</span><span class="p">:{</span>
+<span class="w">                                       </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+<span class="w">                                       </span><span class="nt">&quot;fieldPath&quot;</span><span class="p">:</span><span class="s2">&quot;metadata.namespace&quot;</span>
+<span class="w">                                    </span><span class="p">}</span>
+<span class="w">                                 </span><span class="p">}</span>
+<span class="w">                              </span><span class="p">]</span>
+<span class="w">                           </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                     </span><span class="p">],</span>
+<span class="w">                     </span><span class="nt">&quot;defaultMode&quot;</span><span class="p">:</span><span class="mi">420</span>
+<span class="w">                  </span><span class="p">}</span>
+<span class="w">               </span><span class="p">}</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;containers&quot;</span><span class="p">:[</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;image&quot;</span><span class="p">:</span><span class="s2">&quot;nginx&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;ports&quot;</span><span class="p">:[</span>
+<span class="w">                     </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;containerPort&quot;</span><span class="p">:</span><span class="mi">80</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;protocol&quot;</span><span class="p">:</span><span class="s2">&quot;TCP&quot;</span>
+<span class="w">                     </span><span class="p">}</span>
+<span class="w">                  </span><span class="p">],</span>
+<span class="w">                  </span><span class="nt">&quot;resources&quot;</span><span class="p">:{</span>
 
-<span class="w">                  </span><span class="p">},</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;volumeMounts&quot;</span><span class="p">:[</span><span class="w"></span>
-<span class="w">                     </span><span class="p">{</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;kube-api-access-7pc2d&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;readOnly&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">                        </span><span class="nt">&quot;mountPath&quot;</span><span class="p">:</span><span class="s2">&quot;/var/run/secrets/kubernetes.io/serviceaccount&quot;</span><span class="w"></span>
-<span class="w">                     </span><span class="p">}</span><span class="w"></span>
-<span class="w">                  </span><span class="p">],</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;terminationMessagePath&quot;</span><span class="p">:</span><span class="s2">&quot;/dev/termination-log&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;terminationMessagePolicy&quot;</span><span class="p">:</span><span class="s2">&quot;File&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;imagePullPolicy&quot;</span><span class="p">:</span><span class="s2">&quot;Always&quot;</span><span class="w"></span>
-<span class="w">               </span><span class="p">}</span><span class="w"></span>
-<span class="w">            </span><span class="p">],</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;restartPolicy&quot;</span><span class="p">:</span><span class="s2">&quot;Always&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;terminationGracePeriodSeconds&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;dnsPolicy&quot;</span><span class="p">:</span><span class="s2">&quot;ClusterFirst&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;serviceAccountName&quot;</span><span class="p">:</span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;serviceAccount&quot;</span><span class="p">:</span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;securityContext&quot;</span><span class="p">:{</span><span class="w"></span>
+<span class="w">                  </span><span class="p">},</span>
+<span class="w">                  </span><span class="nt">&quot;volumeMounts&quot;</span><span class="p">:[</span>
+<span class="w">                     </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;kube-api-access-7pc2d&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;readOnly&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;mountPath&quot;</span><span class="p">:</span><span class="s2">&quot;/var/run/secrets/kubernetes.io/serviceaccount&quot;</span>
+<span class="w">                     </span><span class="p">}</span>
+<span class="w">                  </span><span class="p">],</span>
+<span class="w">                  </span><span class="nt">&quot;terminationMessagePath&quot;</span><span class="p">:</span><span class="s2">&quot;/dev/termination-log&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;terminationMessagePolicy&quot;</span><span class="p">:</span><span class="s2">&quot;File&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;imagePullPolicy&quot;</span><span class="p">:</span><span class="s2">&quot;Always&quot;</span>
+<span class="w">               </span><span class="p">}</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;restartPolicy&quot;</span><span class="p">:</span><span class="s2">&quot;Always&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;terminationGracePeriodSeconds&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;dnsPolicy&quot;</span><span class="p">:</span><span class="s2">&quot;ClusterFirst&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;serviceAccountName&quot;</span><span class="p">:</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;serviceAccount&quot;</span><span class="p">:</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;securityContext&quot;</span><span class="p">:{</span>
 
-<span class="w">            </span><span class="p">},</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;schedulerName&quot;</span><span class="p">:</span><span class="s2">&quot;default-scheduler&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;tolerations&quot;</span><span class="p">:[</span><span class="w"></span>
-<span class="w">               </span><span class="p">{</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;node.kubernetes.io/not-ready&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="s2">&quot;Exists&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;effect&quot;</span><span class="p">:</span><span class="s2">&quot;NoExecute&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;tolerationSeconds&quot;</span><span class="p">:</span><span class="mi">300</span><span class="w"></span>
-<span class="w">               </span><span class="p">},</span><span class="w"></span>
-<span class="w">               </span><span class="p">{</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;node.kubernetes.io/unreachable&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="s2">&quot;Exists&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;effect&quot;</span><span class="p">:</span><span class="s2">&quot;NoExecute&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">&quot;tolerationSeconds&quot;</span><span class="p">:</span><span class="mi">300</span><span class="w"></span>
-<span class="w">               </span><span class="p">}</span><span class="w"></span>
-<span class="w">            </span><span class="p">],</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;enableServiceLinks&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;preemptionPolicy&quot;</span><span class="p">:</span><span class="s2">&quot;PreemptLowerPriority&quot;</span><span class="w"></span>
-<span class="w">         </span><span class="p">},</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;status&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;phase&quot;</span><span class="p">:</span><span class="s2">&quot;Pending&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;qosClass&quot;</span><span class="p">:</span><span class="s2">&quot;BestEffort&quot;</span><span class="w"></span>
-<span class="w">         </span><span class="p">}</span><span class="w"></span>
-<span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;oldObject&quot;</span><span class="p">:</span><span class="s2">&quot;None&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;dryRun&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;options&quot;</span><span class="p">:{</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="s2">&quot;CreateOptions&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="s2">&quot;meta.k8s.io/v1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;fieldManager&quot;</span><span class="p">:</span><span class="s2">&quot;kubectl-client-side-apply&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;schedulerName&quot;</span><span class="p">:</span><span class="s2">&quot;default-scheduler&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;tolerations&quot;</span><span class="p">:[</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;node.kubernetes.io/not-ready&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="s2">&quot;Exists&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;effect&quot;</span><span class="p">:</span><span class="s2">&quot;NoExecute&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;tolerationSeconds&quot;</span><span class="p">:</span><span class="mi">300</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;node.kubernetes.io/unreachable&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="s2">&quot;Exists&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;effect&quot;</span><span class="p">:</span><span class="s2">&quot;NoExecute&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;tolerationSeconds&quot;</span><span class="p">:</span><span class="mi">300</span>
+<span class="w">               </span><span class="p">}</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;enableServiceLinks&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;preemptionPolicy&quot;</span><span class="p">:</span><span class="s2">&quot;PreemptLowerPriority&quot;</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;status&quot;</span><span class="p">:{</span>
+<span class="w">            </span><span class="nt">&quot;phase&quot;</span><span class="p">:</span><span class="s2">&quot;Pending&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;qosClass&quot;</span><span class="p">:</span><span class="s2">&quot;BestEffort&quot;</span>
+<span class="w">         </span><span class="p">}</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;oldObject&quot;</span><span class="p">:</span><span class="s2">&quot;None&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;dryRun&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;options&quot;</span><span class="p">:{</span>
+<span class="w">         </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="s2">&quot;CreateOptions&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="s2">&quot;meta.k8s.io/v1&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;fieldManager&quot;</span><span class="p">:</span><span class="s2">&quot;kubectl-client-side-apply&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>

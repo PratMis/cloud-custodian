@@ -176,6 +176,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/s3globalgrants.html">S3 - Global Grants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../aws/examples/s3lifecyclepolicyonbucketdelete.html">S3 - Add lifecycle policy on bucket delete</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/sagemakernotebookdeletepublicorunencrypted.html">SageMaker Notebook - Delete Public or Unencrypted</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/securitygroupsaddpermission.html">Security Groups - add permission</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/securitygroupsdetectremediate.html">Security Groups - Detect and Remediate Violations</a></li>
@@ -970,6 +971,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../aws/resources/emr-security-configuration.html">aws.emr-security-configuration</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-security-configuration.html#filters">Filters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-security-configuration.html#actions">Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../aws/resources/group-emr-serverless.html">emr-serverless resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../aws/resources/emr-serverless-app.html">aws.emr-serverless-app</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-serverless-app.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-serverless-app.html#actions">Actions</a></li>
 </ul>
 </li>
 </ul>
@@ -1896,450 +1905,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../advanced/contribute.html#arm-templates">ARM templates</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../advanced/contribute.html#cassettes">Cassettes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../advanced/contribute.html#running-tests">Running tests</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../resources/index.html">Azure Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../resources/azure-modes.html">Azure Execution Modes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-modes.html#pull">pull</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-modes.html#azure-event-grid">azure-event-grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-modes.html#azure-periodic">azure-periodic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-modes.html#container-event">container-event</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-modes.html#container-periodic">container-periodic</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/azure-common-actions.html">Azure Common Actions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#auto-tag-date">auto-tag-date</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#auto-tag-user">auto-tag-user</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#delete">delete</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#lock">lock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#logic-app">logic-app</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#mark-for-op">mark-for-op</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#notify">notify</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#tag">tag</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#tag-trim">tag-trim</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#untag">untag</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#webhook">webhook</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/azure-common-filters.html">Azure Common Filters</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#authentication">authentication</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#azure-ad-administrators">azure-ad-administrators</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#blob-services">blob-services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#configuration">configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#configuration-parameter">configuration-parameter</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#cost">cost</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#diagnostic-settings">diagnostic-settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#effective-route-table">effective-route-table</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#event">event</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#firewall-rules">firewall-rules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#instance-view">instance-view</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#marked-for-op">marked-for-op</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#metric">metric</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#offer">offer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#offhour">offhour</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#onhour">onhour</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#parent">parent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#policy-compliant">policy-compliant</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#reduce">reduce</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#resource-lock">resource-lock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#storage-diagnostic-settings">storage-diagnostic-settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#value">value</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#vm-extensions">vm-extensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#vulnerability-assessment">vulnerability-assessment</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-ai-%2B-machine-learning.html">AI + Machine Learning resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cognitiveservice.html">azure.cognitiveservice</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cognitiveservice.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cognitiveservice.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/databricks.html">azure.databricks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/databricks.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/databricks.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/search.html">azure.search</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/search.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/search.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-active-directory.html">Active Directory resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/roleassignment.html">azure.roleassignment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/roleassignment.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/roleassignment.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/roledefinition.html">azure.roledefinition</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/roledefinition.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/roledefinition.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-analytics.html">Analytics resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/datafactory.html">azure.datafactory</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/datafactory.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/datafactory.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/hdinsight.html">azure.hdinsight</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/hdinsight.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/hdinsight.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-compute.html">Compute resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/aks.html">azure.aks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/aks.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/aks.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/appserviceplan.html">azure.appserviceplan</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/appserviceplan.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/appserviceplan.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/batch.html">azure.batch</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/batch.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/batch.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/image.html">azure.image</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/image.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/image.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/logic-app-workflow.html">azure.logic-app-workflow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/logic-app-workflow.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/logic-app-workflow.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/service-fabric-cluster.html">azure.service-fabric-cluster</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/service-fabric-cluster.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/service-fabric-cluster.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/service-fabric-cluster-managed.html">azure.service-fabric-cluster-managed</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/service-fabric-cluster-managed.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/service-fabric-cluster-managed.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/vm.html">azure.vm</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vm.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vm.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/vmss.html">azure.vmss</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vmss.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vmss.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/webapp.html">azure.webapp</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/webapp.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/webapp.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-containers.html">Containers resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/aks.html">azure.aks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/aks.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/aks.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/container-group.html">azure.container-group</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/container-group.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/container-group.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/container-registry.html">azure.container-registry</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/container-registry.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/container-registry.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/containerservice.html">azure.containerservice</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/containerservice.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/containerservice.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-cost.html">Cost resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cost-management-export.html">azure.cost-management-export</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cost-management-export.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cost-management-export.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-databases.html">Databases resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cosmosdb.html">azure.cosmosdb</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cosmosdb-collection.html">azure.cosmosdb-collection</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb-collection.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb-collection.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cosmosdb-database.html">azure.cosmosdb-database</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb-database.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb-database.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/mysql.html">azure.mysql</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/mysql.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/mysql.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/postgresql-database.html">azure.postgresql-database</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/postgresql-database.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/postgresql-database.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/postgresql-server.html">azure.postgresql-server</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/postgresql-server.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/postgresql-server.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/redis.html">azure.redis</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/redis.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/redis.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/sql-database.html">azure.sql-database</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/sql-database.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/sql-database.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/sql-server.html">azure.sql-server</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/sql-server.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/sql-server.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-events.html">Events resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/eventhub.html">azure.eventhub</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/eventhub.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/eventhub.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/eventsubscription.html">azure.eventsubscription</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/eventsubscription.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/eventsubscription.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-generic.html">Generic resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/armresource.html">azure.armresource</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/armresource.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/armresource.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/policyassignments.html">azure.policyassignments</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/policyassignments.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/policyassignments.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-integration.html">Integration resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/api-management.html">azure.api-management</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/api-management.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/api-management.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-internet-of-things.html">Internet Of Things resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/iothub.html">azure.iothub</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/iothub.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/iothub.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-media.html">Media resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cdnprofile.html">azure.cdnprofile</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cdnprofile.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cdnprofile.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-network.html">Network resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/application-gateway.html">azure.application-gateway</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/application-gateway.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/application-gateway.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/front-door.html">azure.front-door</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/front-door.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/front-door.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/traffic-manager-profile.html">azure.traffic-manager-profile</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/traffic-manager-profile.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/traffic-manager-profile.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-networking.html">Networking resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/dnszone.html">azure.dnszone</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/dnszone.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/dnszone.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/loadbalancer.html">azure.loadbalancer</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/loadbalancer.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/loadbalancer.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/networkinterface.html">azure.networkinterface</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/networkinterface.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/networkinterface.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/networksecuritygroup.html">azure.networksecuritygroup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/networksecuritygroup.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/networksecuritygroup.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/publicip.html">azure.publicip</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/publicip.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/publicip.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/recordset.html">azure.recordset</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/recordset.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/recordset.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/routetable.html">azure.routetable</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/routetable.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/routetable.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/vnet.html">azure.vnet</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vnet.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vnet.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-resource-group.html">Resource Group resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/resourcegroup.html">azure.resourcegroup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/resourcegroup.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/resourcegroup.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-security.html">Security resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/advisor-recommendation.html">azure.advisor-recommendation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/advisor-recommendation.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/advisor-recommendation.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/defender-alert.html">azure.defender-alert</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-alert.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-alert.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/defender-autoprovisioning.html">azure.defender-autoprovisioning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-autoprovisioning.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-autoprovisioning.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/defender-pricing.html">azure.defender-pricing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-pricing.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-pricing.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/defender-setting.html">azure.defender-setting</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-setting.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-setting.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/keyvault.html">azure.keyvault</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/keyvault-certificate.html">azure.keyvault-certificate</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault-certificate.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault-certificate.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/keyvault-key.html">azure.keyvault-key</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault-key.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault-key.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-storage.html">Storage resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/datalake.html">azure.datalake</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/datalake.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/datalake.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/disk.html">azure.disk</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/disk.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/disk.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/storage.html">azure.storage</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/storage.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/storage.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/storage-container.html">azure.storage-container</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/storage-container.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/storage-container.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-subscription.html">Subscription resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/policyassignments.html">azure.policyassignments</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/policyassignments.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/policyassignments.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/resourcegroup.html">azure.resourcegroup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/resourcegroup.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/resourcegroup.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/subscription.html">azure.subscription</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/subscription.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/subscription.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-web.html">Web resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/appserviceplan.html">azure.appserviceplan</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/appserviceplan.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/appserviceplan.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/webapp.html">azure.webapp</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/webapp.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/webapp.html#actions">Actions</a></li>
 </ul>
 </li>
 </ul>
@@ -5516,10 +5081,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html">Custodian policies for Infrastructure Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#install">Install</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#usage">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#outputs">Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html">Custodian policies for Infrastructure Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#install">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#filters">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#outputs">Outputs</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-logexporter.html">c7n-log-exporter: Cloud watch log exporter automation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-logexporter.html#features">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-logexporter.html#assumptions">Assumptions</a></li>
@@ -5658,7 +5226,7 @@ subscription.</p>
 <h2>1. Create a Resource Group<a class="headerlink" href="#create-a-resource-group" title="Permalink to this headline">¶</a></h2>
 <p>This will hold all of the Azure resources created in this tutorial. You could use an existing
 resource group too.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az group create --name c7n-helm-tutorial --location westus2
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az<span class="w"> </span>group<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>c7n-helm-tutorial<span class="w"> </span>--location<span class="w"> </span>westus2
 </pre></div>
 </div>
 </section>
@@ -5668,11 +5236,11 @@ resource group too.</p>
 also use an existing resource here or multiple storage accounts.</p>
 <p>We will also create two blob containers. One will host the uploaded policies, and the other will store
 the custodian output files of running policies.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az storage account create --resource-group c7n-helm-tutorial --name c7nstorage
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az<span class="w"> </span>storage<span class="w"> </span>account<span class="w"> </span>create<span class="w"> </span>--resource-group<span class="w"> </span>c7n-helm-tutorial<span class="w"> </span>--name<span class="w"> </span>c7nstorage
 
-<span class="nv">account_key</span><span class="o">=</span><span class="k">$(</span>az storage account keys list --account-name c7nstorage --query <span class="s2">&quot;[0].value&quot;</span> --output tsv<span class="k">)</span>
-az storage container create --account-name c7nstorage --account-key <span class="nv">$account_key</span> --name c7n-helm-policies
-az storage container create --account-name c7nstorage --account-key <span class="nv">$account_key</span> --name c7n-helm-logs
+<span class="nv">account_key</span><span class="o">=</span><span class="k">$(</span>az<span class="w"> </span>storage<span class="w"> </span>account<span class="w"> </span>keys<span class="w"> </span>list<span class="w"> </span>--account-name<span class="w"> </span>c7nstorage<span class="w"> </span>--query<span class="w"> </span><span class="s2">&quot;[0].value&quot;</span><span class="w"> </span>--output<span class="w"> </span>tsv<span class="k">)</span>
+az<span class="w"> </span>storage<span class="w"> </span>container<span class="w"> </span>create<span class="w"> </span>--account-name<span class="w"> </span>c7nstorage<span class="w"> </span>--account-key<span class="w"> </span><span class="nv">$account_key</span><span class="w"> </span>--name<span class="w"> </span>c7n-helm-policies
+az<span class="w"> </span>storage<span class="w"> </span>container<span class="w"> </span>create<span class="w"> </span>--account-name<span class="w"> </span>c7nstorage<span class="w"> </span>--account-key<span class="w"> </span><span class="nv">$account_key</span><span class="w"> </span>--name<span class="w"> </span>c7n-helm-logs
 </pre></div>
 </div>
 </section>
@@ -5680,7 +5248,7 @@ az storage container create --account-name c7nstorage --account-key <span class=
 <h2>3. Create a Service Principal<a class="headerlink" href="#create-a-service-principal" title="Permalink to this headline">¶</a></h2>
 <p>This Service Principal will be used as the identity for the container host. You could also use an existing Service Principal.
 Remember to save the password to use as the client secret.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az ad sp create-for-rbac --name c7n-helm
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az<span class="w"> </span>ad<span class="w"> </span>sp<span class="w"> </span>create-for-rbac<span class="w"> </span>--name<span class="w"> </span>c7n-helm
 </pre></div>
 </div>
 <p>This Service Principal will need the proper permissions to interact with the storage account and any other
@@ -5689,14 +5257,14 @@ policies will run against.</p>
 <p>The simplest way to grant these permissions is to make the identity a <code class="docutils literal notranslate"><span class="pre">Contributor</span></code> on the target
 subscription and a <code class="docutils literal notranslate"><span class="pre">Storage</span> <span class="pre">Blob</span> <span class="pre">Data</span> <span class="pre">Contributor</span></code> and <code class="docutils literal notranslate"><span class="pre">Storage</span> <span class="pre">Queue</span> <span class="pre">Data</span> <span class="pre">Contributor</span></code> on the
 storage account created above.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az role assignment create --assignee &lt;Service Principal Client Id&gt; <span class="se">\</span>
-    --role <span class="s2">&quot;Contributor&quot;</span> --scope &lt;Target Subscription Resource Id&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az<span class="w"> </span>role<span class="w"> </span>assignment<span class="w"> </span>create<span class="w"> </span>--assignee<span class="w"> </span>&lt;Service<span class="w"> </span>Principal<span class="w"> </span>Client<span class="w"> </span>Id&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--role<span class="w"> </span><span class="s2">&quot;Contributor&quot;</span><span class="w"> </span>--scope<span class="w"> </span>&lt;Target<span class="w"> </span>Subscription<span class="w"> </span>Resource<span class="w"> </span>Id&gt;
 
-az role assignment create --assignee &lt;Service Principal Client Id&gt; <span class="se">\</span>
-    --role <span class="s2">&quot;Storage Blob Data Contributor&quot;</span> --scope &lt;Storage Account Resource Id&gt;
+az<span class="w"> </span>role<span class="w"> </span>assignment<span class="w"> </span>create<span class="w"> </span>--assignee<span class="w"> </span>&lt;Service<span class="w"> </span>Principal<span class="w"> </span>Client<span class="w"> </span>Id&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--role<span class="w"> </span><span class="s2">&quot;Storage Blob Data Contributor&quot;</span><span class="w"> </span>--scope<span class="w"> </span>&lt;Storage<span class="w"> </span>Account<span class="w"> </span>Resource<span class="w"> </span>Id&gt;
 
-az role assignment create --assignee &lt;Service Principal Client Id&gt; <span class="se">\</span>
-    --role <span class="s2">&quot;Storage Queue Data Contributor&quot;</span> --scope &lt;Storage Account Resource Id&gt;
+az<span class="w"> </span>role<span class="w"> </span>assignment<span class="w"> </span>create<span class="w"> </span>--assignee<span class="w"> </span>&lt;Service<span class="w"> </span>Principal<span class="w"> </span>Client<span class="w"> </span>Id&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--role<span class="w"> </span><span class="s2">&quot;Storage Queue Data Contributor&quot;</span><span class="w"> </span>--scope<span class="w"> </span>&lt;Storage<span class="w"> </span>Account<span class="w"> </span>Resource<span class="w"> </span>Id&gt;
 </pre></div>
 </div>
 </section>
@@ -5705,9 +5273,9 @@ az role assignment create --assignee &lt;Service Principal Client Id&gt; <span c
 <p>We will create an Application Insights instance to gather logs and telemetry generated by the
 running container host.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># You may need to add the application-insights extension</span>
-az extension add -n application-insights
+az<span class="w"> </span>extension<span class="w"> </span>add<span class="w"> </span>-n<span class="w"> </span>application-insights
 
-az monitor app-insights component create --resource-group c7n-helm-tutorial --app c7n-helm-insights --location westus2
+az<span class="w"> </span>monitor<span class="w"> </span>app-insights<span class="w"> </span>component<span class="w"> </span>create<span class="w"> </span>--resource-group<span class="w"> </span>c7n-helm-tutorial<span class="w"> </span>--app<span class="w"> </span>c7n-helm-insights<span class="w"> </span>--location<span class="w"> </span>westus2
 </pre></div>
 </div>
 </section>
@@ -5716,39 +5284,39 @@ az monitor app-insights component create --resource-group c7n-helm-tutorial --ap
 <p>This AKS cluster will be used to host the pods running the Container Host. Tiller will also need to
 be installed with the proper service account. The provided node count and vm size will create a
 small cluster and should be adjusted to fit your needs outside this tutorial.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az aks create --resource-group c7n-helm-tutorial --name c7n-helm <span class="se">\</span>
-    --node-count <span class="m">1</span> --node-vm-size Standard_B2s <span class="se">\</span>
-    --service-principal &lt;Service Principal ID&gt; --client-secret &lt;Client Secret&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az<span class="w"> </span>aks<span class="w"> </span>create<span class="w"> </span>--resource-group<span class="w"> </span>c7n-helm-tutorial<span class="w"> </span>--name<span class="w"> </span>c7n-helm<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--node-count<span class="w"> </span><span class="m">1</span><span class="w"> </span>--node-vm-size<span class="w"> </span>Standard_B2s<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--service-principal<span class="w"> </span>&lt;Service<span class="w"> </span>Principal<span class="w"> </span>ID&gt;<span class="w"> </span>--client-secret<span class="w"> </span>&lt;Client<span class="w"> </span>Secret&gt;
 
-az aks get-credentials --resource-group c7n-helm-tutorial --name c7n-helm
+az<span class="w"> </span>aks<span class="w"> </span>get-credentials<span class="w"> </span>--resource-group<span class="w"> </span>c7n-helm-tutorial<span class="w"> </span>--name<span class="w"> </span>c7n-helm
 </pre></div>
 </div>
 <p>Once the cluster has been created, we can initialize helm and tiller. First, create the Service
 Account and Cluster Role Binding for Tiller</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># rbac-config.yaml</span><span class="w"></span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tiller</span><span class="w"></span>
-<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kube-system</span><span class="w"></span>
-<span class="nn">---</span><span class="w"></span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRoleBinding</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tiller</span><span class="w"></span>
-<span class="nt">roleRef</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">apiGroup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span><span class="w"></span>
-<span class="w">  </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRole</span><span class="w"></span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cluster-admin</span><span class="w"></span>
-<span class="nt">subjects</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span><span class="w"></span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tiller</span><span class="w"></span>
-<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kube-system</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># rbac-config.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tiller</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kube-system</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRoleBinding</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tiller</span>
+<span class="nt">roleRef</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">apiGroup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+<span class="w">  </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRole</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cluster-admin</span>
+<span class="nt">subjects</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tiller</span>
+<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kube-system</span>
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl apply -f rbac-config.yaml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>rbac-config.yaml
 
-helm init --service-account tiller
+helm<span class="w"> </span>init<span class="w"> </span>--service-account<span class="w"> </span>tiller
 </pre></div>
 </div>
 </section>
@@ -5757,37 +5325,37 @@ helm init --service-account tiller
 <p>Now we are ready to deploy the helm chart and the container host. Create a file with the helm
 configuration values for our container host. See the <a class="reference internal" href="containerhosting.html#azure-containerhosting"><span class="std std-ref">Container Host Documentation</span></a>
 for information on filling out the environment variables.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># helm-values.yaml</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># helm-values.yaml</span>
 
-<span class="nt">defaultEnvironment</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">AZURE_TENANT_ID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;Azure</span><span class="nv"> </span><span class="s">Tenant</span><span class="nv"> </span><span class="s">ID&gt;&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">AZURE_CLIENT_ID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;Azure</span><span class="nv"> </span><span class="s">Client</span><span class="nv"> </span><span class="s">ID&gt;&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">AZURE_CONTAINER_POLICY_URI</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;Azure</span><span class="nv"> </span><span class="s">Policy</span><span class="nv"> </span><span class="s">Container</span><span class="nv"> </span><span class="s">URI&gt;&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">AZURE_CONTAINER_STORAGE_RESOURCE_ID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;Storage</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Resource</span><span class="nv"> </span><span class="s">ID&gt;&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">AZURE_CONTAINER_METRICS</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;azure://&lt;App</span><span class="nv"> </span><span class="s">Insights</span><span class="nv"> </span><span class="s">Instrumentation</span><span class="nv"> </span><span class="s">Key&gt;&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">AZURE_CONTAINER_LOG_GROUP</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;azure://&lt;App</span><span class="nv"> </span><span class="s">Insights</span><span class="nv"> </span><span class="s">Instrumentation</span><span class="nv"> </span><span class="s">Key&gt;&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">AZURE_CONTAINER_OUTPUT_DIR</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;Azure</span><span class="nv"> </span><span class="s">Logs</span><span class="nv"> </span><span class="s">Container</span><span class="nv"> </span><span class="s">URI&gt;&quot;</span><span class="w"></span>
+<span class="nt">defaultEnvironment</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">AZURE_TENANT_ID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;Azure</span><span class="nv"> </span><span class="s">Tenant</span><span class="nv"> </span><span class="s">ID&gt;&quot;</span>
+<span class="w">  </span><span class="nt">AZURE_CLIENT_ID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;Azure</span><span class="nv"> </span><span class="s">Client</span><span class="nv"> </span><span class="s">ID&gt;&quot;</span>
+<span class="w">  </span><span class="nt">AZURE_CONTAINER_POLICY_URI</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;Azure</span><span class="nv"> </span><span class="s">Policy</span><span class="nv"> </span><span class="s">Container</span><span class="nv"> </span><span class="s">URI&gt;&quot;</span>
+<span class="w">  </span><span class="nt">AZURE_CONTAINER_STORAGE_RESOURCE_ID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;Storage</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Resource</span><span class="nv"> </span><span class="s">ID&gt;&quot;</span>
+<span class="w">  </span><span class="nt">AZURE_CONTAINER_METRICS</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;azure://&lt;App</span><span class="nv"> </span><span class="s">Insights</span><span class="nv"> </span><span class="s">Instrumentation</span><span class="nv"> </span><span class="s">Key&gt;&quot;</span>
+<span class="w">  </span><span class="nt">AZURE_CONTAINER_LOG_GROUP</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;azure://&lt;App</span><span class="nv"> </span><span class="s">Insights</span><span class="nv"> </span><span class="s">Instrumentation</span><span class="nv"> </span><span class="s">Key&gt;&quot;</span>
+<span class="w">  </span><span class="nt">AZURE_CONTAINER_OUTPUT_DIR</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;Azure</span><span class="nv"> </span><span class="s">Logs</span><span class="nv"> </span><span class="s">Container</span><span class="nv"> </span><span class="s">URI&gt;&quot;</span>
 
-<span class="nt">subscriptionHosts</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;Subscription</span><span class="nv"> </span><span class="s">Name&gt;&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">AZURE_SUBSCRIPTION_ID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;Subscription</span><span class="nv"> </span><span class="s">ID&gt;&quot;</span><span class="w"></span>
+<span class="nt">subscriptionHosts</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;Subscription</span><span class="nv"> </span><span class="s">Name&gt;&#39;</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">AZURE_SUBSCRIPTION_ID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;Subscription</span><span class="nv"> </span><span class="s">ID&gt;&quot;</span>
 </pre></div>
 </div>
 <p>Then deploy the chart with the following command. The client secret should come
 from creating the Service Principal and must be provided in a base64 encoded format.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm upgrade --install --debug --force --wait <span class="se">\</span>
-    --namespace cloud-custodian --values helm-values.yaml <span class="se">\</span>
-    --set defaultSecretEnvironment.AZURE_CLIENT_SECRET<span class="o">=</span>&lt;Base <span class="m">64</span> Azure Client Secret&gt; <span class="se">\</span>
-    helm-tutorial tools/ops/azure/container-host/chart
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm<span class="w"> </span>upgrade<span class="w"> </span>--install<span class="w"> </span>--debug<span class="w"> </span>--force<span class="w"> </span>--wait<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--namespace<span class="w"> </span>cloud-custodian<span class="w"> </span>--values<span class="w"> </span>helm-values.yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--set<span class="w"> </span>defaultSecretEnvironment.AZURE_CLIENT_SECRET<span class="o">=</span>&lt;Base<span class="w"> </span><span class="m">64</span><span class="w"> </span>Azure<span class="w"> </span>Client<span class="w"> </span>Secret&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>helm-tutorial<span class="w"> </span>tools/ops/azure/container-host/chart
 </pre></div>
 </div>
 <p>To verify that the pod is running:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if pod status is &quot;Running&quot;</span>
-kubectl get pods --namespace cloud-custodian
+kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--namespace<span class="w"> </span>cloud-custodian
 
 <span class="c1"># Watch the logs for the pod</span>
-kubectl logs &lt;Pod Name&gt; --namespace cloud-custodian --follow
+kubectl<span class="w"> </span>logs<span class="w"> </span>&lt;Pod<span class="w"> </span>Name&gt;<span class="w"> </span>--namespace<span class="w"> </span>cloud-custodian<span class="w"> </span>--follow
 </pre></div>
 </div>
 </section>
@@ -5795,23 +5363,23 @@ kubectl logs &lt;Pod Name&gt; --namespace cloud-custodian --follow
 <h2>7. Upload a Custodian Policy<a class="headerlink" href="#upload-a-custodian-policy" title="Permalink to this headline">¶</a></h2>
 <p>Finally, create a custodian policy called <code class="docutils literal notranslate"><span class="pre">find-c7nstorage.yaml</span></code>. This policy will just find the
 storage account we made earlier. We’ll set the mode to run every minute for easier testing.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">find-c7nstorage</span><span class="w"></span>
-<span class="w">  </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.storage</span><span class="w"></span>
-<span class="w">  </span><span class="nt">mode</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">container-periodic</span><span class="w"></span>
-<span class="w">    </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span><span class="w">  </span><span class="c1"># Run every minute as an example</span><span class="w"></span>
-<span class="w">  </span><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span><span class="w"></span>
-<span class="w">    </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span><span class="w"></span>
-<span class="w">    </span><span class="nt">op</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eq</span><span class="w"></span>
-<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c7nstorage</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">find-c7nstorage</span>
+<span class="w">  </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.storage</span>
+<span class="w">  </span><span class="nt">mode</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">container-periodic</span>
+<span class="w">    </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span><span class="w">  </span><span class="c1"># Run every minute as an example</span>
+<span class="w">  </span><span class="nt">filters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
+<span class="w">    </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
+<span class="w">    </span><span class="nt">op</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eq</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c7nstorage</span>
 </pre></div>
 </div>
 <p>Upload this file to the policy storage container. Within a few minutes, the container host should
 pick it up and begin executing it.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az storage blob upload --account-name c7nstorage --account-key <span class="nv">$account_key</span> <span class="se">\</span>
-    --container-name c7n-helm-policies --file find-c7nstorage.yaml --name find-c7nstorage.yaml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az<span class="w"> </span>storage<span class="w"> </span>blob<span class="w"> </span>upload<span class="w"> </span>--account-name<span class="w"> </span>c7nstorage<span class="w"> </span>--account-key<span class="w"> </span><span class="nv">$account_key</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--container-name<span class="w"> </span>c7n-helm-policies<span class="w"> </span>--file<span class="w"> </span>find-c7nstorage.yaml<span class="w"> </span>--name<span class="w"> </span>find-c7nstorage.yaml
 </pre></div>
 </div>
 </section>

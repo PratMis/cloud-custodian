@@ -176,6 +176,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/s3globalgrants.html">S3 - Global Grants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../aws/examples/s3lifecyclepolicyonbucketdelete.html">S3 - Add lifecycle policy on bucket delete</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/sagemakernotebookdeletepublicorunencrypted.html">SageMaker Notebook - Delete Public or Unencrypted</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/securitygroupsaddpermission.html">Security Groups - add permission</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/securitygroupsdetectremediate.html">Security Groups - Detect and Remediate Violations</a></li>
@@ -970,6 +971,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../aws/resources/emr-security-configuration.html">aws.emr-security-configuration</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-security-configuration.html#filters">Filters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-security-configuration.html#actions">Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../aws/resources/group-emr-serverless.html">emr-serverless resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../aws/resources/emr-serverless-app.html">aws.emr-serverless-app</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-serverless-app.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-serverless-app.html#actions">Actions</a></li>
 </ul>
 </li>
 </ul>
@@ -1896,450 +1905,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../advanced/contribute.html#arm-templates">ARM templates</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../advanced/contribute.html#cassettes">Cassettes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../advanced/contribute.html#running-tests">Running tests</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../resources/index.html">Azure Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../resources/azure-modes.html">Azure Execution Modes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-modes.html#pull">pull</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-modes.html#azure-event-grid">azure-event-grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-modes.html#azure-periodic">azure-periodic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-modes.html#container-event">container-event</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-modes.html#container-periodic">container-periodic</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/azure-common-actions.html">Azure Common Actions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#auto-tag-date">auto-tag-date</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#auto-tag-user">auto-tag-user</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#delete">delete</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#lock">lock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#logic-app">logic-app</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#mark-for-op">mark-for-op</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#notify">notify</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#tag">tag</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#tag-trim">tag-trim</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#untag">untag</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#webhook">webhook</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/azure-common-filters.html">Azure Common Filters</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#authentication">authentication</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#azure-ad-administrators">azure-ad-administrators</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#blob-services">blob-services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#configuration">configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#configuration-parameter">configuration-parameter</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#cost">cost</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#diagnostic-settings">diagnostic-settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#effective-route-table">effective-route-table</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#event">event</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#firewall-rules">firewall-rules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#instance-view">instance-view</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#marked-for-op">marked-for-op</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#metric">metric</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#offer">offer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#offhour">offhour</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#onhour">onhour</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#parent">parent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#policy-compliant">policy-compliant</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#reduce">reduce</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#resource-lock">resource-lock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#storage-diagnostic-settings">storage-diagnostic-settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#value">value</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#vm-extensions">vm-extensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#vulnerability-assessment">vulnerability-assessment</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-ai-%2B-machine-learning.html">AI + Machine Learning resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cognitiveservice.html">azure.cognitiveservice</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cognitiveservice.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cognitiveservice.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/databricks.html">azure.databricks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/databricks.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/databricks.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/search.html">azure.search</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/search.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/search.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-active-directory.html">Active Directory resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/roleassignment.html">azure.roleassignment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/roleassignment.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/roleassignment.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/roledefinition.html">azure.roledefinition</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/roledefinition.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/roledefinition.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-analytics.html">Analytics resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/datafactory.html">azure.datafactory</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/datafactory.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/datafactory.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/hdinsight.html">azure.hdinsight</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/hdinsight.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/hdinsight.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-compute.html">Compute resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/aks.html">azure.aks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/aks.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/aks.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/appserviceplan.html">azure.appserviceplan</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/appserviceplan.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/appserviceplan.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/batch.html">azure.batch</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/batch.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/batch.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/image.html">azure.image</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/image.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/image.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/logic-app-workflow.html">azure.logic-app-workflow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/logic-app-workflow.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/logic-app-workflow.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/service-fabric-cluster.html">azure.service-fabric-cluster</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/service-fabric-cluster.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/service-fabric-cluster.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/service-fabric-cluster-managed.html">azure.service-fabric-cluster-managed</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/service-fabric-cluster-managed.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/service-fabric-cluster-managed.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/vm.html">azure.vm</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vm.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vm.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/vmss.html">azure.vmss</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vmss.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vmss.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/webapp.html">azure.webapp</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/webapp.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/webapp.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-containers.html">Containers resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/aks.html">azure.aks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/aks.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/aks.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/container-group.html">azure.container-group</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/container-group.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/container-group.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/container-registry.html">azure.container-registry</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/container-registry.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/container-registry.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/containerservice.html">azure.containerservice</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/containerservice.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/containerservice.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-cost.html">Cost resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cost-management-export.html">azure.cost-management-export</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cost-management-export.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cost-management-export.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-databases.html">Databases resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cosmosdb.html">azure.cosmosdb</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cosmosdb-collection.html">azure.cosmosdb-collection</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb-collection.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb-collection.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cosmosdb-database.html">azure.cosmosdb-database</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb-database.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb-database.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/mysql.html">azure.mysql</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/mysql.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/mysql.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/postgresql-database.html">azure.postgresql-database</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/postgresql-database.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/postgresql-database.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/postgresql-server.html">azure.postgresql-server</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/postgresql-server.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/postgresql-server.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/redis.html">azure.redis</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/redis.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/redis.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/sql-database.html">azure.sql-database</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/sql-database.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/sql-database.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/sql-server.html">azure.sql-server</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/sql-server.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/sql-server.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-events.html">Events resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/eventhub.html">azure.eventhub</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/eventhub.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/eventhub.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/eventsubscription.html">azure.eventsubscription</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/eventsubscription.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/eventsubscription.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-generic.html">Generic resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/armresource.html">azure.armresource</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/armresource.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/armresource.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/policyassignments.html">azure.policyassignments</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/policyassignments.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/policyassignments.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-integration.html">Integration resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/api-management.html">azure.api-management</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/api-management.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/api-management.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-internet-of-things.html">Internet Of Things resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/iothub.html">azure.iothub</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/iothub.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/iothub.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-media.html">Media resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cdnprofile.html">azure.cdnprofile</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cdnprofile.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cdnprofile.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-network.html">Network resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/application-gateway.html">azure.application-gateway</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/application-gateway.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/application-gateway.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/front-door.html">azure.front-door</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/front-door.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/front-door.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/traffic-manager-profile.html">azure.traffic-manager-profile</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/traffic-manager-profile.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/traffic-manager-profile.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-networking.html">Networking resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/dnszone.html">azure.dnszone</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/dnszone.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/dnszone.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/loadbalancer.html">azure.loadbalancer</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/loadbalancer.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/loadbalancer.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/networkinterface.html">azure.networkinterface</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/networkinterface.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/networkinterface.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/networksecuritygroup.html">azure.networksecuritygroup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/networksecuritygroup.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/networksecuritygroup.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/publicip.html">azure.publicip</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/publicip.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/publicip.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/recordset.html">azure.recordset</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/recordset.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/recordset.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/routetable.html">azure.routetable</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/routetable.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/routetable.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/vnet.html">azure.vnet</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vnet.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vnet.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-resource-group.html">Resource Group resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/resourcegroup.html">azure.resourcegroup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/resourcegroup.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/resourcegroup.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-security.html">Security resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/advisor-recommendation.html">azure.advisor-recommendation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/advisor-recommendation.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/advisor-recommendation.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/defender-alert.html">azure.defender-alert</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-alert.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-alert.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/defender-autoprovisioning.html">azure.defender-autoprovisioning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-autoprovisioning.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-autoprovisioning.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/defender-pricing.html">azure.defender-pricing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-pricing.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-pricing.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/defender-setting.html">azure.defender-setting</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-setting.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-setting.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/keyvault.html">azure.keyvault</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/keyvault-certificate.html">azure.keyvault-certificate</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault-certificate.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault-certificate.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/keyvault-key.html">azure.keyvault-key</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault-key.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault-key.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-storage.html">Storage resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/datalake.html">azure.datalake</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/datalake.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/datalake.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/disk.html">azure.disk</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/disk.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/disk.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/storage.html">azure.storage</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/storage.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/storage.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/storage-container.html">azure.storage-container</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/storage-container.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/storage-container.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-subscription.html">Subscription resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/policyassignments.html">azure.policyassignments</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/policyassignments.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/policyassignments.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/resourcegroup.html">azure.resourcegroup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/resourcegroup.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/resourcegroup.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/subscription.html">azure.subscription</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/subscription.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/subscription.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-web.html">Web resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/appserviceplan.html">azure.appserviceplan</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/appserviceplan.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/appserviceplan.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/webapp.html">azure.webapp</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/webapp.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/webapp.html#actions">Actions</a></li>
 </ul>
 </li>
 </ul>
@@ -5516,10 +5081,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html">Custodian policies for Infrastructure Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#install">Install</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#usage">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#outputs">Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html">Custodian policies for Infrastructure Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#install">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#filters">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#outputs">Outputs</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-logexporter.html">c7n-log-exporter: Cloud watch log exporter automation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-logexporter.html#features">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-logexporter.html#assumptions">Assumptions</a></li>
@@ -5677,12 +5245,12 @@ because the rest of the infrastructure can be shared.</p>
 </dd>
 </dl>
 <div class="toggle docutils container">
-<div class="header docutils container" style=""></div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">enum</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pull</span><span class="w"></span>
-<span class="nt">required</span><span class="p">:</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="w"></span>
+<div class="header docutils container" style=""></div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enum</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pull</span>
+<span class="nt">required</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
 </pre></div>
 </div>
 </div>
@@ -5694,86 +5262,86 @@ based on a <a class="reference external" href="https://docs.microsoft.com/en-us/
 </dd>
 </dl>
 <div class="toggle docutils container">
-<div class="header docutils container" style=""></div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">execution-options</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">  </span><span class="nt">provision-options</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">    </span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">appInsights</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">oneOf</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">          </span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">location</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">resourceGroupName</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">      </span><span class="nt">identity</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">        </span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">id</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">enum</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SystemAssigned</span><span class="w"></span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UserAssigned</span><span class="w"></span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Embedded</span><span class="w"></span>
-<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">      </span><span class="nt">servicePlan</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">oneOf</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">          </span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">autoScale</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">              </span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">                </span><span class="nt">defaultCapacity</span><span class="p">:</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">                </span><span class="nt">enabled</span><span class="p">:</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span><span class="w"></span>
-<span class="w">                </span><span class="nt">maxCapacity</span><span class="p">:</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">                </span><span class="nt">minCapacity</span><span class="p">:</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">            </span><span class="nt">location</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">resourceGroupName</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">skuName</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">skuTier</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageAccount</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">oneOf</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">          </span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">location</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">resourceGroupName</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">  </span><span class="nt">schedule</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">pattern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^\s?([0-5]?[0-9]|\,|(\*\/)|\-)+ (\*|[0-5]?[0-9]|\,|\/|\-)+ (\*|[0-9]|(1[0-9])|(2[0-3])|\,|\/|\-)+</span><span class="w"></span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(\*|[1-9]|([1-2][0-9])|(3[0-1])|\,|\*\/|\-)+ ([Jj](an|anuary)|[Ff](eb|ebruary)|[Mm](ar|arch)|[Aa](pr|pril)|[Mm]ay|[Jj](un|une)|[Jj](ul|uly)|[Aa](ug|ugust)|[Ss](ep|eptember)|[Oo](ct|ctober)|[Nn](ov|ovember)|[Dd](ec|ecember)|\,|\*\/|[1-9]|(1[0-2])|\*)+</span><span class="w"></span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">([Mm](on|onday)|[Tt](u|ue|ues|uesday)|[Ww](ed|ednesday)|[Tt](hu|hursday)|[Ff](ri|riday)|[Ss](at|aturday)|[Ss](un|unday)|[0-6]|\,|\*|\-)+\s?$</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">enum</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-periodic</span><span class="w"></span>
-<span class="nt">required</span><span class="p">:</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="w"></span>
+<div class="header docutils container" style=""></div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">execution-options</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">  </span><span class="nt">provision-options</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">appInsights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">oneOf</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">location</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">resourceGroupName</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">      </span><span class="nt">identity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">        </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">id</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">enum</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SystemAssigned</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UserAssigned</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Embedded</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">      </span><span class="nt">servicePlan</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">oneOf</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">autoScale</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">              </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">defaultCapacity</span><span class="p">:</span>
+<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">                </span><span class="nt">enabled</span><span class="p">:</span>
+<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<span class="w">                </span><span class="nt">maxCapacity</span><span class="p">:</span>
+<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">                </span><span class="nt">minCapacity</span><span class="p">:</span>
+<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">            </span><span class="nt">location</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">resourceGroupName</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">skuName</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">skuTier</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">      </span><span class="nt">storageAccount</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">oneOf</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">location</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">resourceGroupName</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">  </span><span class="nt">schedule</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">pattern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^\s?([0-5]?[0-9]|\,|(\*\/)|\-)+ (\*|[0-5]?[0-9]|\,|\/|\-)+ (\*|[0-9]|(1[0-9])|(2[0-3])|\,|\/|\-)+</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(\*|[1-9]|([1-2][0-9])|(3[0-1])|\,|\*\/|\-)+ ([Jj](an|anuary)|[Ff](eb|ebruary)|[Mm](ar|arch)|[Aa](pr|pril)|[Mm]ay|[Jj](un|une)|[Jj](ul|uly)|[Aa](ug|ugust)|[Ss](ep|eptember)|[Oo](ct|ctober)|[Nn](ov|ovember)|[Dd](ec|ecember)|\,|\*\/|[1-9]|(1[0-2])|\*)+</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">([Mm](on|onday)|[Tt](u|ue|ues|uesday)|[Ww](ed|ednesday)|[Tt](hu|hursday)|[Ff](ri|riday)|[Ss](at|aturday)|[Ss](un|unday)|[0-6]|\,|\*|\-)+\s?$</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enum</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-periodic</span>
+<span class="nt">required</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
 </pre></div>
 </div>
 </div>
@@ -5784,97 +5352,97 @@ you to apply your policies when events occur. See <a class="reference external" 
 </dd>
 </dl>
 <div class="toggle docutils container">
-<div class="header docutils container" style=""></div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">events</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">items</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">oneOf</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">event</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">          </span><span class="nt">resourceProvider</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">        </span><span class="nt">required</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resourceProvider</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event</span><span class="w"></span>
-<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">    </span><span class="nt">maxItems</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span><span class="w"></span>
-<span class="w">  </span><span class="nt">execution-options</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">  </span><span class="nt">provision-options</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">    </span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">appInsights</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">oneOf</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">          </span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">location</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">resourceGroupName</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">      </span><span class="nt">identity</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">        </span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">id</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">enum</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SystemAssigned</span><span class="w"></span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UserAssigned</span><span class="w"></span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Embedded</span><span class="w"></span>
-<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">      </span><span class="nt">servicePlan</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">oneOf</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">          </span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">autoScale</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">              </span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">                </span><span class="nt">defaultCapacity</span><span class="p">:</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">                </span><span class="nt">enabled</span><span class="p">:</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span><span class="w"></span>
-<span class="w">                </span><span class="nt">maxCapacity</span><span class="p">:</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">                </span><span class="nt">minCapacity</span><span class="p">:</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">            </span><span class="nt">location</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">resourceGroupName</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">skuName</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">skuTier</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageAccount</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">oneOf</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">          </span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">location</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">            </span><span class="nt">resourceGroupName</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">enum</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-event-grid</span><span class="w"></span>
-<span class="nt">required</span><span class="p">:</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">events</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="w"></span>
+<div class="header docutils container" style=""></div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">items</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">oneOf</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">event</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">          </span><span class="nt">resourceProvider</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">        </span><span class="nt">required</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resourceProvider</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">    </span><span class="nt">maxItems</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span>
+<span class="w">  </span><span class="nt">execution-options</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">  </span><span class="nt">provision-options</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">appInsights</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">oneOf</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">location</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">resourceGroupName</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">      </span><span class="nt">identity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">        </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">id</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">enum</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SystemAssigned</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UserAssigned</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Embedded</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">      </span><span class="nt">servicePlan</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">oneOf</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">autoScale</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">              </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">defaultCapacity</span><span class="p">:</span>
+<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">                </span><span class="nt">enabled</span><span class="p">:</span>
+<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<span class="w">                </span><span class="nt">maxCapacity</span><span class="p">:</span>
+<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">                </span><span class="nt">minCapacity</span><span class="p">:</span>
+<span class="w">                  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">            </span><span class="nt">location</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">resourceGroupName</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">skuName</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">skuTier</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">      </span><span class="nt">storageAccount</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">oneOf</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">location</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">resourceGroupName</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enum</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-event-grid</span>
+<span class="nt">required</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">events</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
 </pre></div>
 </div>
 </div>
@@ -5962,74 +5530,74 @@ is missing, Custodian will return an error.</p>
 The defaults are accepted for Storage and Application Insights, and custom values are provided for the
 Service Plan. This policy deploys a dedicated Basic B1 App Service Plan with the default auto scaling
 turned on. Based on the RAM consumption in the underlying VMs, the App Service Plan will be backed by 1-3 VMs.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stopped-vm</span><span class="w"></span>
-<span class="w">    </span><span class="nt">mode</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-periodic</span><span class="w"></span>
-<span class="w">        </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">provision-options</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">servicePlan</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">functionshost</span><span class="w"></span>
-<span class="w">            </span><span class="nt">skuTier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Basic</span><span class="w"></span>
-<span class="w">            </span><span class="nt">skuName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">B1</span><span class="w"></span>
-<span class="w">            </span><span class="nt">autoScale</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">              </span><span class="nt">minCapacity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">              </span><span class="nt">maxCapacity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
-<span class="w">              </span><span class="nt">defaultCapacity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">    </span><span class="w w-Error"> </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.vm</span><span class="w"></span>
-<span class="w">     </span><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">instance-view</span><span class="w"></span>
-<span class="w">        </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">statuses[].code</span><span class="w"></span>
-<span class="w">        </span><span class="nt">op</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">not-in</span><span class="w"></span>
-<span class="w">        </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swap</span><span class="w"></span>
-<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;PowerState/running&quot;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stopped-vm</span>
+<span class="w">    </span><span class="nt">mode</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-periodic</span>
+<span class="w">        </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span>
+<span class="w">        </span><span class="nt">provision-options</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">servicePlan</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">functionshost</span>
+<span class="w">            </span><span class="nt">skuTier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Basic</span>
+<span class="w">            </span><span class="nt">skuName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">B1</span>
+<span class="w">            </span><span class="nt">autoScale</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">              </span><span class="nt">minCapacity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">              </span><span class="nt">maxCapacity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">              </span><span class="nt">defaultCapacity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="w w-Error"> </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.vm</span>
+<span class="w">     </span><span class="nt">filters</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">instance-view</span>
+<span class="w">        </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">statuses[].code</span>
+<span class="w">        </span><span class="nt">op</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">not-in</span>
+<span class="w">        </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swap</span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;PowerState/running&quot;</span>
 </pre></div>
 </div>
 <p>The following example shows how to set the name, size and location of all three components
 of the supporting infrastructure:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stopped-vm</span><span class="w"></span>
-<span class="w">    </span><span class="nt">mode</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-periodic</span><span class="w"></span>
-<span class="w">        </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">provision-options</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">servicePlan</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">functionshost</span><span class="w"></span>
-<span class="w">            </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">East US</span><span class="w"></span>
-<span class="w">            </span><span class="nt">skuTier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Standard</span><span class="w"></span>
-<span class="w">            </span><span class="nt">skuName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S1</span><span class="w"></span>
-<span class="w">          </span><span class="nt">appInsights</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">East US</span><span class="w"></span>
-<span class="w">          </span><span class="nt">storageAccount</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sampleaccount</span><span class="w"></span>
-<span class="w">            </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">East US</span><span class="w"></span>
-<span class="w">    </span><span class="w w-Error"> </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.vm</span><span class="w"></span>
-<span class="w">     </span><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">instance-view</span><span class="w"></span>
-<span class="w">        </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">statuses[].code</span><span class="w"></span>
-<span class="w">        </span><span class="nt">op</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">not-in</span><span class="w"></span>
-<span class="w">        </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swap</span><span class="w"></span>
-<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;PowerState/running&quot;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stopped-vm</span>
+<span class="w">    </span><span class="nt">mode</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-periodic</span>
+<span class="w">        </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span>
+<span class="w">        </span><span class="nt">provision-options</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">servicePlan</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">functionshost</span>
+<span class="w">            </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">East US</span>
+<span class="w">            </span><span class="nt">skuTier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Standard</span>
+<span class="w">            </span><span class="nt">skuName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S1</span>
+<span class="w">          </span><span class="nt">appInsights</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">East US</span>
+<span class="w">          </span><span class="nt">storageAccount</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sampleaccount</span>
+<span class="w">            </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">East US</span>
+<span class="w">    </span><span class="w w-Error"> </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.vm</span>
+<span class="w">     </span><span class="nt">filters</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">instance-view</span>
+<span class="w">        </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">statuses[].code</span>
+<span class="w">        </span><span class="nt">op</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">not-in</span>
+<span class="w">        </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swap</span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;PowerState/running&quot;</span>
 </pre></div>
 </div>
 <p>The final example shows how to use resource ids to specify existing infrastructure:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stopped-vm</span><span class="w"></span>
-<span class="w">    </span><span class="nt">mode</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-periodic</span><span class="w"></span>
-<span class="w">        </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">provision-options</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">servicePlan</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/subscriptions/&lt;subscription_id&gt;/resourceGroups/cloud-custodian/providers/Microsoft.Web/serverFarms/existingResource</span><span class="w"></span>
-<span class="w">          </span><span class="nt">appInsights</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/subscriptions/&lt;subscription_id&gt;/resourceGroups/cloud-custodian/providers/microsoft.insights/components/existingResource</span><span class="w"></span>
-<span class="w">          </span><span class="nt">storageAccount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/subscriptions/&lt;subscription_id&gt;/resourceGroups/cloud-custodian/providers/Microsoft.Storage/storageAccounts/existingResource</span><span class="w"></span>
-<span class="w">    </span><span class="w w-Error"> </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.vm</span><span class="w"></span>
-<span class="w">     </span><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">instance-view</span><span class="w"></span>
-<span class="w">        </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">statuses[].code</span><span class="w"></span>
-<span class="w">        </span><span class="nt">op</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">not-in</span><span class="w"></span>
-<span class="w">        </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swap</span><span class="w"></span>
-<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;PowerState/running&quot;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stopped-vm</span>
+<span class="w">    </span><span class="nt">mode</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-periodic</span>
+<span class="w">        </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span>
+<span class="w">        </span><span class="nt">provision-options</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">servicePlan</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/subscriptions/&lt;subscription_id&gt;/resourceGroups/cloud-custodian/providers/Microsoft.Web/serverFarms/existingResource</span>
+<span class="w">          </span><span class="nt">appInsights</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/subscriptions/&lt;subscription_id&gt;/resourceGroups/cloud-custodian/providers/microsoft.insights/components/existingResource</span>
+<span class="w">          </span><span class="nt">storageAccount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/subscriptions/&lt;subscription_id&gt;/resourceGroups/cloud-custodian/providers/Microsoft.Storage/storageAccounts/existingResource</span>
+<span class="w">    </span><span class="w w-Error"> </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.vm</span>
+<span class="w">     </span><span class="nt">filters</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">instance-view</span>
+<span class="w">        </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">statuses[].code</span>
+<span class="w">        </span><span class="nt">op</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">not-in</span>
+<span class="w">        </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swap</span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;PowerState/running&quot;</span>
 </pre></div>
 </div>
 </section>
@@ -6049,16 +5617,16 @@ Managed System Identities they provide for dynamic automatically
 rotated credentials, but they also allow for simplicity of managing
 role assignments to a smaller population of IAM resources, instead
 of one per policy function.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stopped-vm</span><span class="w"></span>
-<span class="w">    </span><span class="nt">mode</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-periodic</span><span class="w"></span>
-<span class="w">        </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">provision-options</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">identity</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UserAssigned</span><span class="w"></span>
-<span class="w">            </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-custodian-identity</span><span class="w"></span>
-<span class="w">    </span><span class="w w-Error"> </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.vm</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stopped-vm</span>
+<span class="w">    </span><span class="nt">mode</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-periodic</span>
+<span class="w">        </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span>
+<span class="w">        </span><span class="nt">provision-options</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">identity</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UserAssigned</span>
+<span class="w">            </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-custodian-identity</span>
+<span class="w">    </span><span class="w w-Error"> </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.vm</span>
 </pre></div>
 </div>
 <p>The identity id can be provided as the user assigned identity’s name
@@ -6067,15 +5635,15 @@ provisioned.</p>
 <p>Using a Managed System Identity results in the creation of an identity
 per policy function, which then needs subsequent role assignments
 before the policy will be able to successfully execute.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stopped-vm</span><span class="w"></span>
-<span class="w">    </span><span class="nt">mode</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-periodic</span><span class="w"></span>
-<span class="w">        </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">provision-options</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">identity</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SystemAssigned</span><span class="w"></span>
-<span class="w">    </span><span class="w w-Error"> </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.vm</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stopped-vm</span>
+<span class="w">    </span><span class="nt">mode</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-periodic</span>
+<span class="w">        </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span>
+<span class="w">        </span><span class="nt">provision-options</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">identity</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SystemAssigned</span>
+<span class="w">    </span><span class="w w-Error"> </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.vm</span>
 </pre></div>
 </div>
 </section>
@@ -6093,24 +5661,24 @@ be provided on the command line in non-serverless scenarios.</p>
 <p>The default output directory for an Azure Function is <code class="docutils literal notranslate"><span class="pre">/tmp/&lt;random_uuid&gt;</span></code>. The following
 example shows how to save the output of the policy to an Azure Storage Account instead of in
 the default Function location.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stopped-vm</span><span class="w"></span>
-<span class="w">    </span><span class="nt">mode</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-periodic</span><span class="w"></span>
-<span class="w">        </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">provision-options</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">servicePlan</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">functionshost</span><span class="w"></span>
-<span class="w">        </span><span class="nt">execution-options</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">output_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure://yourstorageaccount.blob.core.windows.net/custodian</span><span class="w"></span>
-<span class="w">          </span><span class="nt">metrics</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure://&lt;resource_group_name&gt;/&lt;app_insights_name&gt;</span><span class="w"></span>
-<span class="w">    </span><span class="w w-Error"> </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.vm</span><span class="w"></span>
-<span class="w">     </span><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">instance-view</span><span class="w"></span>
-<span class="w">        </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">statuses[].code</span><span class="w"></span>
-<span class="w">        </span><span class="nt">op</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">not-in</span><span class="w"></span>
-<span class="w">        </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swap</span><span class="w"></span>
-<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;PowerState/running&quot;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stopped-vm</span>
+<span class="w">    </span><span class="nt">mode</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-periodic</span>
+<span class="w">        </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span>
+<span class="w">        </span><span class="nt">provision-options</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">servicePlan</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">functionshost</span>
+<span class="w">        </span><span class="nt">execution-options</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">output_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure://yourstorageaccount.blob.core.windows.net/custodian</span>
+<span class="w">          </span><span class="nt">metrics</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure://&lt;resource_group_name&gt;/&lt;app_insights_name&gt;</span>
+<span class="w">    </span><span class="w w-Error"> </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.vm</span>
+<span class="w">     </span><span class="nt">filters</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">instance-view</span>
+<span class="w">        </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">statuses[].code</span>
+<span class="w">        </span><span class="nt">op</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">not-in</span>
+<span class="w">        </span><span class="nt">value_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swap</span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;PowerState/running&quot;</span>
 </pre></div>
 </div>
 <p>More details on Blob Storage output can be found at <a class="reference internal" href="monitoring.html#azure-bloboutput"><span class="std std-ref">Writing Custodian Output to Azure Blob Storage</span></a></p>
@@ -6126,19 +5694,19 @@ in the policy.</p>
 of one of the <a class="reference external" href="https://github.com/cloud-custodian/cloud-custodian/blob/master/tools/c7n_azure/c7n_azure/azure_events.py">shortcuts</a>.
 For a list of all of the resource providers and their actions, see <a class="reference external" href="https://docs.microsoft.com/en-us/azure/role-based-access-control/resource-provider-operations">Azure Resource Manager resource provider options</a>.</p>
 <p>The following example shows an Event Grid Function that runs when a value is written to Key Vault.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tag-key-vault-creator</span><span class="w"></span>
-<span class="w">    </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.keyvault</span><span class="w"></span>
-<span class="w">    </span><span class="nt">mode</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-event-grid</span><span class="w"></span>
-<span class="w">      </span><span class="nt">events</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">resourceProvider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Microsoft.KeyVault/vaults</span><span class="w"></span>
-<span class="w">          </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span><span class="w"></span>
-<span class="w">    </span><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;tag:CreatorEmail&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"></span>
-<span class="w">    </span><span class="nt">actions</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auto-tag-user</span><span class="w"></span>
-<span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CreatorEmail</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tag-key-vault-creator</span>
+<span class="w">    </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.keyvault</span>
+<span class="w">    </span><span class="nt">mode</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-event-grid</span>
+<span class="w">      </span><span class="nt">events</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">resourceProvider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Microsoft.KeyVault/vaults</span>
+<span class="w">          </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="w">    </span><span class="nt">filters</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;tag:CreatorEmail&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auto-tag-user</span>
+<span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CreatorEmail</span>
 </pre></div>
 </div>
 </section>

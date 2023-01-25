@@ -108,6 +108,8 @@ be applies for all resources.
 
    group-emr.rst
 
+   group-emr-serverless.rst
+
    group-es.rst
 
    group-events.rst

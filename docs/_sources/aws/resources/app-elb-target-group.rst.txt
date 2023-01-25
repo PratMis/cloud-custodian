@@ -13,6 +13,8 @@ Filters
 -------
 
 
+  - :ref:`attributes <aws.app-elb-target-group.filters.attributes>`
+
   - :ref:`config-compliance <aws.common.filters.config-compliance>`
   
   - :ref:`default-vpc <aws.app-elb-target-group.filters.default-vpc>`
@@ -31,6 +33,117 @@ Filters
   
   - :ref:`value <aws.common.filters.value>`
   
+
+
+.. _aws.app-elb-target-group.filters.attributes:
+
+attributes
+++++++++++
+Value filter that allows filtering on Target group attributes
+
+:example:
+
+.. code-block:: yaml
+
+        policies:
+            - name: target-group-check-attributes
+              resource: app-elb-target-group
+              filters:
+                - type: attributes
+                  key: preserve_client_ip.enabled
+                  value: True
+                  op: eq
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      default:
+        type: object
+      key:
+        type: string
+      op:
+        enum:
+        - eq
+        - equal
+        - ne
+        - not-equal
+        - gt
+        - greater-than
+        - ge
+        - gte
+        - le
+        - lte
+        - lt
+        - less-than
+        - glob
+        - regex
+        - regex-case
+        - in
+        - ni
+        - not-in
+        - contains
+        - difference
+        - intersect
+      type:
+        enum:
+        - attributes
+      value:
+        oneOf:
+        - type: array
+        - type: string
+        - type: boolean
+        - type: number
+        - type: 'null'
+      value_from:
+        additionalProperties: 'False'
+        properties:
+          expr:
+            oneOf:
+            - type: integer
+            - type: string
+          format:
+            enum:
+            - csv
+            - json
+            - txt
+            - csv2dict
+          url:
+            type: string
+        required:
+        - url
+        type: object
+      value_regex:
+        type: string
+      value_type:
+        enum:
+        - age
+        - integer
+        - expiration
+        - normalize
+        - size
+        - cidr
+        - cidr_size
+        - swap
+        - resource_count
+        - expr
+        - unique_size
+        - date
+        - version
+    required:
+    - type
+
+
+
+
+Permissions - elasticloadbalancing:DescribeTargetGroupAttributes
 
 
 .. _aws.app-elb-target-group.filters.default-vpc:
@@ -90,6 +203,8 @@ Actions
   
   - :ref:`mark-for-op <aws.common.actions.mark-for-op>`
   
+  - :ref:`modify-attributes <aws.app-elb-target-group.actions.modify-attributes>`
+
   - :ref:`notify <aws.common.actions.notify>`
   
   - :ref:`post-finding <aws.common.actions.post-finding>`
@@ -149,4 +264,125 @@ deletion of any app elb target groups.
 
 
 Permissions - elasticloadbalancing:DeleteTargetGroup
+
+
+.. _aws.app-elb-target-group.actions.modify-attributes:
+
+modify-attributes
++++++++++++++++++
+Modify target group attributes.
+
+:example:
+
+.. code-block:: yaml
+
+        policies:
+          - name: modify-preserve-client-ip-enable
+            resource: app-elb-target-group
+            filters:
+              - type: attributes
+                key: "preserve_client_ip.enabled"
+                value: False
+            actions:
+              - type: modify-attributes
+                attributes:
+                  "preserve_client_ip.enabled": "true"
+
+.. container:: toggle
+
+  
+
+  .. raw:: html
+     
+    <div class="header docutils container" style=""></div>
+
+  .. code-block:: yaml
+
+    properties:
+      attributes:
+        additionalProperties: false
+        properties:
+          deregistration_delay.connection_termination.enabled:
+            enum:
+            - 'true'
+            - 'false'
+            - true
+            - false
+          deregistration_delay.timeout_seconds:
+            type: number
+          lambda.multi_value_headers.enabled:
+            enum:
+            - 'true'
+            - 'false'
+            - true
+            - false
+          load_balancing.algorithm.type:
+            enum:
+            - round_robin
+            - least_outstanding_requests
+          load_balancing.cross_zone.enabled:
+            enum:
+            - 'true'
+            - 'false'
+            - true
+            - false
+            - use_load_balancer_configuration
+          preserve_client_ip.enabled:
+            enum:
+            - 'true'
+            - 'false'
+            - true
+            - false
+          proxy_protocol_v2.enabled:
+            enum:
+            - 'true'
+            - 'false'
+            - true
+            - false
+          slow_start.duration_seconds:
+            type: number
+          stickiness.app_cookie.cookie_name:
+            type: string
+          stickiness.app_cookie.duration_seconds:
+            type: number
+          stickiness.enabled:
+            enum:
+            - 'true'
+            - 'false'
+            - true
+            - false
+          stickiness.lb_cookie.duration_seconds:
+            type: number
+          stickiness.type:
+            enum:
+            - lb_cookie
+            - app_cookie
+            - source_ip
+            - source_ip_dest_ip
+            - source_ip_dest_ip_proto
+          target_failover.on_deregistration:
+            enum:
+            - rebalance
+            - no_rebalance
+          target_failover.on_unhealthy:
+            enum:
+            - rebalance
+            - no_rebalance
+          target_group_health.dns_failover.minimum_healthy_targets.count:
+            type: string
+          target_group_health.dns_failover.minimum_healthy_targets.percentage:
+            type: string
+          target_group_health.unhealthy_state_routing.minimum_healthy_targets.count:
+            type: number
+          target_group_health.unhealthy_state_routing.minimum_healthy_targets.percentage:
+            type: string
+        type: object
+      type:
+        enum:
+        - modify-attributes
+
+
+
+
+Permissions - elasticloadbalancing:ModifyTargetGroupAttributes
 

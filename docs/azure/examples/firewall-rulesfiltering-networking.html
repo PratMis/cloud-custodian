@@ -176,6 +176,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/s3globalgrants.html">S3 - Global Grants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../aws/examples/s3lifecyclepolicyonbucketdelete.html">S3 - Add lifecycle policy on bucket delete</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/sagemakernotebookdeletepublicorunencrypted.html">SageMaker Notebook - Delete Public or Unencrypted</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/securitygroupsaddpermission.html">Security Groups - add permission</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/securitygroupsdetectremediate.html">Security Groups - Detect and Remediate Violations</a></li>
@@ -970,6 +971,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../aws/resources/emr-security-configuration.html">aws.emr-security-configuration</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-security-configuration.html#filters">Filters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-security-configuration.html#actions">Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../aws/resources/group-emr-serverless.html">emr-serverless resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../aws/resources/emr-serverless-app.html">aws.emr-serverless-app</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-serverless-app.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-serverless-app.html#actions">Actions</a></li>
 </ul>
 </li>
 </ul>
@@ -1896,450 +1905,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../advanced/contribute.html#arm-templates">ARM templates</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../advanced/contribute.html#cassettes">Cassettes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../advanced/contribute.html#running-tests">Running tests</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../resources/index.html">Azure Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../resources/azure-modes.html">Azure Execution Modes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-modes.html#pull">pull</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-modes.html#azure-event-grid">azure-event-grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-modes.html#azure-periodic">azure-periodic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-modes.html#container-event">container-event</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-modes.html#container-periodic">container-periodic</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/azure-common-actions.html">Azure Common Actions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#auto-tag-date">auto-tag-date</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#auto-tag-user">auto-tag-user</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#delete">delete</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#lock">lock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#logic-app">logic-app</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#mark-for-op">mark-for-op</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#notify">notify</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#tag">tag</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#tag-trim">tag-trim</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#untag">untag</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-actions.html#webhook">webhook</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/azure-common-filters.html">Azure Common Filters</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#authentication">authentication</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#azure-ad-administrators">azure-ad-administrators</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#blob-services">blob-services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#configuration">configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#configuration-parameter">configuration-parameter</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#cost">cost</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#diagnostic-settings">diagnostic-settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#effective-route-table">effective-route-table</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#event">event</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#firewall-rules">firewall-rules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#instance-view">instance-view</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#marked-for-op">marked-for-op</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#metric">metric</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#offer">offer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#offhour">offhour</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#onhour">onhour</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#parent">parent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#policy-compliant">policy-compliant</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#reduce">reduce</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#resource-lock">resource-lock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#storage-diagnostic-settings">storage-diagnostic-settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#value">value</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#vm-extensions">vm-extensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/azure-common-filters.html#vulnerability-assessment">vulnerability-assessment</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-ai-%2B-machine-learning.html">AI + Machine Learning resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cognitiveservice.html">azure.cognitiveservice</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cognitiveservice.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cognitiveservice.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/databricks.html">azure.databricks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/databricks.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/databricks.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/search.html">azure.search</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/search.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/search.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-active-directory.html">Active Directory resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/roleassignment.html">azure.roleassignment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/roleassignment.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/roleassignment.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/roledefinition.html">azure.roledefinition</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/roledefinition.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/roledefinition.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-analytics.html">Analytics resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/datafactory.html">azure.datafactory</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/datafactory.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/datafactory.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/hdinsight.html">azure.hdinsight</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/hdinsight.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/hdinsight.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-compute.html">Compute resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/aks.html">azure.aks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/aks.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/aks.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/appserviceplan.html">azure.appserviceplan</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/appserviceplan.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/appserviceplan.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/batch.html">azure.batch</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/batch.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/batch.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/image.html">azure.image</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/image.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/image.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/logic-app-workflow.html">azure.logic-app-workflow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/logic-app-workflow.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/logic-app-workflow.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/service-fabric-cluster.html">azure.service-fabric-cluster</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/service-fabric-cluster.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/service-fabric-cluster.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/service-fabric-cluster-managed.html">azure.service-fabric-cluster-managed</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/service-fabric-cluster-managed.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/service-fabric-cluster-managed.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/vm.html">azure.vm</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vm.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vm.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/vmss.html">azure.vmss</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vmss.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vmss.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/webapp.html">azure.webapp</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/webapp.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/webapp.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-containers.html">Containers resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/aks.html">azure.aks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/aks.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/aks.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/container-group.html">azure.container-group</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/container-group.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/container-group.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/container-registry.html">azure.container-registry</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/container-registry.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/container-registry.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/containerservice.html">azure.containerservice</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/containerservice.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/containerservice.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-cost.html">Cost resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cost-management-export.html">azure.cost-management-export</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cost-management-export.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cost-management-export.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-databases.html">Databases resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cosmosdb.html">azure.cosmosdb</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cosmosdb-collection.html">azure.cosmosdb-collection</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb-collection.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb-collection.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cosmosdb-database.html">azure.cosmosdb-database</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb-database.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cosmosdb-database.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/mysql.html">azure.mysql</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/mysql.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/mysql.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/postgresql-database.html">azure.postgresql-database</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/postgresql-database.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/postgresql-database.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/postgresql-server.html">azure.postgresql-server</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/postgresql-server.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/postgresql-server.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/redis.html">azure.redis</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/redis.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/redis.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/sql-database.html">azure.sql-database</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/sql-database.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/sql-database.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/sql-server.html">azure.sql-server</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/sql-server.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/sql-server.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-events.html">Events resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/eventhub.html">azure.eventhub</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/eventhub.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/eventhub.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/eventsubscription.html">azure.eventsubscription</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/eventsubscription.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/eventsubscription.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-generic.html">Generic resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/armresource.html">azure.armresource</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/armresource.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/armresource.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/policyassignments.html">azure.policyassignments</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/policyassignments.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/policyassignments.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-integration.html">Integration resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/api-management.html">azure.api-management</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/api-management.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/api-management.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-internet-of-things.html">Internet Of Things resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/iothub.html">azure.iothub</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/iothub.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/iothub.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-media.html">Media resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/cdnprofile.html">azure.cdnprofile</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cdnprofile.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/cdnprofile.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-network.html">Network resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/application-gateway.html">azure.application-gateway</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/application-gateway.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/application-gateway.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/front-door.html">azure.front-door</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/front-door.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/front-door.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/traffic-manager-profile.html">azure.traffic-manager-profile</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/traffic-manager-profile.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/traffic-manager-profile.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-networking.html">Networking resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/dnszone.html">azure.dnszone</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/dnszone.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/dnszone.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/loadbalancer.html">azure.loadbalancer</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/loadbalancer.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/loadbalancer.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/networkinterface.html">azure.networkinterface</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/networkinterface.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/networkinterface.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/networksecuritygroup.html">azure.networksecuritygroup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/networksecuritygroup.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/networksecuritygroup.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/publicip.html">azure.publicip</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/publicip.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/publicip.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/recordset.html">azure.recordset</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/recordset.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/recordset.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/routetable.html">azure.routetable</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/routetable.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/routetable.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/vnet.html">azure.vnet</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vnet.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/vnet.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-resource-group.html">Resource Group resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/resourcegroup.html">azure.resourcegroup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/resourcegroup.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/resourcegroup.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-security.html">Security resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/advisor-recommendation.html">azure.advisor-recommendation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/advisor-recommendation.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/advisor-recommendation.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/defender-alert.html">azure.defender-alert</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-alert.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-alert.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/defender-autoprovisioning.html">azure.defender-autoprovisioning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-autoprovisioning.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-autoprovisioning.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/defender-pricing.html">azure.defender-pricing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-pricing.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-pricing.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/defender-setting.html">azure.defender-setting</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-setting.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/defender-setting.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/keyvault.html">azure.keyvault</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/keyvault-certificate.html">azure.keyvault-certificate</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault-certificate.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault-certificate.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/keyvault-key.html">azure.keyvault-key</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault-key.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/keyvault-key.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-storage.html">Storage resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/datalake.html">azure.datalake</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/datalake.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/datalake.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/disk.html">azure.disk</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/disk.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/disk.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/storage.html">azure.storage</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/storage.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/storage.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/storage-container.html">azure.storage-container</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/storage-container.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/storage-container.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-subscription.html">Subscription resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/policyassignments.html">azure.policyassignments</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/policyassignments.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/policyassignments.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/resourcegroup.html">azure.resourcegroup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/resourcegroup.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/resourcegroup.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/subscription.html">azure.subscription</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/subscription.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/subscription.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/group-web.html">Web resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../resources/appserviceplan.html">azure.appserviceplan</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/appserviceplan.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/appserviceplan.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../resources/webapp.html">azure.webapp</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../resources/webapp.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../resources/webapp.html#actions">Actions</a></li>
 </ul>
 </li>
 </ul>
@@ -5516,10 +5081,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html">Custodian policies for Infrastructure Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#install">Install</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#usage">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#outputs">Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html">Custodian policies for Infrastructure Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#install">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#filters">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#outputs">Outputs</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-logexporter.html">c7n-log-exporter: Cloud watch log exporter automation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-logexporter.html#features">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-logexporter.html#assumptions">Assumptions</a></li>
@@ -5663,24 +5231,24 @@ not contain all of them (or any of them).  In this example we use the <code clas
 modifier to find non-compliant resources.</p>
 <p>You could further extend this example by using the <code class="docutils literal notranslate"><span class="pre">set-network-rules</span></code> action
 to remediate the non-compliant resources.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">storage-only-allow-datacenter-ips</span><span class="w"></span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
-<span class="w">      </span><span class="no">Find all storage accounts which permit access</span><span class="w"></span>
-<span class="w">      </span><span class="no">from any IP not in datacenter IP space</span><span class="w"></span>
-<span class="w">    </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.storage</span><span class="w"></span>
-<span class="w">    </span><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">or</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span><span class="w"></span>
-<span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">properties.networkAcls.defaultAction</span><span class="w"></span>
-<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Allow&#39;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">storage-only-allow-datacenter-ips</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">Find all storage accounts which permit access</span>
+<span class="w">      </span><span class="no">from any IP not in datacenter IP space</span>
+<span class="w">    </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.storage</span>
+<span class="w">    </span><span class="nt">filters</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">or</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
+<span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">properties.networkAcls.defaultAction</span>
+<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Allow&#39;</span>
 
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">not</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">firewall-rules</span><span class="w"></span>
-<span class="w">            </span><span class="nt">only</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;8.8.8.8&#39;</span><span class="w"></span>
-<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;10.0.0.0/16&#39;</span><span class="w"></span>
-<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;20.0.0.0</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">20.10.0.0&#39;</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">not</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">firewall-rules</span>
+<span class="w">            </span><span class="nt">only</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;8.8.8.8&#39;</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;10.0.0.0/16&#39;</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;20.0.0.0</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">20.10.0.0&#39;</span>
 </pre></div>
 </div>
 </section>

@@ -176,6 +176,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/s3globalgrants.html">S3 - Global Grants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../aws/examples/s3lifecyclepolicyonbucketdelete.html">S3 - Add lifecycle policy on bucket delete</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/sagemakernotebookdeletepublicorunencrypted.html">SageMaker Notebook - Delete Public or Unencrypted</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/securitygroupsaddpermission.html">Security Groups - add permission</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../aws/examples/securitygroupsdetectremediate.html">Security Groups - Detect and Remediate Violations</a></li>
@@ -970,6 +971,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../aws/resources/emr-security-configuration.html">aws.emr-security-configuration</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-security-configuration.html#filters">Filters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-security-configuration.html#actions">Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../aws/resources/group-emr-serverless.html">emr-serverless resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../aws/resources/emr-serverless-app.html">aws.emr-serverless-app</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-serverless-app.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../aws/resources/emr-serverless-app.html#actions">Actions</a></li>
 </ul>
 </li>
 </ul>
@@ -1896,450 +1905,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../../azure/advanced/contribute.html#arm-templates">ARM templates</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../azure/advanced/contribute.html#cassettes">Cassettes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../azure/advanced/contribute.html#running-tests">Running tests</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../azure/resources/index.html">Azure Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/azure-modes.html">Azure Execution Modes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-modes.html#pull">pull</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-modes.html#azure-event-grid">azure-event-grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-modes.html#azure-periodic">azure-periodic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-modes.html#container-event">container-event</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-modes.html#container-periodic">container-periodic</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/azure-common-actions.html">Azure Common Actions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-actions.html#auto-tag-date">auto-tag-date</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-actions.html#auto-tag-user">auto-tag-user</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-actions.html#delete">delete</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-actions.html#lock">lock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-actions.html#logic-app">logic-app</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-actions.html#mark-for-op">mark-for-op</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-actions.html#notify">notify</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-actions.html#tag">tag</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-actions.html#tag-trim">tag-trim</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-actions.html#untag">untag</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-actions.html#webhook">webhook</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/azure-common-filters.html">Azure Common Filters</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#authentication">authentication</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#azure-ad-administrators">azure-ad-administrators</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#blob-services">blob-services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#configuration">configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#configuration-parameter">configuration-parameter</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#cost">cost</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#diagnostic-settings">diagnostic-settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#effective-route-table">effective-route-table</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#event">event</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#firewall-rules">firewall-rules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#instance-view">instance-view</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#marked-for-op">marked-for-op</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#metric">metric</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#offer">offer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#offhour">offhour</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#onhour">onhour</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#parent">parent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#policy-compliant">policy-compliant</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#reduce">reduce</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#resource-lock">resource-lock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#storage-diagnostic-settings">storage-diagnostic-settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#value">value</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#vm-extensions">vm-extensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/azure-common-filters.html#vulnerability-assessment">vulnerability-assessment</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-ai-%2B-machine-learning.html">AI + Machine Learning resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/cognitiveservice.html">azure.cognitiveservice</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/cognitiveservice.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/cognitiveservice.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/databricks.html">azure.databricks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/databricks.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/databricks.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/search.html">azure.search</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/search.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/search.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-active-directory.html">Active Directory resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/roleassignment.html">azure.roleassignment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/roleassignment.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/roleassignment.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/roledefinition.html">azure.roledefinition</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/roledefinition.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/roledefinition.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-analytics.html">Analytics resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/datafactory.html">azure.datafactory</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/datafactory.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/datafactory.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/hdinsight.html">azure.hdinsight</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/hdinsight.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/hdinsight.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-compute.html">Compute resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/aks.html">azure.aks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/aks.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/aks.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/appserviceplan.html">azure.appserviceplan</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/appserviceplan.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/appserviceplan.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/batch.html">azure.batch</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/batch.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/batch.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/image.html">azure.image</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/image.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/image.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/logic-app-workflow.html">azure.logic-app-workflow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/logic-app-workflow.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/logic-app-workflow.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/service-fabric-cluster.html">azure.service-fabric-cluster</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/service-fabric-cluster.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/service-fabric-cluster.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/service-fabric-cluster-managed.html">azure.service-fabric-cluster-managed</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/service-fabric-cluster-managed.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/service-fabric-cluster-managed.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/vm.html">azure.vm</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/vm.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/vm.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/vmss.html">azure.vmss</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/vmss.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/vmss.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/webapp.html">azure.webapp</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/webapp.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/webapp.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-containers.html">Containers resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/aks.html">azure.aks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/aks.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/aks.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/container-group.html">azure.container-group</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/container-group.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/container-group.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/container-registry.html">azure.container-registry</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/container-registry.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/container-registry.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/containerservice.html">azure.containerservice</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/containerservice.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/containerservice.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-cost.html">Cost resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/cost-management-export.html">azure.cost-management-export</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/cost-management-export.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/cost-management-export.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-databases.html">Databases resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/cosmosdb.html">azure.cosmosdb</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/cosmosdb.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/cosmosdb.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/cosmosdb-collection.html">azure.cosmosdb-collection</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/cosmosdb-collection.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/cosmosdb-collection.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/cosmosdb-database.html">azure.cosmosdb-database</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/cosmosdb-database.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/cosmosdb-database.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/mysql.html">azure.mysql</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/mysql.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/mysql.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/postgresql-database.html">azure.postgresql-database</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/postgresql-database.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/postgresql-database.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/postgresql-server.html">azure.postgresql-server</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/postgresql-server.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/postgresql-server.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/redis.html">azure.redis</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/redis.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/redis.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/sql-database.html">azure.sql-database</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/sql-database.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/sql-database.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/sql-server.html">azure.sql-server</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/sql-server.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/sql-server.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-events.html">Events resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/eventhub.html">azure.eventhub</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/eventhub.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/eventhub.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/eventsubscription.html">azure.eventsubscription</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/eventsubscription.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/eventsubscription.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-generic.html">Generic resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/armresource.html">azure.armresource</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/armresource.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/armresource.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/policyassignments.html">azure.policyassignments</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/policyassignments.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/policyassignments.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-integration.html">Integration resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/api-management.html">azure.api-management</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/api-management.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/api-management.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-internet-of-things.html">Internet Of Things resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/iothub.html">azure.iothub</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/iothub.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/iothub.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-media.html">Media resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/cdnprofile.html">azure.cdnprofile</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/cdnprofile.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/cdnprofile.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-network.html">Network resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/application-gateway.html">azure.application-gateway</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/application-gateway.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/application-gateway.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/front-door.html">azure.front-door</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/front-door.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/front-door.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/traffic-manager-profile.html">azure.traffic-manager-profile</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/traffic-manager-profile.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/traffic-manager-profile.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-networking.html">Networking resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/dnszone.html">azure.dnszone</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/dnszone.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/dnszone.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/loadbalancer.html">azure.loadbalancer</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/loadbalancer.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/loadbalancer.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/networkinterface.html">azure.networkinterface</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/networkinterface.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/networkinterface.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/networksecuritygroup.html">azure.networksecuritygroup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/networksecuritygroup.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/networksecuritygroup.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/publicip.html">azure.publicip</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/publicip.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/publicip.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/recordset.html">azure.recordset</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/recordset.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/recordset.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/routetable.html">azure.routetable</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/routetable.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/routetable.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/vnet.html">azure.vnet</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/vnet.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/vnet.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-resource-group.html">Resource Group resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/resourcegroup.html">azure.resourcegroup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/resourcegroup.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/resourcegroup.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-security.html">Security resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/advisor-recommendation.html">azure.advisor-recommendation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/advisor-recommendation.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/advisor-recommendation.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/defender-alert.html">azure.defender-alert</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/defender-alert.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/defender-alert.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/defender-autoprovisioning.html">azure.defender-autoprovisioning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/defender-autoprovisioning.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/defender-autoprovisioning.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/defender-pricing.html">azure.defender-pricing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/defender-pricing.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/defender-pricing.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/defender-setting.html">azure.defender-setting</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/defender-setting.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/defender-setting.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/keyvault.html">azure.keyvault</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/keyvault.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/keyvault.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/keyvault-certificate.html">azure.keyvault-certificate</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/keyvault-certificate.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/keyvault-certificate.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/keyvault-key.html">azure.keyvault-key</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/keyvault-key.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/keyvault-key.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-storage.html">Storage resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/datalake.html">azure.datalake</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/datalake.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/datalake.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/disk.html">azure.disk</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/disk.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/disk.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/storage.html">azure.storage</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/storage.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/storage.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/storage-container.html">azure.storage-container</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/storage-container.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/storage-container.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-subscription.html">Subscription resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/policyassignments.html">azure.policyassignments</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/policyassignments.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/policyassignments.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/resourcegroup.html">azure.resourcegroup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/resourcegroup.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/resourcegroup.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/subscription.html">azure.subscription</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/subscription.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/subscription.html#actions">Actions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../azure/resources/group-web.html">Web resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/appserviceplan.html">azure.appserviceplan</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/appserviceplan.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/appserviceplan.html#actions">Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../azure/resources/webapp.html">azure.webapp</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/webapp.html#filters">Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../azure/resources/webapp.html#actions">Actions</a></li>
 </ul>
 </li>
 </ul>
@@ -5516,10 +5081,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html">Custodian policies for Infrastructure Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#install">Install</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#usage">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#outputs">Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html">Custodian policies for Infrastructure Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#install">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#filters">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-left.html#outputs">Outputs</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-logexporter.html">c7n-log-exporter: Cloud watch log exporter automation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-logexporter.html#features">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-logexporter.html#assumptions">Assumptions</a></li>
@@ -5673,12 +5241,12 @@
 <span id="awscc-aps-workspace-actions-delete"></span><h3>delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h3>
 <p>Parent base class for filters and actions.</p>
 <div class="toggle docutils container">
-<div class="header docutils container" style=""></div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">enum</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delete</span><span class="w"></span>
-<span class="nt">required</span><span class="p">:</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="w"></span>
+<div class="header docutils container" style=""></div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enum</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delete</span>
+<span class="nt">required</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
 </pre></div>
 </div>
 </div>
@@ -5688,72 +5256,72 @@
 <span id="awscc-aps-workspace-actions-update"></span><h3>update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h3>
 <p>Parent base class for filters and actions.</p>
 <div class="toggle docutils container">
-<div class="header docutils container" style=""></div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">definitions</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">Tag</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A key-value pair to associate with a resource.</span><span class="w"></span>
-<span class="w">    </span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">Key</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">tag.</span><span class="nv"> </span><span class="s">You</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">specify</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">1</span><span class="nv"> </span><span class="s">to</span><span class="w"></span>
-<span class="w">          </span><span class="s">128</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">characters</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">cannot</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">prefixed</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">aws:.</span><span class="nv"> </span><span class="s">You</span><span class="nv"> </span><span class="s">can</span><span class="w"></span>
-<span class="w">          </span><span class="s">use</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">following</span><span class="nv"> </span><span class="s">characters:</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">letters,</span><span class="nv"> </span><span class="s">digits,</span><span class="w"></span>
-<span class="w">          </span><span class="s">whitespace,</span><span class="nv"> </span><span class="s">_,</span><span class="nv"> </span><span class="s">.,</span><span class="nv"> </span><span class="s">/,</span><span class="nv"> </span><span class="s">=,</span><span class="nv"> </span><span class="s">+,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">-.&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">maxLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span><span class="w"></span>
-<span class="w">        </span><span class="nt">minLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">      </span><span class="nt">Value</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">tag.</span><span class="nv"> </span><span class="s">You</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">specify</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">to</span><span class="w"></span>
-<span class="w">          </span><span class="s">256</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">characters</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">cannot</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">prefixed</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">aws:.</span><span class="nv"> </span><span class="s">You</span><span class="nv"> </span><span class="s">can</span><span class="w"></span>
-<span class="w">          </span><span class="s">use</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">following</span><span class="nv"> </span><span class="s">characters:</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">letters,</span><span class="nv"> </span><span class="s">digits,</span><span class="w"></span>
-<span class="w">          </span><span class="s">whitespace,</span><span class="nv"> </span><span class="s">_,</span><span class="nv"> </span><span class="s">.,</span><span class="nv"> </span><span class="s">/,</span><span class="nv"> </span><span class="s">=,</span><span class="nv"> </span><span class="s">+,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">-.&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">maxLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">256</span><span class="w"></span>
-<span class="w">        </span><span class="nt">minLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
-<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Key</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Value</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">AlertManagerDefinition</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The AMP Workspace alert manager definition data</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">  </span><span class="nt">Alias</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AMP Workspace alias.</span><span class="w"></span>
-<span class="w">    </span><span class="nt">maxLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span><span class="w"></span>
-<span class="w">    </span><span class="nt">minLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">  </span><span class="nt">Tags</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An array of key-value pairs to apply to this resource.</span><span class="w"></span>
-<span class="w">    </span><span class="nt">insertionOrder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">    </span><span class="nt">items</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">      </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A key-value pair to associate with a resource.</span><span class="w"></span>
-<span class="w">      </span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">Key</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">tag.</span><span class="nv"> </span><span class="s">You</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">specify</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">1</span><span class="w"></span>
-<span class="w">            </span><span class="s">to</span><span class="nv"> </span><span class="s">128</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">characters</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">cannot</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">prefixed</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">aws:.</span><span class="w"></span>
-<span class="w">            </span><span class="s">You</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">following</span><span class="nv"> </span><span class="s">characters:</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">letters,</span><span class="w"></span>
-<span class="w">            </span><span class="s">digits,</span><span class="nv"> </span><span class="s">whitespace,</span><span class="nv"> </span><span class="s">_,</span><span class="nv"> </span><span class="s">.,</span><span class="nv"> </span><span class="s">/,</span><span class="nv"> </span><span class="s">=,</span><span class="nv"> </span><span class="s">+,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">-.&#39;</span><span class="w"></span>
-<span class="w">          </span><span class="nt">maxLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span><span class="w"></span>
-<span class="w">          </span><span class="nt">minLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">        </span><span class="nt">Value</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">tag.</span><span class="nv"> </span><span class="s">You</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">specify</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">to</span><span class="w"></span>
-<span class="w">            </span><span class="s">256</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">characters</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">cannot</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">prefixed</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">aws:.</span><span class="nv"> </span><span class="s">You</span><span class="w"></span>
-<span class="w">            </span><span class="s">can</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">following</span><span class="nv"> </span><span class="s">characters:</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">letters,</span><span class="nv"> </span><span class="s">digits,</span><span class="w"></span>
-<span class="w">            </span><span class="s">whitespace,</span><span class="nv"> </span><span class="s">_,</span><span class="nv"> </span><span class="s">.,</span><span class="nv"> </span><span class="s">/,</span><span class="nv"> </span><span class="s">=,</span><span class="nv"> </span><span class="s">+,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">-.&#39;</span><span class="w"></span>
-<span class="w">          </span><span class="nt">maxLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">256</span><span class="w"></span>
-<span class="w">          </span><span class="nt">minLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
-<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">      </span><span class="nt">required</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Key</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Value</span><span class="w"></span>
-<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span><span class="w"></span>
-<span class="w">    </span><span class="nt">uniqueItems</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">enum</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">update</span><span class="w"></span>
+<div class="header docutils container" style=""></div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">Tag</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A key-value pair to associate with a resource.</span>
+<span class="w">    </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">Key</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">tag.</span><span class="nv"> </span><span class="s">You</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">specify</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">1</span><span class="nv"> </span><span class="s">to</span>
+<span class="w">          </span><span class="s">128</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">characters</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">cannot</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">prefixed</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">aws:.</span><span class="nv"> </span><span class="s">You</span><span class="nv"> </span><span class="s">can</span>
+<span class="w">          </span><span class="s">use</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">following</span><span class="nv"> </span><span class="s">characters:</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">letters,</span><span class="nv"> </span><span class="s">digits,</span>
+<span class="w">          </span><span class="s">whitespace,</span><span class="nv"> </span><span class="s">_,</span><span class="nv"> </span><span class="s">.,</span><span class="nv"> </span><span class="s">/,</span><span class="nv"> </span><span class="s">=,</span><span class="nv"> </span><span class="s">+,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">-.&#39;</span>
+<span class="w">        </span><span class="nt">maxLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span>
+<span class="w">        </span><span class="nt">minLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">      </span><span class="nt">Value</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">tag.</span><span class="nv"> </span><span class="s">You</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">specify</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">to</span>
+<span class="w">          </span><span class="s">256</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">characters</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">cannot</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">prefixed</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">aws:.</span><span class="nv"> </span><span class="s">You</span><span class="nv"> </span><span class="s">can</span>
+<span class="w">          </span><span class="s">use</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">following</span><span class="nv"> </span><span class="s">characters:</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">letters,</span><span class="nv"> </span><span class="s">digits,</span>
+<span class="w">          </span><span class="s">whitespace,</span><span class="nv"> </span><span class="s">_,</span><span class="nv"> </span><span class="s">.,</span><span class="nv"> </span><span class="s">/,</span><span class="nv"> </span><span class="s">=,</span><span class="nv"> </span><span class="s">+,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">-.&#39;</span>
+<span class="w">        </span><span class="nt">maxLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">256</span>
+<span class="w">        </span><span class="nt">minLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Key</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Value</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="nt">properties</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">AlertManagerDefinition</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The AMP Workspace alert manager definition data</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">Alias</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AMP Workspace alias.</span>
+<span class="w">    </span><span class="nt">maxLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">minLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">Tags</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An array of key-value pairs to apply to this resource.</span>
+<span class="w">    </span><span class="nt">insertionOrder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">items</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">additionalProperties</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A key-value pair to associate with a resource.</span>
+<span class="w">      </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Key</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">tag.</span><span class="nv"> </span><span class="s">You</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">specify</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">1</span>
+<span class="w">            </span><span class="s">to</span><span class="nv"> </span><span class="s">128</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">characters</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">cannot</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">prefixed</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">aws:.</span>
+<span class="w">            </span><span class="s">You</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">following</span><span class="nv"> </span><span class="s">characters:</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">letters,</span>
+<span class="w">            </span><span class="s">digits,</span><span class="nv"> </span><span class="s">whitespace,</span><span class="nv"> </span><span class="s">_,</span><span class="nv"> </span><span class="s">.,</span><span class="nv"> </span><span class="s">/,</span><span class="nv"> </span><span class="s">=,</span><span class="nv"> </span><span class="s">+,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">-.&#39;</span>
+<span class="w">          </span><span class="nt">maxLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span>
+<span class="w">          </span><span class="nt">minLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">        </span><span class="nt">Value</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">tag.</span><span class="nv"> </span><span class="s">You</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">specify</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">to</span>
+<span class="w">            </span><span class="s">256</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">characters</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">cannot</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">prefixed</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">aws:.</span><span class="nv"> </span><span class="s">You</span>
+<span class="w">            </span><span class="s">can</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">following</span><span class="nv"> </span><span class="s">characters:</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Unicode</span><span class="nv"> </span><span class="s">letters,</span><span class="nv"> </span><span class="s">digits,</span>
+<span class="w">            </span><span class="s">whitespace,</span><span class="nv"> </span><span class="s">_,</span><span class="nv"> </span><span class="s">.,</span><span class="nv"> </span><span class="s">/,</span><span class="nv"> </span><span class="s">=,</span><span class="nv"> </span><span class="s">+,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">-.&#39;</span>
+<span class="w">          </span><span class="nt">maxLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">256</span>
+<span class="w">          </span><span class="nt">minLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">      </span><span class="nt">required</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Key</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Value</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span>
+<span class="w">    </span><span class="nt">uniqueItems</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enum</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">update</span>
 </pre></div>
 </div>
 </div>

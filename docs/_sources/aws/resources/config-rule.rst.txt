@@ -120,6 +120,8 @@ managed config rules with missing remediation and to enable it accordingly.
         type: object
       rule_name:
         type: string
+      rule_prefix:
+        type: string
       type:
         enum:
         - remediation
