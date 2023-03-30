@@ -348,7 +348,7 @@ class KinesisAnalyticsSubnetFilter(SubnetFilter):
 class KinesisVideoStream(QueryResourceManager):
     retry = staticmethod(
         get_retry((
-            'LimitExceededException',)))
+            'ClientLimitExceededException',)))
 
     class resource_type(TypeInfo):
         service = 'kinesisvideo'
