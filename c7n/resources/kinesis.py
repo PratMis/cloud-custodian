@@ -32,7 +32,7 @@ class ConfigStream(ConfigSource):
 class KinesisStream(QueryResourceManager):
     retry = staticmethod(
         get_retry((
-            'LimitExceededException',)))
+            'ClientLimitExceededException',)))
 
     class resource_type(TypeInfo):
         service = 'kinesis'
